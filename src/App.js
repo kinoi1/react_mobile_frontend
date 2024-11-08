@@ -62,11 +62,11 @@ function App() {
       </section>
 
       <section className="pt-8">
-        <div className="container pl-6">
+        <div className="container pl-6 pr-8">
           <div className='row'>
             <div className="col-md-12 d-flex flex-row gap-1">
               <p className="col-md-8 m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="col-md-4 bg-rose-500 text-white rounded-lg px-2 ml-8 text-right">
+              <div className="col-md-4 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
                 Segera Kerjakan!
               </div>
             </div>
@@ -75,33 +75,36 @@ function App() {
         </div>
       </section>
 
-      <section className="pt-8 work-active">
-        <div className="bg-white w-11/12 p-4 rounded-xl shadow-lg">
-          <div className='w-full'>
-            <div class="flex flex-row">
-              <div className='bg-slate-200 rounded-lg'>
+      <section className="pt-8">
+        <div className='container pr-8 pl-6'>
+          <div className="bg-white p-4 rounded-xl shadow-lg work-active">
+            <div className='col-md-12'>
+              {/* <div class="d-flex flex-row"> */}
+                <div className='bg-slate-200 rounded-lg'>
+                  
+                </div>
+                <div className="d-flex flex-row">
+                  <div className='col-md-5 d-flex flex-column'>
+                    <div className='text-slate-400'>
+                      <p>Follow Tiktok</p>
+                    </div>
+                    <div className='text-sky-600'>
+                      <p><i></i> Rp. 500</p>
+                    </div>
+                  </div>
                 
-              </div>
-              <div className="flex flex-row">
-                <div className='flex flex-col'>
-                  <div className='text-slate-400'>
-                    <p>Follow Tiktok</p>
-                  </div>
-                  <div className='text-sky-600'>
-                    <p><i></i> Rp. 500</p>
+                  <div className='col-md-5'>
+                    <span className='d-flex justify-content-end'>Progress</span>
+                    <div className="progress">
+                      <div className="progress-bar " role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                   </div>
                 </div>
-               
-                <div className='flex flex-col'>
-                  <span>Progress</span>
-                  <div className="bg-blue-600 h-4 rounded-full progress-50">
-
-                  </div>
-                </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
+
       </section>
     </div>
   );
