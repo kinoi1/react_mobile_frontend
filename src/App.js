@@ -17,25 +17,29 @@ function App() {
                   <span className="text-slate-400">apa kabar</span>
                 </div>
                 <div className="w-93 bg-white card p-4 rounded-xl absolute top-16 shadow-lg">
-                  <div className="d-flex flex-row gap-4">
-                    <div className="d-flex flex-column pt-3">
-                      <div className="small">Saldo Tersedia</div>
-                      <div className="lead">Rp. 150.000</div>
+                  <div className="d-flex flex-row justify-space-between">
+                    <div className='d-flex gap-4'>
+                    <div className="d-flex flex-column">
+                      <div className="text-grey font-normal text-base">Saldo Tersedia</div>
+                      <div className="text-2xl font-semibold text-blue">Rp. 150.000</div>
                     </div>
                     <div className='d-flex align-self-end'>
-                        <img alt='tes' src={`${baseUrl}/saldo.svg`}></img>
+                        <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
                     </div>
+                    </div>
+                    <div className='d-flex gap-4'>
                     <div className="d-flex flex-column">
-                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex">
-                        <p className="text-sky-600 flex align-self-center m-0 pb-2 pt-2">1351</p>
+                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex w-full ">
+                        <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex w-full">1351</p>
                       </div>
-                      <div className="text-slate-400">Pekerjaan</div>
+                      <div className="text-grey text-xs">Pekerjaan</div>
                     </div>
                     <div className="d-flex flex-column">
                       <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5">
-                        <p className="text-sky-600 flex justify-center m-0 pb-2 pt-2">Rp 500k</p>
+                        <p className="text-blue flex align-self-center m-0">Rp 500k</p>
                       </div>
-                      <div className="text-slate-400">Penarikan</div>
+                      <div className="text-grey text-xs">Penarikan</div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -47,25 +51,15 @@ function App() {
 
       <section className="pt-24">
         <div className="container ml-4 p-0">
-          <div className="w-90 bg-sky-600 rounded-xl shadow-lg card">
-            <div className="pl-2">
-              <div className="flex flex-col">
-                <p>Kini Notif Job Langsung di Whatsapp</p>
-                <p>
-                  Dapatkan notif pekerjaan secara real-time melalui channel resmi dari
-                  indobuzz, Gabung sekarang juga biar ga kehabisan tiket.
-                </p>
-                <div>Bergabung Sekarang</div>
-              </div>
-            </div>
-          </div>
+          <img className='w-91' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
+          </img>
         </div>
       </section>
 
       <section className="pt-8">
         <div className="container pl-6 pr-8">
           <div className='row'>
-            <div className="col-md-12 d-flex flex-row gap-1">
+            <div className="col-md-12 d-flex flex-row gap-1 p-0">
               <p className="w-66 m-0 mr-2 p-0">Pekerjaan aktif</p>
               <div className="w-32 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
                 Segera Kerjakan!
@@ -77,7 +71,7 @@ function App() {
       </section>
 
       <section className="pt-8">
-        <div className='container pr-8 pl-6'>
+        <div className='container pl-6'>
           <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
             <div className='col-md-12 p-0'>
               {/* <div class="d-flex flex-row"> */}
