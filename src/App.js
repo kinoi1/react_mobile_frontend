@@ -65,8 +65,8 @@ function App() {
         <div className="container pl-6 pr-8">
           <div className='row'>
             <div className="col-md-12 d-flex flex-row gap-1">
-              <p className="col-md-8 m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="col-md-4 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
+              <p className="w-66 m-0 mr-2 p-0">Pekerjaan aktif</p>
+              <div className="w-32 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
                 Segera Kerjakan!
               </div>
             </div>
@@ -77,19 +77,19 @@ function App() {
 
       <section className="pt-8">
         <div className='container pr-8 pl-6'>
-          <div className="bg-white p-4 rounded-xl shadow-lg work-active">
-            <div className='col-md-12'>
+          <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
+            <div className='col-md-12 p-0'>
               {/* <div class="d-flex flex-row"> */}
-                <div className='bg-slate-200 rounded-lg'>
-                  
-                </div>
                 <div className="d-flex flex-row">
-                  <div className='col-md-5 d-flex flex-column'>
+                  <div className='w-20 bg-slate-200 rounded-lg'>
+                  
+                  </div>
+                  <div className='col-md-5 d-flex flex-column pl-2'>
                     <div className='text-slate-400'>
-                      <p>Follow Tiktok</p>
+                      <p className='m-0'>Follow Tiktok</p>
                     </div>
                     <div className='text-sky-600'>
-                      <p><i></i> Rp. 500</p>
+                      <p className='m-0'><i></i> Rp. 500</p>
                     </div>
                   </div>
                 
