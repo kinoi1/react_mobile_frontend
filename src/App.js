@@ -1,5 +1,6 @@
 import './App.css';
 import './assets/main.css';
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
                       <div className="lead">Rp. 150.000</div>
                     </div>
                     <div className='d-flex align-self-end'>
-                        <span className='fa fa-coins'></span>
+                        <img alt='tes' src={`${baseUrl}/saldo.svg`}></img>
                     </div>
                     <div className="d-flex flex-column">
                       <div className="col-md-12 bg-slate-200 rounded-xl d-flex">
