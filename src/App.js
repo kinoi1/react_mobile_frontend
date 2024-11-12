@@ -25,9 +25,9 @@ function App() {
                     <div className='d-flex gap-4'>
                     <div className="d-flex flex-column">
                       <div className="text-grey font-normal text-base">Saldo Tersedia</div>
-                      <div className="text-2xl font-semibold text-blue">Rp. 150.000</div>
+                      <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
                     </div>
-                    <div className='d-flex align-self-end'>
+                    <div className='d-flex align-self-end pb-1'>
                         <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
                     </div>
                     </div>
@@ -67,9 +67,9 @@ function App() {
       <section className="pt-8">
         <div className="container pl-6 pr-8">
           <div className='row'>
-            <div className="col-md-12 d-flex flex-row gap-1 p-0">
-              <p className="w-66 m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="w-34 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
+            <div className="col-md-12 d-flex flex-row gap-1 p-0 justify-space-between">
+              <p className="m-0 mr-2 p-0">Pekerjaan aktif</p>
+              <div className="bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
                 Segera Kerjakan!
               </div>
             </div>
@@ -81,31 +81,35 @@ function App() {
       <section className="pt-8">
       {Data.length > 0 ? (
         Data.map((item,index) => (
-        <div className='container pl-6' key={index}>
-          <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
-            <div className='col-md-12 p-0'>
-              {/* <div class="d-flex flex-row"> */}
-                <div className="d-flex flex-row">
-                  <div className='w-20 bg-slate-200 rounded-lg'>
-                  
-                  </div>
-                  <div className='col-md-5 d-flex flex-column pl-2'>
-                    <div className='text-slate-400'>
-                      <p className='m-0 font-medium'>{item.nama}</p>
+        <div className='container' key={index}>
+          <div className='row'>
+            <div className='col-md-12'>
+              <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
+                <div className='col-md-12 p-0'>
+                  {/* <div class="d-flex flex-row"> */}
+                    <div className="d-flex flex-row">
+                      <div className='w-20 bg-slate-200 rounded-lg'>
+                      
+                      </div>
+                      <div className='col-md-5 d-flex flex-column pl-2'>
+                        <div className='text-slate-400'>
+                          <p className='m-0 font-medium'>{item.nama}</p>
+                        </div>
+                        <div className='text-sky-600 d-flex flex-row gap-2'>
+                          <img src={`${baseUrl}/img/Saldo-icon(blue).svg`}></img><p className='m-0 text-blue font-medium'> Rp. {item.harga}</p>
+                        </div>
+                      </div>
+                    
+                      <div className='col-md-5'>
+                        <span className='d-flex justify-content-end'>Progress</span>
+                        <div className="progress">
+                          <div className="progress-bar " role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
-                    <div className='text-sky-600 d-flex flex-row gap-2'>
-                      <img src={`${baseUrl}/img/Saldo-icon(blue).svg`}></img><p className='m-0 text-blue font-medium'> Rp. {item.harga}</p>
-                    </div>
-                  </div>
-                
-                  <div className='col-md-5'>
-                    <span className='d-flex justify-content-end'>Progress</span>
-                    <div className="progress">
-                      <div className="progress-bar " role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
+                  {/* </div> */}
                 </div>
-              {/* </div> */}
+              </div>
             </div>
           </div>
         </div>
@@ -144,32 +148,38 @@ function App() {
         </div>
       </section>
 
-      <section className='position-fixed pb-4'>
-        <div className='w-full d-flex px-8 gap-10'>
-          <div>
-            <a href='foo' onClick=''>
-              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-beranda.svg`} alt='icon'></img>
-            </a>
-          </div>
-          <div>
-            <a href='foo' onClick=''>
-              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-pekerjaan.svg`} alt='icon'></img>
-            </a>
-          </div>
-          <div>
-            <a href='foo' onClick=''>
-              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-riwayat.svg`} alt='icon'></img>
-            </a>
-          </div>
-          <div>
-            <a href='foo' onClick=''>
-              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-setting.svg`} alt='icon'></img>
-            </a>
-          </div>
-          <div>
-            <a href='foo' onClick=''>
-              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-wallet.svg`} alt='icon'></img>
-            </a>
+      <section className='position-fixed w-full'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <div className='w-full d-flex px-4 gap-4'>
+              <div>
+                <a href='foo' onClick=''>
+                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-beranda.svg`} alt='icon'></img>
+                </a>
+              </div>
+              <div>
+                <a href='foo' onClick=''>
+                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-pekerjaan.svg`} alt='icon'></img>
+                </a>
+              </div>
+              <div>
+                <a href='foo' onClick=''>
+                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-riwayat.svg`} alt='icon'></img>
+                </a>
+              </div>
+              <div>
+                <a href='foo' onClick=''>
+                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-setting.svg`} alt='icon'></img>
+                </a>
+              </div>
+              <div>
+                <a href='foo' onClick=''>
+                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-wallet.svg`} alt='icon'></img>
+                </a>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
