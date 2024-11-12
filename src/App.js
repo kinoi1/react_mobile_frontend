@@ -3,14 +3,14 @@ import './assets/main.css';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
-  // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
+  { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
 ];
 
 function App() {
   return (
     <div>
       <section className="bg-main pt-11 pb-14">
-        <div className="container pl-6">
+        <div className="container">
           <div className="row">
             <div className='col-md-12'>
               <div className="d-flex flex-column">
@@ -20,7 +20,7 @@ function App() {
                 <div>
                   <span className="text-white opacity-40">Apa kabarmu hari ini?</span>
                 </div>
-                <div className="w-93 bg-white card p-4 rounded-xl absolute top-16 shadow-lg">
+                <div className="w-94 bg-white card p-4 rounded-xl absolute top-16 shadow-lg">
                   <div className="d-flex flex-row justify-space-between">
                     <div className='d-flex gap-4'>
                     <div className="d-flex flex-column">
@@ -54,9 +54,13 @@ function App() {
       </section>
 
       <section className="pt-24">
-        <div className="container ml-4 p-0">
-          <img className='w-91 rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
-          </img>
+        <div className="container">
+          <div className='row'>
+            <div className='col-md-12'>
+              <img className='w-full rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
+              </img>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -87,10 +91,10 @@ function App() {
                   </div>
                   <div className='col-md-5 d-flex flex-column pl-2'>
                     <div className='text-slate-400'>
-                      <p className='m-0'>{item.nama}</p>
+                      <p className='m-0 font-medium'>{item.nama}</p>
                     </div>
-                    <div className='text-sky-600'>
-                      <p className='m-0'><i></i> Rp. {item.harga}</p>
+                    <div className='text-sky-600 d-flex flex-row gap-2'>
+                      <img src={`${baseUrl}/img/Saldo-icon(blue).svg`}></img><p className='m-0 text-blue font-medium'> Rp. {item.harga}</p>
                     </div>
                   </div>
                 
@@ -106,9 +110,38 @@ function App() {
           </div>
         </div>
       ))
-    ): (
-      <p className='d-flex justify-content-center opacity-40'>Tidak ada pekerjaan yang diambil</p>
-    )}
+      ): (
+        <p className='d-flex justify-content-center opacity-40'>Tidak ada pekerjaan yang diambil</p>
+      )}
+      </section>
+
+      <section className='pt-8 pb-8'>
+        <div className='container'>
+          <div className='bg-white w-full px-2'>
+            <div className='d-flex flex-row justify-space-between'>
+              <div className='text-label font-medium'> Pekerjaan Terbaru!</div>
+              <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className=''>
+        <div className='container'>
+          <div className='bg-white px-2'>
+            <div className='col-md-12 p-0'>
+              <div className='d-flex'>
+                <div className='w-20 bg-slate-200 rounded-lg'>
+
+                </div>
+                <div className='col-md-5'>
+                  <span className=''>Subscribe Youtube</span>
+                </div>
+                <div className='col-md-5'></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className='position-fixed pb-4'>

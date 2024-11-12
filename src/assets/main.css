@@ -11,13 +11,23 @@ body {
 }
 .bg-main{
     background-color:#0566EB;
-    ;
+}
+.bg-green{
+    background-color: #13B4AC;
+}
+@media (min-height: 852px){
+    .pt-24{
+        padding-top:9rem !important;
+    }
+}
+.shadow-lg{
+    box-shadow: 0 0rem 0rem rgba(0,0,0,0.100)!important;
 }
 .progress{
     width: 50%;
 }
 .work-active{
-    border:0.15rem solid;
+    border:0.05rem solid;
     border-color: #d9d9d9;
 }
 .absolute{
@@ -30,8 +40,14 @@ body {
     padding-top:1rem;
     padding-bottom:1rem;
 }
+.p-1{
+    padding:0.25rem;
+}
 .p-2{
     padding:0.5rem;
+}
+.pb-8{
+    padding-bottom: 2rem;
 }
 .pb-14{
     padding-bottom:3.5rem;
@@ -75,6 +91,9 @@ body {
 .rounded-xl{
     border-radius: 0.75rem;
 }
+.gap-2{
+    gap:0.5rem;
+}
 .gap-4{
     gap:0.75rem;
 }
@@ -101,6 +120,10 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+.px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
 .px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -113,6 +136,9 @@ body {
 }
 .w-93{
     width:93%;
+}
+.w-94{
+    width:94%;
 }
 .w-full{
     width: 100%;
@@ -139,12 +165,12 @@ body {
     border-radius:3rem !important;
 }
 .progress-bar{
-    background-color: orange;
+    background-color: #FF9E49;
     width: 50% !important;
 }
 .progress{
     border-radius: 3rem;;
-    background-color: orange;
+    background-color: #FF9E49;
     width: 100%;
     background-color: #c9c9c9;
 }
@@ -153,6 +179,9 @@ body {
 }
 .text-grey{
     color: #737373;
+}
+.text-label{
+    color: #434343;
 }
 .font-normal{
     font-weight: 400;
