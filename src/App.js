@@ -2,6 +2,10 @@ import './App.css';
 import './assets/main.css';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
+const Data = [
+  // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
+];
+
 function App() {
   return (
     <div>
@@ -11,10 +15,10 @@ function App() {
             <div className='col-md-12'>
               <div className="d-flex flex-column">
                 <div className="text-white">
-                  <span>Halo, Jeni</span>
+                  <span className='text-sm'>Halo, Jeni</span>
                 </div>
                 <div>
-                  <span className="text-slate-400">apa kabar</span>
+                  <span className="text-white opacity-40">Apa kabarmu hari ini?</span>
                 </div>
                 <div className="w-93 bg-white card p-4 rounded-xl absolute top-16 shadow-lg">
                   <div className="d-flex flex-row justify-space-between">
@@ -27,18 +31,18 @@ function App() {
                         <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
                     </div>
                     </div>
-                    <div className='d-flex gap-4'>
+                    <div className='d-flex gap-5'>
                     <div className="d-flex flex-column">
                       <div className="col-md-12 bg-slate-200 rounded-xl d-flex w-full ">
-                        <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex w-full">1351</p>
+                        <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex w-full px-2">1351</p>
                       </div>
-                      <div className="text-grey text-xs">Pekerjaan</div>
+                      <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div>
                     </div>
                     <div className="d-flex flex-column">
                       <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5">
                         <p className="text-blue flex align-self-center m-0">Rp 500k</p>
                       </div>
-                      <div className="text-grey text-xs">Penarikan</div>
+                      <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div>
                     </div>
                     </div>
                   </div>
@@ -51,7 +55,7 @@ function App() {
 
       <section className="pt-24">
         <div className="container ml-4 p-0">
-          <img className='w-91' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
+          <img className='w-91 rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
           </img>
         </div>
       </section>
@@ -61,7 +65,7 @@ function App() {
           <div className='row'>
             <div className="col-md-12 d-flex flex-row gap-1 p-0">
               <p className="w-66 m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="w-32 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
+              <div className="w-34 bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
                 Segera Kerjakan!
               </div>
             </div>
@@ -71,7 +75,9 @@ function App() {
       </section>
 
       <section className="pt-8">
-        <div className='container pl-6'>
+      {Data.length > 0 ? (
+        Data.map((item,index) => (
+        <div className='container pl-6' key={index}>
           <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
             <div className='col-md-12 p-0'>
               {/* <div class="d-flex flex-row"> */}
@@ -81,17 +87,17 @@ function App() {
                   </div>
                   <div className='col-md-5 d-flex flex-column pl-2'>
                     <div className='text-slate-400'>
-                      <p className='m-0'>Follow Tiktok</p>
+                      <p className='m-0'>{item.nama}</p>
                     </div>
                     <div className='text-sky-600'>
-                      <p className='m-0'><i></i> Rp. 500</p>
+                      <p className='m-0'><i></i> Rp. {item.harga}</p>
                     </div>
                   </div>
                 
                   <div className='col-md-5'>
                     <span className='d-flex justify-content-end'>Progress</span>
                     <div className="progress">
-                      <div className="progress-bar " role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div className="progress-bar " role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -99,7 +105,40 @@ function App() {
             </div>
           </div>
         </div>
+      ))
+    ): (
+      <p className='d-flex justify-content-center opacity-40'>Tidak ada pekerjaan yang diambil</p>
+    )}
+      </section>
 
+      <section className='position-fixed pb-4'>
+        <div className='w-full d-flex px-8 gap-10'>
+          <div>
+            <a href='foo' onClick=''>
+              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-beranda.svg`} alt='icon'></img>
+            </a>
+          </div>
+          <div>
+            <a href='foo' onClick=''>
+              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-pekerjaan.svg`} alt='icon'></img>
+            </a>
+          </div>
+          <div>
+            <a href='foo' onClick=''>
+              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-riwayat.svg`} alt='icon'></img>
+            </a>
+          </div>
+          <div>
+            <a href='foo' onClick=''>
+              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-setting.svg`} alt='icon'></img>
+            </a>
+          </div>
+          <div>
+            <a href='foo' onClick=''>
+              <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-wallet.svg`} alt='icon'></img>
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );
