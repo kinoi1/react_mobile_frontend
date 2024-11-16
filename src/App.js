@@ -3,61 +3,102 @@ import './assets/main.css';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
-  { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
+  // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
 ];
 
 function App() {
   return (
     <div>
-      <section className="bg-main pt-11 pb-14">
-        <div className="container">
-          <div className="row">
-            <div className='col-md-12'>
-              <div className="d-flex flex-column">
-                <div className="text-white">
+      <section className="w-full bg-main pt-7 pb-30 position-fixed z-index-2">
+        <div className="w-full container position-fixed z-index-2">
+          <div className="w-full row position-fixed z-index-2">
+            <div className='w-full col-md-12 position-fixed z-index-2'>
+              <div className="text-white">
                   <span className='text-sm'>Halo, Jeni</span>
                 </div>
-                <div>
+                <div className='pb-6'> 
                   <span className="text-white opacity-40">Apa kabarmu hari ini?</span>
                 </div>
-                <div className="w-94 bg-white card p-4 rounded-xl absolute top-16 shadow-lg">
+              <div className="d-flex flex-column">
+                
+                {/* <div className="w-94 bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed">
                   <div className="d-flex flex-row justify-space-between">
-                    <div className='d-flex gap-4'>
-                    <div className="d-flex flex-column">
-                      <div className="text-grey font-normal text-base">Saldo Tersedia</div>
-                      <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
-                    </div>
+                    <div className='d-flex gap-4 n-detail'>
+                      <div className="d-flex flex-column justify-content-end">
+                        <div className="text-grey font-normal text-base">Saldo Tersedia</div>
+                        <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
+                      </div>
                     <div className='d-flex align-self-end pb-1'>
                         <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
                     </div>
                     </div>
                     <div className='d-flex gap-5'>
                     <div className="d-flex flex-column">
-                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex w-full ">
+                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex w-full n-work">
                         <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex w-full px-2">1351</p>
                       </div>
                       <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div>
                     </div>
                     <div className="d-flex flex-column">
-                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5">
+                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
                         <p className="text-blue flex align-self-center m-0">Rp 500k</p>
                       </div>
                       <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div>
                     </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <div className='card-fixed-d'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12'>
+            <div className="bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed">
+              <div className="d-flex flex-row justify-space-between">
+                <div className='d-flex gap-4 n-detail'>
+                  <div className="d-flex flex-column justify-content-end">
+                    <div className="text-grey font-normal text-base">Saldo Tersedia</div>
+                    <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
+                  </div>
+                <div className='d-flex align-self-end pb-1'>
+                    <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
+                </div>
+                </div>
+                <div className='d-flex gap-5'>
+                <div className="d-flex flex-column">
+                  <div className="col-md-12 bg-slate-200 rounded-xl d-flex n-work">
+                    <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
+                  </div>
+                  <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div>
+                </div>
+                <div className="d-flex flex-column">
+                  <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
+                    <p className="text-blue flex align-self-center m-0">Rp 500k</p>
+                  </div>
+                  <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      
+
 
       <section className="pt-24">
         <div className="container">
           <div className='row'>
             <div className='col-md-12'>
-              <img className='w-full rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
+              <img className='w-100 rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
               </img>
             </div>
           </div>
@@ -119,7 +160,7 @@ function App() {
       )}
       </section>
 
-      <section className='pt-8 pb-8'>
+      <section className='pt-4 pb-4 shadow-small'>
         <div className='container'>
           <div className='bg-white w-full px-2'>
             <div className='d-flex flex-row justify-space-between'>
