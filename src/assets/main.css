@@ -16,9 +16,7 @@ body {
     background-color: #13B4AC;
 }
 @media (min-height: 852px){
-    /* .pt-24{
-        padding-top:9rem !important;
-    } */
+    
     .w-14-r{
         width: 3rem !important;
     }
@@ -35,6 +33,25 @@ body {
         width:1.5rem !important;
     }
 }
+
+@media (max-width: 480px){
+    .w-14-r{
+        width: 3rem !important;
+    }
+    .gap-4{
+        gap:1rem !important;
+    }
+    .text-base{
+        font-size: 0.7rem !important;
+    }
+    .text-2xl{
+        font-size: 1rem !important;
+    }
+    .w-2-r{
+        width:1.5rem !important;
+    }
+}
+
 .shadow-lg{
     box-shadow: 0 0rem 0rem rgba(0,0,0,0.100)!important;
 }
