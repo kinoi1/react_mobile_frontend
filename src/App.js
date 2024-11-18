@@ -1,5 +1,7 @@
 import './App.css';
 import './assets/main.css';
+import Pekerjaan from "./Pekerjaan";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
@@ -204,16 +206,20 @@ function App() {
           <div className='row'>
             <div className='col-md-12'>
               <div className='w-full d-flex px-4 gap-4'>
+              
+
               <div>
                 <a href='foo' className='icon-home button-bar-active' onClick=''>
-      
+                
 
                 </a>
               </div>
               <div>
-                <a href='./pekerjaan.js' className='icon-work' onClick=''>
+                <a href='/pekerjaan' className='icon-work' onClick=''>
               
                 </a>
+                
+
               </div>
               <div>
                 <a href='foo' className='icon-riwayat' onClick=''>
@@ -230,6 +236,7 @@ function App() {
                   
                 </a>
               </div>
+              
               </div>
             </div>
           </div>
