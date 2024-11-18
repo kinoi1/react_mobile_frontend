@@ -94,7 +94,7 @@ function App() {
       
 
 
-      <section className="pt-24">
+      <section className="banner-dashboard">
         <div className="container">
           <div className='row'>
             <div className='col-md-12'>
@@ -171,25 +171,39 @@ function App() {
         </div>
       </section>
 
-      <section className=''>
+      <section className='shadow-small'>
         <div className='container'>
-          <div className='bg-white px-2'>
-            <div className='col-md-12 p-0'>
-              <div className='d-flex'>
-                <div className='w-20 bg-slate-200 rounded-lg'>
-
+          <div className='col-md-12 p-0'>
+            <div className='bg-white px-2'>
+              <div className='col-md-12 list-work'>
+                <div className='d-flex'>
+                  <div className='w-20  rounded-lg'>
+                    <img className='' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
+                  </div>
+                  <div className='col-md-5'>
+                    <div className='d-flex flex-column'>
+                      <span className='text-xs'>Subscribe Youtube</span>
+                      <span className='text-small'> <img className='w-1-r' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} ></img> <span className='opacity-40'>Maks Ambil 4 tiket</span>
+                      </span>
+                      <span className='text-blue text-small'>
+                        <img className='w-1-r' src={`${baseUrl}/img/Saldo-icon(blue).svg`} alt='indobuzz'></img>
+                        Rp. 500
+                      </span>
+                    </div>
+                  </div>
+                  <div className='col-md-5'>
+                    <button className='btn btn-primary text-xs'>
+                        Ambil Pekerjaan
+                    </button>
+                  </div>
                 </div>
-                <div className='col-md-5'>
-                  <span className=''>Subscribe Youtube</span>
-                </div>
-                <div className='col-md-5'></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='position-fixed w-full'>
+      <section className='position-fixed w-full bottom-0'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>

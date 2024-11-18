@@ -32,7 +32,6 @@ body {
         width:1.5rem !important;
     }
     .n-work,.n-detail{
-        padding-top:10%;
         padding-bottom:10%;
     }
     .w-full{
@@ -43,6 +42,9 @@ body {
     }
     .card-fixed-d{
         padding-top:5rem;
+    }
+    .banner-dashboard{
+        padding-top: 7rem !important;
     }
 }
 
@@ -87,6 +89,10 @@ body {
     .card-fixed-d{
         padding-top:5rem;
     }
+    .banner-dashboard{
+        padding-top:7rem !important;
+    }
+    
 }
 
 .shadow-lg{
@@ -239,6 +245,9 @@ body {
 .w-100{
     width: 100%;
 }
+.w-1-r{
+    width: 1rem;
+}
 .w-2-r{
     width: 2rem;
 }
@@ -276,6 +285,9 @@ body {
 .font-semibold{
     font-weight: 600;
 }
+.text-small{
+    font-size: 0.5rem;
+}
 .text-xs{
     font-size: 0.75rem;
 }
@@ -299,4 +311,13 @@ body {
 }
 .card-fixed{
     width: 450px;
+}
+.banner-dashboard{
+    padding-top:5rem;
+}
+.bottom-0{
+    bottom:0%;
+}
+.list-work{
+    padding:1rem 0rem 1rem 0rem;
 }
