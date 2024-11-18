@@ -94,6 +94,11 @@ body {
     }
     
 }
+@media (max-width: 400px){
+    .banner-dashboard{
+        padding-top:8rem !important;
+    }
+}
 
 .shadow-lg{
     box-shadow: 0 0rem 0rem rgba(0,0,0,0.100)!important;
@@ -114,6 +119,10 @@ body {
 .py-4{
     padding-top:1rem;
     padding-bottom:1rem;
+}
+.py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .pr-0{
     padding-right: 0;
@@ -264,7 +273,7 @@ body {
     width: 2rem;
 }
 .w-14-r{
-    width: 3.5rexm;
+    width: 3.5rem;
 }
 .h-60{
     height: 60%;
@@ -304,7 +313,7 @@ body {
     font-weight: 600;
 }
 .text-small{
-    font-size: 0.5rem;
+    font-size: 0.65rem;
 }
 .text-xs{
     font-size: 0.75rem;
@@ -324,6 +333,9 @@ body {
 .opacity-40{
     opacity: 0.4;
 }
+.opacity-60{
+    opacity: 0.6 ;
+}
 .shadow-small{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -341,4 +353,60 @@ body {
 }
 .z-index-2{
     z-index:2;
+}
+.listwork-section{
+    padding-bottom:3rem;
+}
+.icon-home{
+    background-color: #C9C9C9;
+    display: block;
+    width: 56px;
+    height: 56px;
+    mask: url('/public/img/navbar-icon/Navbar-beranda.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/navbar-icon/Navbar-beranda.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-work{
+    background-color: #C9C9C9;
+    display: block;
+    width: 56px;
+    height: 56px;
+    mask: url('/public/img/navbar-icon/Navbar-pekerjaan.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/navbar-icon/Navbar-pekerjaan.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-riwayat{
+    background-color: #C9C9C9;
+    display: block;
+    width: 56px;
+    height: 56px;
+    mask: url('/public/img/navbar-icon/Navbar-riwayat.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/navbar-icon/Navbar-riwayat.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-setting{
+    background-color: #C9C9C9;
+    display: block;
+    width: 56px;
+    height: 56px;
+    mask: url('/public/img/navbar-icon/Navbar-setting.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/navbar-icon/Navbar-setting.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-wallet{
+    background-color: #C9C9C9;
+    display: block;
+    width: 56px;
+    height: 56px;
+    mask: url('/public/img/navbar-icon/Navbar-wallet.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/navbar-icon/Navbar-wallet.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.button-bar-active{
+    background-color: #0087EC;
 }

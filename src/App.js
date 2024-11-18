@@ -140,7 +140,7 @@ function App() {
 
       <section className='pt-4 pb-4 shadow-small'>
         <div className='container'>
-          <div className='bg-white w-full'>
+          <div className='col-md-12 bg-white w-full p-0'>
             <div className='d-flex flex-row justify-space-between'>
               <div className='text-label font-medium'> Pekerjaan Terbaru!</div>
               <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>
@@ -149,10 +149,10 @@ function App() {
         </div>
       </section>
       
-
+<section className='listwork-section'>
     {listwork.length > 0 ? (
         listwork.map((item,index) => (
-      <section className='shadow-small' key={index}>
+      <div className='shadow-small' key={index}>
         <div className='container'>
           <div className='col-md-12 p-0'>
             <div className='bg-white'>
@@ -164,7 +164,7 @@ function App() {
                   <div className='col-md-5'>
                     <div className='d-flex flex-column gap-03'>
                       <span className='text-xs'>{item.nama}</span>
-                      <span className='text-small'> <img className='w-1-r' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} ></img> <span className='opacity-40'>Maks Ambil 4 tiket</span>
+                      <span className='text-small'> <img className='w-1-r' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} ></img> <span className='opacity-60'>Maks Ambil 4 tiket</span>
                       </span>
                       <span className='text-blue text-small'>
                         <img className='w-1-r' src={`${baseUrl}/img/Saldo-icon(blue).svg`} alt='indobuzz'></img>
@@ -185,11 +185,19 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       ))
     ):(
       <p>cek</p>
     )}
+    <div className='py-8'>
+      <div className='d-flex justify-content-center'>
+        <button className='btn bg-slate-200 text-xs rounded-3'>
+          Lihat semua <i className='fa fa-arrow-right text-blue'></i>
+        </button>
+      </div>
+    </div>
+</section>
 
       <section className='bg-white position-fixed w-full bottom-0'>
         <div className='container'>
@@ -197,28 +205,29 @@ function App() {
             <div className='col-md-12'>
               <div className='w-full d-flex px-4 gap-4'>
               <div>
-                <a href='foo' onClick=''>
-                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-beranda.svg`} alt='icon'></img>
+                <a href='foo' className='icon-home button-bar-active' onClick=''>
+      
+
                 </a>
               </div>
               <div>
-                <a href='foo' onClick=''>
-                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-pekerjaan.svg`} alt='icon'></img>
+                <a href='foo' className='icon-work' onClick=''>
+              
                 </a>
               </div>
               <div>
-                <a href='foo' onClick=''>
-                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-riwayat.svg`} alt='icon'></img>
+                <a href='foo' className='icon-riwayat' onClick=''>
+                  
                 </a>
               </div>
               <div>
-                <a href='foo' onClick=''>
-                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-setting.svg`} alt='icon'></img>
+                <a href='foo' className='icon-setting' onClick=''>
+
                 </a>
               </div>
               <div>
-                <a href='foo' onClick=''>
-                  <img className='w-14-r' src={`${baseUrl}/img/navbar-icon/Navbar-wallet.svg`} alt='icon'></img>
+                <a href='foo' className='icon-wallet' onClick=''>
+                  
                 </a>
               </div>
               </div>
