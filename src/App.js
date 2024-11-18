@@ -6,6 +6,12 @@ const Data = [
   // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
 ];
 
+const listwork = [
+  {id: "1", icon: "/img/work-icon/Follower-icon.svg", nama: " Youtube", harga:"500"},
+  {id: "1", icon: "/img/work-icon/Follower-icon.svg", nama: "tes Youtube", harga:"500"}
+
+]
+
 function App() {
   return (
     <div>
@@ -20,41 +26,13 @@ function App() {
                   <span className="text-white opacity-40">Apa kabarmu hari ini?</span>
                 </div>
               <div className="d-flex flex-column">
-                
-                {/* <div className="w-94 bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed">
-                  <div className="d-flex flex-row justify-space-between">
-                    <div className='d-flex gap-4 n-detail'>
-                      <div className="d-flex flex-column justify-content-end">
-                        <div className="text-grey font-normal text-base">Saldo Tersedia</div>
-                        <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
-                      </div>
-                    <div className='d-flex align-self-end pb-1'>
-                        <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
-                    </div>
-                    </div>
-                    <div className='d-flex gap-5'>
-                    <div className="d-flex flex-column">
-                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex w-full n-work">
-                        <p className="text-blue font-medium flex justify-content-center align-items-center m-0 d-flex w-full px-2">1351</p>
-                      </div>
-                      <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div>
-                    </div>
-                    <div className="d-flex flex-column">
-                      <div className="col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
-                        <p className="text-blue flex align-self-center m-0">Rp 500k</p>
-                      </div>
-                      <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div>
-                    </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
       
-      <div className='card-fixed-d'>
+      <div className='card-fixed-d z-index-2'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>
@@ -162,7 +140,7 @@ function App() {
 
       <section className='pt-4 pb-4 shadow-small'>
         <div className='container'>
-          <div className='bg-white w-full px-2'>
+          <div className='bg-white w-full'>
             <div className='d-flex flex-row justify-space-between'>
               <div className='text-label font-medium'> Pekerjaan Terbaru!</div>
               <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>
@@ -170,31 +148,37 @@ function App() {
           </div>
         </div>
       </section>
+      
 
-      <section className='shadow-small'>
+    {listwork.length > 0 ? (
+        listwork.map((item,index) => (
+      <section className='shadow-small' key={index}>
         <div className='container'>
           <div className='col-md-12 p-0'>
-            <div className='bg-white px-2'>
+            <div className='bg-white'>
               <div className='col-md-12 list-work'>
                 <div className='d-flex'>
                   <div className='w-20  rounded-lg'>
                     <img className='' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
                   </div>
                   <div className='col-md-5'>
-                    <div className='d-flex flex-column'>
-                      <span className='text-xs'>Subscribe Youtube</span>
+                    <div className='d-flex flex-column gap-03'>
+                      <span className='text-xs'>{item.nama}</span>
                       <span className='text-small'> <img className='w-1-r' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} ></img> <span className='opacity-40'>Maks Ambil 4 tiket</span>
                       </span>
                       <span className='text-blue text-small'>
                         <img className='w-1-r' src={`${baseUrl}/img/Saldo-icon(blue).svg`} alt='indobuzz'></img>
-                        Rp. 500
+                        <span className='pl-01'>{item.harga}</span>
+                        
                       </span>
                     </div>
                   </div>
-                  <div className='col-md-5'>
-                    <button className='btn btn-primary text-xs'>
-                        Ambil Pekerjaan
-                    </button>
+                  <div className='col-md-5 d-flex justify-content-end'>
+                    <div className='row align-items-center'>
+                      <button className='btn btn-primary text-xs h-60 rounded-small'>
+                          Ambil Pekerjaan
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -202,8 +186,12 @@ function App() {
           </div>
         </div>
       </section>
+      ))
+    ):(
+      <p>cek</p>
+    )}
 
-      <section className='position-fixed w-full bottom-0'>
+      <section className='bg-white position-fixed w-full bottom-0'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>
