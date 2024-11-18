@@ -7,8 +7,8 @@ const Data = [
 ];
 
 const listwork = [
-  {id: "1", icon: "/img/work-icon/Follower-icon.svg", nama: " Youtube", harga:"500"},
-  {id: "1", icon: "/img/work-icon/Follower-icon.svg", nama: "tes Youtube", harga:"500"}
+  {id: "1", icon: "icon-follow", nama: " Youtube", harga:"500"},
+  {id: "1", icon: "icon-follow", nama: "tes Youtube", harga:"500"}
 
 ]
 
@@ -88,7 +88,7 @@ function App() {
           <div className='row'>
             <div className="col-md-12 d-flex flex-row gap-1 p-0 justify-space-between">
               <p className="m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="bg-rose-500 text-white rounded-3 px-2 ml-8 text-right">
+              <div className="text-xs bg-rose-500 text-white rounded-3 px-2-5 ml-8 text-right d-flex align-items-center">
                 Segera Kerjakan!
               </div>
             </div>
@@ -158,8 +158,8 @@ function App() {
             <div className='bg-white'>
               <div className='col-md-12 list-work'>
                 <div className='d-flex'>
-                  <div className='w-20  rounded-lg'>
-                    <img className='' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
+                  <div className='rounded-lg'>
+                    <img className='work-image' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
                   </div>
                   <div className='col-md-5'>
                     <div className='d-flex flex-column gap-03'>
@@ -168,12 +168,12 @@ function App() {
                       </span>
                       <span className='text-blue text-small'>
                         <img className='w-1-r' src={`${baseUrl}/img/Saldo-icon(blue).svg`} alt='indobuzz'></img>
-                        <span className='pl-01'>{item.harga}</span>
+                        <span className='pl-01'>Rp. {item.harga}</span>
                         
                       </span>
                     </div>
                   </div>
-                  <div className='col-md-5 d-flex justify-content-end'>
+                  <div className='col-md-6 d-flex justify-content-end'>
                     <div className='row align-items-center'>
                       <button className='btn btn-primary text-xs h-60 rounded-small'>
                           Ambil Pekerjaan
@@ -211,7 +211,7 @@ function App() {
                 </a>
               </div>
               <div>
-                <a href='foo' className='icon-work' onClick=''>
+                <a href='./pekerjaan.js' className='icon-work' onClick=''>
               
                 </a>
               </div>
