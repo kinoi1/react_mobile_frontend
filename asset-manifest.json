@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_mobile_frontend/static/css/main.af2d8a84.css",
-    "main.js": "/react_mobile_frontend/static/js/main.422e9447.js",
+    "main.css": "/react_mobile_frontend/static/css/main.e7f1f735.css",
+    "main.js": "/react_mobile_frontend/static/js/main.297d682d.js",
     "static/js/453.ed3810f9.chunk.js": "/react_mobile_frontend/static/js/453.ed3810f9.chunk.js",
     "static/media/Navbar-riwayat.svg": "/react_mobile_frontend/static/media/Navbar-riwayat.9ff73d99e1a2398cf51c.svg",
     "static/media/Navbar-setting.svg": "/react_mobile_frontend/static/media/Navbar-setting.dda9f1abb251f8d8d74a.svg",
@@ -10,12 +10,12 @@
     "static/media/Navbar-pekerjaan.svg": "/react_mobile_frontend/static/media/Navbar-pekerjaan.64e631b80b4edb990690.svg",
     "static/media/Navbar-wallet.svg": "/react_mobile_frontend/static/media/Navbar-wallet.9ef29667e6f83aa56a0b.svg",
     "static/media/Navbar-beranda.svg": "/react_mobile_frontend/static/media/Navbar-beranda.2901dac11cfa7e1b9919.svg",
-    "main.af2d8a84.css.map": "/react_mobile_frontend/static/css/main.af2d8a84.css.map",
-    "main.422e9447.js.map": "/react_mobile_frontend/static/js/main.422e9447.js.map",
+    "main.e7f1f735.css.map": "/react_mobile_frontend/static/css/main.e7f1f735.css.map",
+    "main.297d682d.js.map": "/react_mobile_frontend/static/js/main.297d682d.js.map",
     "453.ed3810f9.chunk.js.map": "/react_mobile_frontend/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af2d8a84.css",
-    "static/js/main.422e9447.js"
+    "static/css/main.e7f1f735.css",
+    "static/js/main.297d682d.js"
   ]
 }
