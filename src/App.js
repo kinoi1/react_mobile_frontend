@@ -1,7 +1,6 @@
 import './App.css';
 import './assets/main.css';
-import Pekerjaan from "./Pekerjaan";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import BottomBar from './bottom_bar';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
@@ -70,9 +69,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      
-
 
       <section className="banner-dashboard">
         <div className="container">
@@ -199,49 +195,8 @@ function App() {
         </button>
       </div>
     </div>
-</section>
-
-      <section className='bg-white position-fixed w-full bottom-0'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <div className='w-full d-flex px-4 gap-4'>
-              
-
-              <div>
-                <a href='foo' className='icon-home button-bar-active' onClick=''>
-                
-
-                </a>
-              </div>
-              <div>
-                <a href='/pekerjaan' className='icon-work' onClick=''>
-              
-                </a>
-                
-
-              </div>
-              <div>
-                <a href='foo' className='icon-riwayat' onClick=''>
-                  
-                </a>
-              </div>
-              <div>
-                <a href='foo' className='icon-setting' onClick=''>
-
-                </a>
-              </div>
-              <div>
-                <a href='foo' className='icon-wallet' onClick=''>
-                  
-                </a>
-              </div>
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+</section>   
+    <BottomBar />
     </div>
   );
 }

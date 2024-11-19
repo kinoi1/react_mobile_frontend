@@ -11,8 +11,14 @@ body {
 .bg-main{
     background-color:#0566EB;
 }
+.bg-blue{
+    background-color: #0087EC;
+}
 .bg-green{
     background-color: #13B4AC;
+}
+.bg-red{
+    background: #EC4034;
 }
 @media (min-height: 852px){
     
@@ -97,6 +103,11 @@ body {
     }
 }
 @media (max-width: 400px){
+    body {
+        display: block;
+        justify-content: unset;
+        font-family: 'Poppins', sans-serif;
+    }
     .banner-dashboard{
         padding-top:8rem !important;
     }
@@ -120,6 +131,14 @@ body {
 }
 .top-16{
     top:4rem;
+}
+.py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.py-2{
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
 }
 .py-4{
     padding-top:1rem;
@@ -427,4 +446,14 @@ body {
 }
 .work-image{
     width:2.75rem;
+}
+.daftar-pekerjaan{
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+.left-0{
+    left:0%;
+}
+.work-image-active{
+    width: 30px !important;
 }
