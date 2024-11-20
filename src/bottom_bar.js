@@ -1,44 +1,63 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-var clasbot;
-
 function BottomBar() {
-    const location = useLocation();
-    clasbot = '';
-    if (location.pathname == '/pekerjaan') {
-        clasbot = 'left-0';  
-    }
-    return (
-<section className={`bg-white position-fixed w-full bottom-0 ${clasbot}`}>
-    <div className='container'>
-        <div className='row'>
-            <div className='col-md-12'>
-                <div className='d-flex px-4 gap-4 justify-content-between'>
-                    <div>
-                        <a href={`${baseUrl}/`} className='icon-home button-bar-active' ></a>
-                    </div>
-                    <div>
-                        <a href={`${baseUrl}/pekerjaan`} className='icon-work'></a>
-                    </div>
-                    <div>
-                        <a href='foo' className='icon-riwayat'></a>
-                    </div>
-                    <div>
-                        <a href='foo' className='icon-setting'></a>
-                    </div>
-                    <div>
-                        <a href='foo' className='icon-wallet'></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  const location = useLocation();
+  const [activePath, setActivePath] = useState(location.pathname);
 
-);
+  const handleSetActive = (path) => {
+    setActivePath(path);
+  };
+
+  return (
+    <section className={`bg-white position-fixed container bottom-0 ${location.pathname === '/pekerjaan' ? 'left-0' : ''}`}>
+      <div className="">
+        <div className="">
+          <div className="col-md-12 p-0">
+            <div className="d-flex gap-4 justify-content-between">
+              <div>
+                <Link
+                  to={`${baseUrl}/`}
+                  className={`icon-home ${activePath === `${baseUrl}/` ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive(`${baseUrl}/`)}
+                ></Link>
+              </div>
+              <div>
+                <Link
+                  to={`${baseUrl}/pekerjaan`}
+                  className={`icon-work ${activePath === `${baseUrl}/pekerjaan` ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive(`${baseUrl}/pekerjaan`)}
+                ></Link>
+              </div>
+              <div>
+                <Link
+                  to="foo"
+                  className={`icon-riwayat ${activePath === 'foo' ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive('foo')}
+                ></Link>
+              </div>
+              <div>
+                <Link
+                  to="foo"
+                  className={`icon-setting ${activePath === 'foo' ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive('foo')}
+                ></Link>
+              </div>
+              <div>
+                <Link
+                  to="foo"
+                  className={`icon-wallet ${activePath === 'foo' ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive('foo')}
+                ></Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default BottomBar;

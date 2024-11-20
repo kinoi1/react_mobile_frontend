@@ -2,6 +2,7 @@ import './App.css';
 import './assets/main.css';
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
+
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
@@ -56,23 +57,23 @@ function App() {
                 <div className='d-flex gap-5'>
                 <div className="h-full-work">
                   <div className="col-md-12 bg-slate-200 rounded-xl h-full-work n-work">
-                    <p className="h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
+                    <p className="text-2xl h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
                   </div>
                   {/* <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div> */}
                 </div>
                 <div className="h-full-work">
                   <div className="h-full-work col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
-                    <p className="h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
+                    <p className="text-2xl h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
                   </div>
                   {/* <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div> */}
                 </div>
                 </div>
               </div>
-              <div className='d-flex flex-row justify-content-end gap-11'>
+              <div className='d-flex flex-row justify-content-end gap-pekerjaan'>
                 <div className='text-grey text-xs'>
                   Pekerjaan
                 </div>
-                <div className='text-grey text-xs pr-3'>
+                <div className='text-grey text-xs p-penarikan'>
                   Penarikan
                 </div>
               </div>
@@ -145,13 +146,13 @@ function App() {
         </div>
       ))
       ): (
-        <p className='d-flex justify-content-center opacity-40 text-sm'>Tidak ada pekerjaan yang diambil</p>
+        <p className='d-flex justify-content-center opacity-40 text-xsm'>Tidak ada pekerjaan yang diambil</p>
       )}
       </section>
 
       <section className='pt-4 pb-4 shadow-small bg-white'>
         <div className='container'>
-          <div className='col-md-12 w-full p-0'>
+          <div className='col-md-12 p-0'>
             <div className='d-flex flex-row justify-space-between'>
               <div className='text-label font-medium'> Pekerjaan Terbaru!</div>
               <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>

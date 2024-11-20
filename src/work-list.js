@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import "./assets/worklist.css"; 
 import Pagination from "./pagination";
+import { useLocation } from 'react-router-dom';
+
+
 
 const WorkList = () => {
   const baseUrl = process.env.REACT_APP_BASE_URL;
-
+  const location = useLocation();
+    
+  const isPekerjaanPage = location.pathname === '/react_mobile_frontend/pekerjaan';
+  // console.log(location);
   const listwork = [
     { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
     { id: "2", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
@@ -32,7 +38,7 @@ const WorkList = () => {
   };
 
   return (
-    <div className="worklist-container">
+    <div data-tes={location.pathname} className="worklist-container">
       <section className="listwork-section bg-white">
         {/* Render the items */}
         {currentItems.map((item, index) => (
@@ -49,18 +55,30 @@ const WorkList = () => {
                           alt="indobuzz"
                         />
                       </div>
-                      <div className="col-md-6 p-0">
+                      <div className="col-md-5 p-0">
                         <div className="d-flex flex-column gap-03">
                           <span className="font-medium">{item.nama}</span>
+                          <span className='text-xsm'> <img className='w-1-r mr-02' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
+                          </img> 
+                          
+                          <span className='opacity-60'>Maks Ambil 4 tiket</span></span> 
                           <span className="text-blue text-xsm">
                             Rp. {item.harga}
                           </span>
                         </div>
                       </div>
-                      <div className="d-flex justify-content-end">
-                        <button className="btn btn-primary text-xs h-60 rounded-small">
-                          Ambil Pekerjaan
-                        </button>
+                      <div className="col-md-2 pr-0 d-flex flex-row-reverse">
+                        <div className="">
+                          {!isPekerjaanPage && (
+                            <div>
+                            <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
+                            <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
+                            </div>
+                          )}
+                            <button className="btn btn-primary text-xs h-60 rounded-small">
+                              Ambil Pekerjaan
+                            </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -69,32 +87,26 @@ const WorkList = () => {
             </div>
           </div>
         ))}
-
-        {/* Render the pagination */}
+        {!isPekerjaanPage && (
+          <div className='py-8 see-all'>
+          <div className='d-flex justify-content-center'>
+            <button className='btn bg-slate-200 text-xs rounded-3'>
+              Lihat semua <i className='fa fa-arrow-right text-blue'></i>
+            </button>
+          </div>
+          </div>
+        )}
+        
+        {isPekerjaanPage && (
         <div className="pagination-container py-4">
           <Pagination
             totalPages={totalPages}
             itemsPerPage={itemsPerPage}
             onPageChange={handlePageChange}
           />
-          {/* <ReactPaginate
-            previousLabel={<i className="d-flex justify-content-center align-items-center next border-solid-1 p-4 shadow-small rounded-3 fa fa-angle-left"></i>}
-            nextLabel={<i className="d-flex justify-content-center align-items-center next border-solid-1 p-4 shadow-small rounded-3 fa fa-angle-right"></i>}
-            breakLabel={"..."}
-            pageCount={Math.ceil(listwork.length / itemsPerPage)}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={3}
-            onPageChange={handlePageClick}
-            containerClassName={"pagination"}
-            activeClassName={"active"}
-            previousClassName={"prev"}
-            nextClassName={"next"}
-            breakClassName={"break"}
-            disabledClassName={"disabled"}
-            pageClassName="page-item" // Class setiap angka halaman
-
-          /> */}
+          
         </div>
+        )}
       </section>
     </div>
   );

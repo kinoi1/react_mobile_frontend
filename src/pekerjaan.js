@@ -68,7 +68,21 @@ function Pekerjaan() {
             </div>
         </div>
     </section>
+
     <WorkList />
+
+    <section className="mt-2 py-4 bg-white mb-12">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12">
+                    <span>
+                        Pekerjaan Trending Topik
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <BottomBar />
     </div>
   );

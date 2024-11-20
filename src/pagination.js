@@ -11,7 +11,7 @@ const Pagination = ({ totalPages, itemsPerPage, onPageChange }) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i);
 
   return (
-    <ul className="pagination gap-4">
+    <ul className="pagination gap-4 m-0">
       {/* Tombol Sebelumnya */}
       <li
         className={`prev-item ${currentPage === 0 ? "disabled" : ""}`}

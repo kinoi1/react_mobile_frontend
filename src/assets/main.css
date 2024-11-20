@@ -119,6 +119,28 @@ body {
     .work-image{
         width: unset !important;
     }
+    .w-full{
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+    .p-penarikan{
+        padding-right: 1rem !important;
+    }
+    /* .gap-pekerjaan{
+        gap: 1.5rem !important;
+    } */
+    .n-work{
+        padding-top:0.625rem;
+        padding-bottom:0.625rem;
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+    }
+    .n-detail{
+        padding-bottom: 0;
+    }
+    .text-2xl{
+        font-size: 0.9rem !important;
+    }
 }
 
 .shadow-lg{
@@ -225,8 +247,14 @@ body {
 .pr-8{
     padding-right: 2rem;;
 }
+.mr-02{
+    margin-right: 0.2rem;
+}
 .mt-2{
     margin-top: 0.5rem;
+}
+.mb-12{
+    margin-bottom: 3rem;
 }
 .rounded-xl{
     border-radius: 0.75rem;
@@ -406,7 +434,7 @@ body {
     z-index:2;
 }
 .listwork-section{
-    padding-bottom:3rem;
+    /* padding-bottom:3rem; */
 }
 .icon-home{
     background-color: #C9C9C9;
@@ -489,4 +517,13 @@ body {
 }
 .justify-content-evenly{
     justify-content: space-evenly;
+}
+.p-penarikan{
+    padding-right: 0.75rem;
+}
+.gap-pekerjaan{
+    gap:2.25rem;
+}
+.flex-row-reverse{
+    flex-flow: row-reverse;
 }
