@@ -5,16 +5,19 @@ import App from './App';
 import Pekerjaan from './Pekerjaan';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { NextUIProvider } from '@nextui-org/react';
+const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
+
 
 const Router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />
+    path: `${baseUrl}`,
+    element: <App />,
   },
   {
-    path: "/pekerjaan",
-    element: <Pekerjaan />
-  }
+    path: `${baseUrl}/pekerjaan`,
+    element: <Pekerjaan />,
+  },
 
 ]);
 

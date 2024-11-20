@@ -3,13 +3,14 @@ import './App.css';
 import './assets/main.css';
 import './assets/BottomBar.module.css';
 import BottomBar from "./bottom_bar";
+import WorkList from "./work-list";
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Pekerjaan() {
   return (
-    <div>
-    <section className="daftar-pekerjaan shadow-small">
+    <div className="bg-slate-200 w-full">
+    <section className="bg-white daftar-pekerjaan shadow-small">
         <div className="container">
             <div className="row justify-content-center">
                 <span>
@@ -19,7 +20,7 @@ function Pekerjaan() {
         </div>
     </section>
 
-    <div className="container py-4">
+    <div className="container py-4 bg-white">
         <div className="row">
             <div className="col-md-12">
                 <div className="d-flex flex-row justify-space-between">
@@ -30,7 +31,7 @@ function Pekerjaan() {
         </div>
     </div>
 
-    <div className="work-active">
+    <div className="bg-white shadow-small">
         <div className="container">
             <div className="row">
                 <div className="col-md-12 d-flex flex-row align-items-center justify-content-between py-2">
@@ -55,6 +56,19 @@ function Pekerjaan() {
             </div>
         </div>
     </div>
+
+    <section className="mt-2 py-4 bg-white">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12">
+                    <span>
+                        Pekerjaan Terbaru
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <WorkList />
     <BottomBar />
     </div>
   );
