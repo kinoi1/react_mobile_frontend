@@ -60,13 +60,11 @@ function App() {
                   <div className="col-md-12 bg-slate-200 rounded-xl h-full-work n-work">
                     <p className="text-lg h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
                   </div>
-                  {/* <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div> */}
                 </div>
                 <div className="h-full-work">
                   <div className="h-full-work col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
                     <p className="text-lg h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
                   </div>
-                  {/* <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div> */}
                 </div>
                 </div>
               </div>

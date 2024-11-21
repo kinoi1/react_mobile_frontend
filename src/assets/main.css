@@ -21,6 +21,12 @@ body {
 .bg-red{
     background: #EC4034;
 }
+.bg-image{
+  background-image: url('/public/img/header.png'); /* Ganti dengan URL gambar Anda */
+  background-repeat: no-repeat;          /* Jangan ulangi gambar */
+  background-position: center;           /* Pusatkan gambar */
+  background-size: cover;
+}
 @media (min-height: 852px){
     
     .w-14-r{
@@ -210,6 +216,9 @@ body {
 }
 .pb-14{
     padding-bottom:3.5rem;
+}
+.pb-16{
+    padding-bottom: 4rem;
 }
 .pb-24{
     padding-bottom: 6rem;

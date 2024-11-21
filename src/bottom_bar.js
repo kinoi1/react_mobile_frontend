@@ -33,9 +33,9 @@ function BottomBar() {
               </div>
               <div>
                 <Link
-                  to="foo"
-                  className={`icon-riwayat ${activePath === 'foo' ? 'button-bar-active' : ''}`}
-                  onClick={() => handleSetActive('foo')}
+                  to={`${baseUrl}/history`}
+                  className={`icon-riwayat ${activePath === 'history' ? 'button-bar-active' : ''}`}
+                  onClick={() => handleSetActive('/history')}
                 ></Link>
               </div>
               <div>
