@@ -9,17 +9,18 @@ const Data = [
   // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
 ];
 
-const listwork = [
-  {id: "1", icon: "icon-follow", nama: " Youtube", harga:"500"},
-  {id: "1", icon: "icon-follow", nama: "tes Youtube", harga:"500"},
-  {id: "1", icon: "icon-follow", nama: " Youtube", harga:"500"},
-  {id: "1", icon: "icon-follow", nama: "tes Youtube", harga:"500"},
-  {id: "1", icon: "icon-follow", nama: " Youtube", harga:"500"},
-  {id: "1", icon: "icon-follow", nama: "tes Youtube", harga:"500"}
-
-]
 
 function App() {
+  const listwork = [
+    { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
+    { id: "2", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
+    { id: "3", icon: "icon-follow", nama: "Youtube", harga: "500" },
+    { id: "4", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
+    { id: "5", icon: "icon-follow", nama: "Youtube", harga: "500" },
+    { id: "6", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
+    { id: "7", icon: "icon-follow", nama: "Youtube", harga: "500" },
+    { id: "8", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
+  ];
   return (
     <div>
       <section className="w-full bg-main pt-7 pb-30 position-fixed z-index-2">
@@ -48,7 +49,7 @@ function App() {
                 <div className='d-flex gap-4 n-detail'>
                   <div className="d-flex flex-column justify-content-end">
                     <div className="text-grey font-normal text-base">Saldo Tersedia</div>
-                    <div className="text-2xl font-semibold text-blue"><span>Rp. 150.000</span></div>
+                    <div className="text-base font-semibold text-blue"><span>Rp. 150.000</span></div>
                   </div>
                 <div className='d-flex align-self-end pb-1'>
                     <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
@@ -57,13 +58,13 @@ function App() {
                 <div className='d-flex gap-5'>
                 <div className="h-full-work">
                   <div className="col-md-12 bg-slate-200 rounded-xl h-full-work n-work">
-                    <p className="text-2xl h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
+                    <p className="text-lg h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
                   </div>
                   {/* <div className="text-grey text-xs d-flex justify-content-center">Pekerjaan</div> */}
                 </div>
                 <div className="h-full-work">
                   <div className="h-full-work col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
-                    <p className="text-2xl h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
+                    <p className="text-lg h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
                   </div>
                   {/* <div className="text-grey text-xs d-flex justify-content-center">Penarikan</div> */}
                 </div>
@@ -161,7 +162,7 @@ function App() {
         </div>
       </section>
       
-    <WorkList />
+    <WorkList listwork={listwork} />
     <BottomBar />
     </div>
   );

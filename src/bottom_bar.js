@@ -12,7 +12,7 @@ function BottomBar() {
   };
 
   return (
-    <section className={`bg-white position-fixed container bottom-0 ${location.pathname === '/pekerjaan' ? 'left-0' : ''}`}>
+    <section className={`bg-white position-fixed container bottom-0 ${location.pathname === '/pekerjaan' ? 'left-0' : ''} root-bottom-bar`}>
       <div className="">
         <div className="">
           <div className="col-md-12 p-0">

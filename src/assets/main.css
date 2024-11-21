@@ -106,6 +106,9 @@ body {
     .work-image{
         width: unset !important;
     }
+    .root-bottom-bar{
+        width: 100% !important;
+    }
 }
 @media (max-width: 400px){
     body {
@@ -124,7 +127,7 @@ body {
         max-width: 400px !important;
     }
     .p-penarikan{
-        padding-right: 1rem !important;
+        padding-right: 1.2rem !important;
     }
     /* .gap-pekerjaan{
         gap: 1.5rem !important;
@@ -140,6 +143,9 @@ body {
     }
     .text-2xl{
         font-size: 0.9rem !important;
+    }
+    .root-bottom-bar{
+        width: 100% !important;
     }
 }
 
@@ -190,14 +196,23 @@ body {
 .pr-3{
     padding-right: 0.75rem !important;
 }
+.pb-3{
+    padding-bottom: 0.75rem;
+}
 .pb-6{
     padding-bottom:1.5rem;
 }
 .pb-8{
     padding-bottom: 2rem;
 }
+.pb-12{
+    padding-bottom: 3rem;
+}
 .pb-14{
     padding-bottom:3.5rem;
+}
+.pb-24{
+    padding-bottom: 6rem;
 }
 .pb-30{
     padding-bottom:7.5rem;
@@ -255,6 +270,9 @@ body {
 }
 .mb-12{
     margin-bottom: 3rem;
+}
+.mb-16{
+    margin-bottom: 4rem;
 }
 .rounded-xl{
     border-radius: 0.75rem;
@@ -339,7 +357,7 @@ body {
     width: 1rem;
 }
 .w-2-r{
-    width: 2rem;
+    width: 1.5rem;
 }
 .w-14-r{
     width: 3.5rem;
@@ -400,6 +418,9 @@ body {
 .text-base{
     font-size: 1rem;
 }
+.text-lg{
+    font-size: 1.125rem;
+}
 .text-sm{
     font-size: 1.2rem;
 }
@@ -417,6 +438,9 @@ body {
 }
 .shadow-small{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.shadow-small-t{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .card-fixed{
     width: 450px;
@@ -522,8 +546,18 @@ body {
     padding-right: 0.75rem;
 }
 .gap-pekerjaan{
-    gap:2.25rem;
+    gap:2.95rem;
 }
 .flex-row-reverse{
     flex-flow: row-reverse;
+}
+
+.border-r-0{
+    border-right: 0;
+}
+.border-l-0{
+    border-left: 0;
+}
+.root-bottom-bar{
+    width: 480px;
 }

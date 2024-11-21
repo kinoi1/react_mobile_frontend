@@ -4,24 +4,12 @@ import "./assets/worklist.css";
 import Pagination from "./pagination";
 import { useLocation } from 'react-router-dom';
 
-
-
-const WorkList = () => {
+const WorkList = ( param, pagination = true ) => {
+  const listwork = param.listwork;
   const baseUrl = process.env.REACT_APP_BASE_URL;
   const location = useLocation();
     
   const isPekerjaanPage = location.pathname === '/react_mobile_frontend/pekerjaan';
-  // console.log(location);
-  const listwork = [
-    { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
-    { id: "2", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
-    { id: "3", icon: "icon-follow", nama: "Youtube", harga: "500" },
-    { id: "4", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
-    { id: "5", icon: "icon-follow", nama: "Youtube", harga: "500" },
-    { id: "6", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
-    { id: "7", icon: "icon-follow", nama: "Youtube", harga: "500" },
-    { id: "8", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
-  ];
 
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
@@ -30,12 +18,10 @@ const WorkList = () => {
   const startIndex = currentPage * itemsPerPage;
   const currentItems = listwork.slice(startIndex, startIndex + itemsPerPage);
   const totalPages = Math.ceil(listwork.length / itemsPerPage);
-  const handlePageClick = (event) => {
-    setCurrentPage(event.selected);
-  };
+
   const handlePageChange = (page) => {
-    console.log("Halaman aktif:", page + 1);
-  };
+    setCurrentPage(page.selected);
+};
 
   return (
     <div data-tes={location.pathname} className="worklist-container">
@@ -69,7 +55,7 @@ const WorkList = () => {
                       </div>
                       <div className="col-md-2 pr-0 d-flex flex-row-reverse">
                         <div className="">
-                          {!isPekerjaanPage && (
+                          {isPekerjaanPage && (
                             <div>
                             <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
                             <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
@@ -87,26 +73,29 @@ const WorkList = () => {
             </div>
           </div>
         ))}
-        {!isPekerjaanPage && (
-          <div className='py-8 see-all'>
-          <div className='d-flex justify-content-center'>
-            <button className='btn bg-slate-200 text-xs rounded-3'>
-              Lihat semua <i className='fa fa-arrow-right text-blue'></i>
-            </button>
-          </div>
-          </div>
-        )}
+        {!pagination && (
+          <div>
+            {!isPekerjaanPage && (
+              <div className='py-8 see-all'>
+                <div className='d-flex justify-content-center'>
+                  <button className='btn bg-slate-200 text-xs rounded-3'>
+                    Lihat semua <i className='fa fa-arrow-right text-blue'></i>
+                  </button>
+                </div>
+              </div>
+            )}
         
-        {isPekerjaanPage && (
-        <div className="pagination-container py-4">
-          <Pagination
-            totalPages={totalPages}
-            itemsPerPage={itemsPerPage}
-            onPageChange={handlePageChange}
-          />
-          
-        </div>
-        )}
+            {isPekerjaanPage && (
+              <div className="pagination-container py-4">
+                <Pagination
+                  totalPages={totalPages}
+                  itemsPerPage={itemsPerPage}
+                  onPageChange={handlePageChange}
+                />
+              </div>
+            )}
+          </div>
+      )}
       </section>
     </div>
   );
