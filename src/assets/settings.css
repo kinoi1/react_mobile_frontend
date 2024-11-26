@@ -1,0 +1,96 @@
+.icon-profile-pict{
+    background-color: #696969;
+    display: block;
+    width: 40px;
+    height: 40px;
+    mask: url('/public/img/settings/Profile-pict.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Profile-pict.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-profile{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-ubahprofile.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-ubahprofile.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-sosmed{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-akunsosmed.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-akunsosmed.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-rekening{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-rekeningbank.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-rekeningbank.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-key{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-password.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-password.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-referral{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-referral.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-referral.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-kontributor{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-pusatedukasi.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-pusatedukasi.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-ketentuan{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/Setting-ketentuan.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/Setting-ketentuan.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg-profile{
+    background-color: #1e76ed;
+    border-radius: 50%;
+}
+.text-setting{
+    color:#4C4C4C;
+}
+.logout{
+    height: 41px;
+}
+.input-gray{
+    background-color: #F5F5F5;
+}
+.input-label{
+    color:#626262;
+}

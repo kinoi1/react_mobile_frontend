@@ -1,0 +1,48 @@
+li.nav-item{
+    background-color: #fff;
+}
+button.nav-link.active{
+    border-top:0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 2px solid #0087EC !important;
+}
+.btn {
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.icon-pending{
+    background-color: #0087EC;
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask: url('/public/img/work-icon/pending.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/work-icon/pending.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-sukses{
+    background-color: #0087EC;
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask: url('/public/img/work-icon/sukses.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/work-icon/sukses.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-report{
+    background-color: #0087EC;
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask: url('/public/img/work-icon/report.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/work-icon/report.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.text-blue{
+    color: #0087EC !important;
+}

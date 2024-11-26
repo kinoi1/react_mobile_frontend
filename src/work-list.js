@@ -3,6 +3,8 @@ import ReactPaginate from "react-paginate";
 import "./assets/worklist.css"; 
 import Pagination from "./pagination";
 import { useLocation } from 'react-router-dom';
+import ButtonModal from './modal/ButtonModal';
+
 
 const WorkList = ( param, pagination = true ) => {
   const listwork = param.listwork;
@@ -22,6 +24,11 @@ const WorkList = ( param, pagination = true ) => {
   const handlePageChange = (page) => {
     setCurrentPage(page.selected);
 };
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false)
 
   return (
     <div data-tes={location.pathname} className="worklist-container">
@@ -43,17 +50,18 @@ const WorkList = ( param, pagination = true ) => {
                       </div>
                       <div className="col-md-5 p-0">
                         <div className="d-flex flex-column gap-03">
-                          <span className="font-medium">{item.nama}</span>
+                          <span className="text-xs text-dark-grey font-medium">{item.nama}</span>
                           <span className='text-xsm'> <img className='w-1-r mr-02' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
                           </img> 
                           
-                          <span className='opacity-60'>Maks Ambil 4 tiket</span></span> 
-                          <span className="text-blue text-xsm">
+                          <span className='text-small text-grey font-normal'>Maks Ambil 4 tiket</span></span> 
+                          <span className="text-blue text-xs-small">
+                            <img className='mr-02' src={`${baseUrl}/img/Saldo-icon(blue).svg`} width={'13'} height={'13'} alt='indobuzz'></img>
                             Rp. {item.harga}
                           </span>
                         </div>
                       </div>
-                      <div className="col-md-2 pr-0 d-flex flex-row-reverse">
+                      <div className="pr-0 d-flex flex-row-reverse align-items-center">
                         <div className="">
                           {isPekerjaanPage && (
                             <div>
@@ -61,7 +69,7 @@ const WorkList = ( param, pagination = true ) => {
                             <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
                             </div>
                           )}
-                            <button className="btn btn-primary text-xs h-60 rounded-small">
+                            <button onClick={handleOpenModal} className="btn btn-primary text-xs-small rounded-small px-2 btn-ambil">
                               Ambil Pekerjaan
                             </button>
                         </div>
@@ -97,6 +105,8 @@ const WorkList = ( param, pagination = true ) => {
           </div>
       )}
       </section>
+      <ButtonModal show={showModal} onClose={handleCloseModal}/>
+
     </div>
   );
 };

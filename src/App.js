@@ -1,7 +1,9 @@
 import './App.css';
 import './assets/main.css';
+import React, { useState } from "react";
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
+
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
@@ -11,6 +13,8 @@ const Data = [
 
 
 function App() {
+
+
   const listwork = [
     { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
     { id: "2", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
@@ -23,15 +27,15 @@ function App() {
   ];
   return (
     <div>
-      <section className="w-full bg-main pt-7 pb-30 position-fixed z-index-2">
+      <section className="w-full bg-image pt-7 pb-30 position-fixed z-index-2">
         <div className="w-full container position-fixed z-index-2">
           <div className="w-full row position-fixed z-index-2">
             <div className='w-full col-md-12 position-fixed z-index-2'>
               <div className="text-white">
-                  <span className='text-sm'>Halo, Jeni</span>
+                  <span className='text-base-small'>Halo, Jeni</span>
                 </div>
                 <div className='pb-6'> 
-                  <span className="text-white opacity-40">Apa kabarmu hari ini?</span>
+                  <span className="text-white text-xs opacity-50">Apa kabarmu hari ini?</span>
                 </div>
               <div className="d-flex flex-column">
               </div>
@@ -40,48 +44,44 @@ function App() {
         </div>
       </section>
       
-      <div className='card-fixed-d z-index-2'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12'>
-            <div className="bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed">
-              <div className="h-full-work d-flex flex-row justify-space-between">
-                <div className='d-flex gap-4 n-detail'>
-                  <div className="d-flex flex-column justify-content-end">
-                    <div className="text-grey font-normal text-base">Saldo Tersedia</div>
-                    <div className="text-base font-semibold text-blue"><span>Rp. 150.000</span></div>
-                  </div>
-                <div className='d-flex align-self-end pb-1'>
-                    <img className='w-2-r' alt='tes' src={`${baseUrl}/img/Saldo-icon(white).svg`}></img>
-                </div>
-                </div>
-                <div className='d-flex gap-5'>
-                <div className="h-full-work">
-                  <div className="col-md-12 bg-slate-200 rounded-xl h-full-work n-work">
-                    <p className="text-lg h-full-work text-blue font-medium flex justify-content-center align-items-center m-0 d-flex px-2">1351</p>
-                  </div>
-                </div>
-                <div className="h-full-work">
-                  <div className="h-full-work col-md-12 bg-slate-200 rounded-xl d-flex px-2-5 n-work">
-                    <p className="text-lg h-full-work d-flex text-blue flex align-items-center m-0">Rp 500k</p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <div className='d-flex flex-row justify-content-end gap-pekerjaan'>
-                <div className='text-grey text-xs'>
-                  Pekerjaan
-                </div>
-                <div className='text-grey text-xs p-penarikan'>
-                  Penarikan
-                </div>
-              </div>
-            </div>
-            </div>
+      <div className='position-fixed z-index-2'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-md-12'>
+                        <div className="bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
+                            <div class="row">
+                                <div class="col-5 d-flex align-items-center pr-0">
+                                  <div class="d-flex flex-column justify-content-end">
+                                      <div className='row'></div>
+                                      <div className='d-flex flex-column'>
+                                        <span className='text-xs text-grey'>Saldo tersedia</span>
+                                        <span className='text-base text-blue font-semibold d-flex flex-row align-items-center gap-2'>Rp. 150,000 <i className='icon-saldo w-1-2 h-1-2'></i> </span>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="row">
+                                      <div class="col-6 pr-0">
+                                          <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
+                                              <p class="text-blue font-medium m-0 p text-xsm">1351</p>
+                                          </div>
+                                          <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
+                                      </div>
+                                      <div class="col-6 pr-0">
+                                          <div class="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
+                                              <p class="text-blue m-0 text-xsm">Rp 500k</p>
+                                          </div>
+                                          <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
             
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
 
       <section className="banner-dashboard">
         <div className="container">
@@ -145,7 +145,7 @@ function App() {
         </div>
       ))
       ): (
-        <p className='d-flex justify-content-center opacity-40 text-xsm'>Tidak ada pekerjaan yang diambil</p>
+        <p className='d-flex justify-content-center text-none text-xs'>Tidak ada pekerjaan yang diambil</p>
       )}
       </section>
 
@@ -153,7 +153,7 @@ function App() {
         <div className='container'>
           <div className='col-md-12 p-0'>
             <div className='d-flex flex-row justify-space-between'>
-              <div className='text-label font-medium'> Pekerjaan Terbaru!</div>
+              <div className='text-xsm font-medium'> Pekerjaan Terbaru!</div>
               <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>
             </div>
           </div>

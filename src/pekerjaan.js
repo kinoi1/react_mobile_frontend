@@ -25,7 +25,7 @@ function Pekerjaan() {
       ];
 
       const listworkspecial = [
-        { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
+        { id: "1", icon: "icon-follow", nama: "Download, Registrasi & Review", harga: "500" },
       ];
 
   return (
@@ -44,8 +44,8 @@ function Pekerjaan() {
         <div className="row">
             <div className="col-md-12">
                 <div className="d-flex flex-row justify-space-between">
-                    <div className="text-xs">Pekerjaan Aktif</div>
-                    <div className="text-xs bg-green text-white px-2 rounded-3">Kamu punya 1 pekerjaan aktif</div>
+                    <div className="text-xsm">Pekerjaan Aktif</div>
+                    <div className="text-small bg-green text-white px-2 rounded-3">Kamu punya 1 pekerjaan aktif</div>
                 </div>
             </div>
         </div>
@@ -66,10 +66,10 @@ function Pekerjaan() {
                     </div>
                     <div className="d-flex gap-5">
                         <div className="p-0 d-flex px-2 py-1 justify-content-center bg-blue rounded-3">
-                            <button className="btn text-xs p-0 text-white">Unggah Bukti</button>
+                            <button className="btn text-xs-small p-0 text-white">Unggah Bukti</button>
                         </div>
                         <div className="bg-red px-2 rounded-3">
-                            <button className="btn text-xs p-0 py-1 text-white"> batalkan</button>
+                            <button className="btn text-xs-small p-0 py-1 text-white"> batalkan</button>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ function Pekerjaan() {
 
     <WorkList listwork={listworktrending} />
 
-    <section className="mt-2 bg-white pt-4 pb-2 shadow-small">
+    <section className="mt-2 bg-white pt-4 pb-2">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
@@ -118,18 +118,18 @@ function Pekerjaan() {
     </section>
 
     <section className="bg-white shadow-small pb-3">
-        <div className="container">
+        <div className="container opacity-60">
             <div className="row">
                 <div className="col-md-12">
                     <div className="input-group">
                         <div className="input-group-prepend">
                             <span className="input-group-text bg-transparent border-r-0">
-                            <i className="fa fa-search opacity-60"></i>
+                            <i className="fa fa-search"></i>
                             </span>
                         </div>
                         <input
                             type="text"
-                            className="form-control pl-0 border-l-0"
+                            className="form-control pl-0 border-l-0 text-xs text-placeholder "
                             placeholder="Masukan kode pekerjaan"
                             aria-label="Search"
                         />
