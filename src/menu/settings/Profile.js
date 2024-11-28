@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import HeaderSetting from "./components/Header";
 import { motion, AnimatePresence } from "framer-motion";
+import ModalProfile from "../../modal/ModalProfile";
 
-function Profile() {
+const Profile = ({ value }) => {
   const baseUrl = process.env.REACT_APP_BASE_URL;
   const [formData, setFormData] = useState({}); // Menyimpan data hanya saat submit
   const [inputs, setInputs] = useState({
@@ -12,6 +13,7 @@ function Profile() {
     city:"",
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("");
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -31,6 +33,17 @@ function Profile() {
     console.log("Form Submitted:", inputs);
     alert("Data berhasil disimpan!");
   };
+
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false)
+
+  const handleSelectValue = (value) => {
+    setSelectedValue(value);
+    setShowModal(false); // Tutup modal
+  };
     return (
         <div>
 
@@ -39,10 +52,10 @@ function Profile() {
     <div className="container pt-24 bg-white w-100 ">
       {/* Trigger Button */}
       <button
-        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white`}
+        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white p-2-5`}
         onClick={toggleCollapse}
         aria-expanded={isOpen}
-      ><span className="col-12 d-flex"><span className="flex-fill d-flex justify-content-start">Perhatian! </span> 
+      ><span className="col-12 d-flex p-0"><span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">Perhatian! </span> 
         {isOpen ? <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i> : <i className="fa fa-angle-right d-flex justify-content-end align-items-center"></i>}
         </span>
         {/* Animated Content */}
@@ -67,11 +80,10 @@ function Profile() {
                 stiffness: 120,
                 damping: 12,
               }}
-              className="card card-body bg-purple text-white border-0"
+              className="card card-body bg-purple text-white border-0 p-0"
             >
-              <p>
-                This is the content inside the collapsible div. It now has a
-                bouncy animation when opening and closing.
+              <p className="text-align-start m-0 text-xs-small">
+              Pengisian profil ini untuk tujuan pekerjaan dari brand yang berkaitan dengan hal yang spesifik, seperti pekerjaan yang membutuhkan 100 orang ibu-ibu yang memiliki balita untuk membuat konten soal susu balita yang di pakai, atau butuh 100 orang yang memiliki hewan peliharaan untuk membuat konten dengan hewan peliharaannya, dll.
               </p>
             </motion.div>
           )}
@@ -82,9 +94,9 @@ function Profile() {
 
       
     </div>
+    <form onSubmit={handleSubmit}>
 
-            <div className="container bg-white">
-                <form onSubmit={handleSubmit}>
+            <div className="container bg-white pb-8">
                     {/* Name Field */}
                     <div className="form-group">
                     <label htmlFor="name" className="input-label text-xs">Nama</label>
@@ -128,25 +140,23 @@ function Profile() {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="city" className="input-label text-xs">Nomor </label>
-                        <select
-                            className="form-control input-gray text-xs"
+                        <label htmlFor="city" className="input-label text-xs">Kota </label>
+                        <input
+                            type="text"
+                            className="form-control input-gray text-xs border-0 input-select"
                             id="city"
                             name="city"
-                            value={formData.city}
-                            onChange={handleChange}
+                            value={selectedValue}
+                            onClick={handleOpenModal}
                         >
-                            <option value="">Pilih</option>
-                            <option value="">Subang</option>
-                            <option value="">Bandung</option>
-                            <option value="">Jakarta</option>
-                        </select>
+                            
+                        </input>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="gender" className="input-label text-xs">Nomor </label>
                         <select
-                            className="form-control input-gray text-xs"
+                            className="form-control input-gray text-xs border-0 input-select"
                             id="gender"
                             name="gender"
                             value={formData.gender}
@@ -161,11 +171,20 @@ function Profile() {
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit" className="btn btn-primary">
-                    Submit
-                    </button>
-                </form>
+                    
+                    
+                
             </div>
+            <div className="root">
+                <div className="position-fixed container pt-2 pb-4 bg-white">
+                        <button type="submit" className="btn btn-primary col-12 profile-submit">
+                        Perbaharui Profile
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ModalProfile show={showModal} onClose={handleCloseModal} onSelectValue={handleSelectValue} />
+
         </div>
     )
 }

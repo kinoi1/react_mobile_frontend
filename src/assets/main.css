@@ -59,7 +59,19 @@ body {
 }
 .n-work,.n-detail{
     height: 38px;
-    width: 71px;
+    width: 90px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .n-work,.n-detail{
+        height: 38px !important;
+        width: 110px !important;
+    }
+    .pekerjaan{
+        width: 110px !important;
+    }
+    .text-xsm{
+        font-size: 1rem !important;
+    }
 }
 @media (min-height: 852px){
     
@@ -111,10 +123,6 @@ body {
     .card-fixed{
         padding: 1rem !important;
     }
-    .pt-24{
-        padding-top:15rem !important;
-    }
-
     .w-full{
         width: 100% !important;
     }
@@ -153,9 +161,6 @@ body {
     .p-penarikan{
         padding-right: 0.7rem !important;
     }
-    /* .gap-pekerjaan{
-        gap: 1.5rem !important;
-    } */
     .n-work{
         padding-top:0.625rem;
         padding-bottom:0.625rem;
@@ -169,6 +174,14 @@ body {
     .root-bottom-bar{
         width: 100% !important;
     }
+    .n-work,.n-detail{
+        height: 38px !important;
+        width: 71px !important;
+    }
+    .pekerjaan{
+        width: 71px !important;
+    }
+    
 }
 
 .shadow-lg{
@@ -192,6 +205,9 @@ body {
 }
 .top-24{
     top: 6rem;
+}
+.p-2-5{
+    padding: 0.625rem !important;
 }
 .py-1{
     padding-top: 0.25rem;
@@ -411,6 +427,9 @@ body {
 }
 .w-35{
     width: 35%;
+}
+.w-60{
+    width: 60%;
 }
 .w-66{
     width: 66%;
@@ -733,7 +752,7 @@ body {
     line-height: 1;
 }
 .pekerjaan{
-    width: 71px;
+    width: 90px;
 }
 .banner-history{
     padding-top:13rem;
@@ -746,4 +765,7 @@ body {
 .tarik-saldo{
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+}
+.white-space-nowrap{
+    white-space: nowrap;
 }

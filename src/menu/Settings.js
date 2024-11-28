@@ -20,8 +20,8 @@ function Settings() {
     return(
     <div>
         <section className="root">
-            <div className="container pt-4 pb-16 bg-image">
-                <div className="row">
+            <div className="pt-4 pb-16 bg-image">
+                <div className="">
                     <div className="col-md-12 d-flex flex-row">
                         <div className="bg-profile">
                             <span className="icon-profile-pict bg-white">

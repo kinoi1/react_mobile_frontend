@@ -48,7 +48,7 @@ const WorkList = ( param, pagination = true ) => {
                           alt="indobuzz"
                         />
                       </div>
-                      <div className="col-md-5 p-0">
+                      <div className="p-0 w-60">
                         <div className="d-flex flex-column gap-03">
                           <span className="text-xs text-dark-grey font-medium">{item.nama}</span>
                           <span className='text-xsm'> <img className='w-1-r mr-02' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >

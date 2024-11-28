@@ -92,5 +92,17 @@
     background-color: #F5F5F5;
 }
 .input-label{
-    color:#626262;
+    color: #626262;
+}
+.input-select{
+    color: #4D4D4D;
+}
+.text-align-start{
+    text-align: start;
+}
+div.card-body{
+    padding: 1rem;
+}
+.profile-submit{
+    height: 40px;
 }

@@ -46,7 +46,7 @@ function History() {
                         <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
                             <div class="d-flex flex-row justify-content-between">
                                 <div class="">
-                                    <div class="d-flex flex-row gap-2">
+                                    <div class="d-flex flex-row gap-5">
                                         <div class="">
                                             <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
                                                 <p class="text-blue font-medium m-0 p text-xsm">1351</p>
