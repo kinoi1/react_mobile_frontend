@@ -27,7 +27,7 @@ function App() {
   ];
   return (
     <div>
-      <section className="w-full bg-image pt-7 pb-30 position-fixed z-index-2">
+      <section className="w-full pt-7 pb-30 position-fixed z-index-2 bg-image">
         <div className="w-full container position-fixed z-index-2">
           <div className="w-full row position-fixed z-index-2">
             <div className='w-full col-md-12 position-fixed z-index-2'>
@@ -44,44 +44,37 @@ function App() {
         </div>
       </section>
       
-      <div className='position-fixed z-index-2'>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-md-12'>
-                        <div className="bg-white card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
-                            <div class="row">
-                                <div class="col-5 d-flex align-items-center pr-0">
-                                  <div class="d-flex flex-column justify-content-end">
-                                      <div className='row'></div>
-                                      <div className='d-flex flex-column'>
-                                        <span className='text-xs text-grey'>Saldo tersedia</span>
-                                        <span className='text-base text-blue font-semibold d-flex flex-row align-items-center gap-2'>Rp. 150,000 <i className='icon-saldo w-1-2 h-1-2'></i> </span>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div class="col-7">
-                                    <div class="row">
-                                      <div class="col-6 pr-0">
-                                          <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
-                                              <p class="text-blue font-medium m-0 p text-xsm">1351</p>
-                                          </div>
-                                          <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
-                                      </div>
-                                      <div class="col-6 pr-0">
-                                          <div class="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
-                                              <p class="text-blue m-0 text-xsm">Rp 500k</p>
-                                          </div>
-                                          <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
-                                      </div>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-            
+
+      <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
+        <div class="d-flex flex-row justify-content-between">
+          <div class="d-flex align-items-center pr-0">
+            <div class="d-flex flex-column justify-content-end">
+                <div className='row'></div>
+                <div className='d-flex flex-column'>
+                  <span className='text-xs text-grey'>Saldo tersedia</span>
+                  <span className='text-base text-blue font-semibold d-flex flex-row align-items-center gap-2'>Rp. 150,000 <i className='icon-saldo w-1-2 h-1-2'></i> </span>
                 </div>
             </div>
+          </div>
+          <div class="">
+              <div class="d-flex flex-row gap-2">
+                <div class="">
+                    <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
+                        <p class="text-blue font-medium m-0 p text-xsm">1351</p>
+                    </div>
+                    <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
+                </div>
+                <div class="">
+                    <div class="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
+                        <p class="text-blue m-0 text-xsm">Rp 500k</p>
+                    </div>
+                    <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
+                </div>
+              </div>
+          </div>
+                  
         </div>
+      </div>
 
       <section className="banner-dashboard">
         <div className="container">

@@ -12,50 +12,44 @@ function BottomBar() {
   };
 
   return (
-    <section className={`bg-white position-sticky container bottom-0 pt-4 ${location.pathname === '/pekerjaan' ? 'left-0' : ''} root-bottom-bar`}>
-      <div className="">
-        <div className="">
-          <div className="col-md-12 px-4">
-            <div className="d-flex gap-4 justify-content-between">
+    <section className={`bg-white position-sticky container bottom-0 d-flex ${location.pathname === '/pekerjaan' ? 'left-0' : ''} root-bottom-bar`}>
+            <div className="d-flex flex-row gap-4 w-100 justify-content-between">
               <div>
                 <Link
-                  to={`${baseUrl}/`}
-                  className={`icon-home ${activePath === `${baseUrl}/` ? 'button-bar-active' : ''}`}
+                  to={`${baseUrl}/`}ß
+                  className={`icon-home flex-fill ${activePath === `${baseUrl}/` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive(`${baseUrl}/`)}
                 ></Link>
               </div>
               <div>
                 <Link
                   to={`${baseUrl}/pekerjaan`}
-                  className={`icon-work ${activePath === `${baseUrl}/pekerjaan` ? 'button-bar-active' : ''}`}
+                  className={`icon-work flex-fill ${activePath === `${baseUrl}/pekerjaan` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive(`${baseUrl}/pekerjaan`)}
                 ></Link>
               </div>
               <div>
                 <Link
                   to={`${baseUrl}/history`}
-                  className={`icon-riwayat ${activePath === `${baseUrl}/history` ? 'button-bar-active' : ''}`}
+                  className={`icon-riwayat flex-fill ${activePath === `${baseUrl}/history` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive('/history')}
                 ></Link>
               </div>
               <div>
                 <Link
                   to={`${baseUrl}/riwayat-pekerjaan`}
-                  className={`icon-wallet ${activePath === `${baseUrl}/riwayat-pekerjaan` ? 'button-bar-active' : ''}`}
+                  className={`icon-wallet flex-fill ${activePath === `${baseUrl}/riwayat-pekerjaan` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive('/riwayat-pekerjaan')}
                 ></Link>
               </div>
               <div>
                 <Link
                   to={`${baseUrl}/settings`}
-                  className={`icon-setting ${activePath === `${baseUrl}/settings` ? 'button-bar-active' : ''}`}
+                  className={`icon-setting flex-fill ${activePath === `${baseUrl}/settings` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive('/settings')}
                 ></Link>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

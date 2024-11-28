@@ -7,14 +7,14 @@ body {
 }
 
 #root {
-    max-width: 375px !important;
+    max-width: 480px !important;
     width: 100%;
 }
 .root{
-    width: 375px;
+    width: 480px;
 }
 .modal-root{
-    max-width: 375px !important;
+    max-width: 480px !important;
 }
 .bg-main{
     background-color:#0566EB;
@@ -31,11 +31,19 @@ body {
 .bg-red{
     background: #EC4034;
 }
+.bg-purple{
+    background-color: #B93CC2;
+}
 .bg-image{
+  max-width: 480px;
+  height: 172px;
   background-image: url('/public/img/header.png'); /* Ganti dengan URL gambar Anda */
-  background-repeat: no-repeat;          /* Jangan ulangi gambar */
-  background-position: center;           /* Pusatkan gambar */
+  position: relative;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  overflow: hidden; 
 }
 .bg-sky-blue{
     background-color: #0087EC24;
@@ -68,12 +76,6 @@ body {
         width:1.5rem !important;
     }
 
-    .w-full{
-        /* width: 100% !important; */
-    }
-    .card-fixed{
-        /* width: 92% !important; */
-    }
     .card-fixed-d{
         padding-top:5rem;
     }
@@ -83,10 +85,10 @@ body {
 }
 @media (min-width: 576px) {
     .container{
-        max-width: 375px !important;
+        max-width: 480px !important;
     }
 }
-@media (max-width: 375px){
+@media (max-width: 480px){
     .w-14-r{
         width: 3rem !important;
     }
@@ -330,6 +332,12 @@ body {
 .rounded-xl{
     border-radius: 0.75rem;
 }
+.rounded-top-small{
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+.rounded-small{
+    border-radius: 0.25rem;
+}
 .gap-03{
     gap: 0.3rem;
 }
@@ -393,7 +401,7 @@ body {
     width:94%;
 }
 .w-full{
-    width: 375px !important;
+    width: 480px !important;
 }
 .w-20{
     width: 20%;
@@ -548,7 +556,9 @@ body {
     border-width: 0;
 }
 .card-fixed{
-    width: 343px;
+    max-width: 450px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .banner-dashboard{
     padding-top:13.5rem;
@@ -677,7 +687,7 @@ body {
     border-left: 0;
 }
 .root-bottom-bar{
-    width: 375px;
+    height: 60px;
 }
 
 /* 
@@ -732,4 +742,8 @@ body {
     width: 118px;
     padding-top:5px;
     padding-bottom:5px;
+}
+.tarik-saldo{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HeaderSetting from "./components/Header";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Profile() {
   const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -10,6 +11,11 @@ function Profile() {
     nohp: "",
     city:"",
   });
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +36,54 @@ function Profile() {
 
             <HeaderSetting label='Ubah profile' />
 
-            <div className="container pt-24 bg-white">
+    <div className="container pt-24 bg-white w-100 ">
+      {/* Trigger Button */}
+      <button
+        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white`}
+        onClick={toggleCollapse}
+        aria-expanded={isOpen}
+      ><span className="col-12 d-flex"><span className="flex-fill d-flex justify-content-start">Perhatian! </span> 
+        {isOpen ? <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i> : <i className="fa fa-angle-right d-flex justify-content-end align-items-center"></i>}
+        </span>
+        {/* Animated Content */}
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? "auto" : 0 }}
+        style={{
+          overflow: "hidden",
+        }}
+        className="bg-purple border-0"
+        transition={{ type: "spring", stiffness: 120, damping: 15 }}
+      >
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              key="content"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 12,
+              }}
+              className="card card-body bg-purple text-white border-0"
+            >
+              <p>
+                This is the content inside the collapsible div. It now has a
+                bouncy animation when opening and closing.
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+
+      </button>
+
+      
+    </div>
+
+            <div className="container bg-white">
                 <form onSubmit={handleSubmit}>
                     {/* Name Field */}
                     <div className="form-group">
