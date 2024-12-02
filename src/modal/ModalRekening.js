@@ -3,7 +3,7 @@ import  { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import '../assets/settings.css';
 
-const DataGender =
+const dataList =
     [
         {
             "DataID": 1,
@@ -15,144 +15,12 @@ const DataGender =
         },        
       ];
 
-const DataCity =
-    [
-        {
-            "DataID": 1,
-            "Name": "Subang"
-        },
-        {
-            "DataID": 2,
-            "Name": "Jakarta"
-        },
-        {
-            "DataID": 3,
-            "Name": "Bandung"
-        },
-        {
-            "DataID": 4,
-            "Name": "Surabaya"
-        },
-        {
-            "DataID": 5,
-            "Name": "Indramayu"
-        },
-        {
-            "DataID": 6,
-            "Name": "Purwakarta"
-        },
-        
-      ];
-const DataProfesi =
-[
-    {
-        "DataID": 1,
-        "Name": "Mahasiswa"
-    },
-    {
-        "DataID": 2,
-        "Name": "Karyawan Swasta"
-    },   
-    {
-        "DataID": 3,
-        "Name": "PNS"
-    },      
-    {
-        "DataID": 4,
-        "Name": "Ibu rumah tangga"
-    }, 
-];
-
-const DataHobby =
-[
-    {
-        "DataID": 1,
-        "Name": "Memancing kerusuhan"
-    },
-    {
-        "DataID": 2,
-        "Name": "Marah-marah"
-    },   
-    {
-        "DataID": 3,
-        "Name": "Tidur"
-    },      
-    {
-        "DataID": 4,
-        "Name": "Makan"
-    }, 
-];
-const DataMarried =
-[
-    {
-        "DataID": 1,
-        "Name": "Ya"
-    },
-    {
-        "DataID": 2,
-        "Name": "Tidak"
-    },   
-];
-const DataPet =
-[
-    {
-        "DataID": 1,
-        "Name": "Ya"
-    },
-    {
-        "DataID": 2,
-        "Name": "Tidak"
-    },   
-];
-      var dataList = [];
-      var HeaderText = '';
 
 
-const ModalProfile = ({ show, onClose, onSelectValue, type }) => {
 
-const HeaderContent = ({ type }) => {
-const renderContent = () => {
-    switch (type) {
-        case "city":
-        return <span> Silahkan <span className="text-blue">pilih kota</span> tempat kamu tinggal! 
-                </span>
-        case "gender":
-        return <span> Silahkan <span className="text-blue">pilih gender</span> Kamu! 
-                </span>
-        case "profesi":
-            return <span> Silahkan <span className="text-blue">pilih pekerjaan</span> Kamu saat ini! </span>
-        case "hobby":
-            return <span> Silahkan <span className="text-blue">pilih hobi</span> Kamu saat ini! </span>
-        case "married":
-            return <span> Apakah kamu sudah <span className="text-blue">Menikah</span>? </span>
-    
-        case "pet":
-            return <span> Apakah kamu punya <span className="text-blue">peliharaan</span>? </span>
-        default:
-        return <h2>404: Page Not Found</h2>;
-    }
-    };
-
-    return (
-    <div>
-        {renderContent()} {/* Render konten berdasarkan nilai string */}
-    </div>
-    );
-};
+const ModalRekening = ({ show, onClose, onSelectValue }) => {
   // Variasi animasi untuk modal
-if(type == 'city'){
-    dataList = DataCity;
-}else if(type == 'gender') {
-    dataList = DataGender;
-}else if(type == 'profesi') {
-    dataList = DataProfesi;
-}else if(type == 'hobby'){
-    dataList = DataHobby;
-}else if(type == 'pet'){
-    dataList = DataPet;
-}else if(type == 'married'){
-    dataList = DataMarried;
-}
+
   const modalVariants = {
     hidden: { y: "100%", opacity: 0 }, // Modal di luar layar bawah
     visible: { y: 0, opacity: 1 }, // Modal muncul ke posisi tengah bawah
@@ -244,7 +112,7 @@ if(type == 'city'){
               }}
             >
               <div className="modal-header border-0 d-flex justify-content-center pt-0">
-                <HeaderContent type={type} />
+                
               </div>
               <div className="modal-body">
                 <div className="input-group shadow-small pb-3">
@@ -289,4 +157,4 @@ if(type == 'city'){
   );
 };
 
-export default ModalProfile;
+export default ModalRekening;

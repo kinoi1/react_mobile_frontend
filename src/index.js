@@ -9,6 +9,8 @@ import History from './menu/History';
 import Riwayat from './menu/Riwayat_Pekerjaan';
 import Settings from './menu/Settings';
 import Profile from './menu/settings/Profile';
+import SocialMedia from './menu/settings/Sosial_media';
+import Rekening from './menu/settings/Rekening';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -37,15 +39,23 @@ const Router = createBrowserRouter([
     path: `${baseUrl}/settings/profile`,
     element: <Profile />,
   },
+  {
+    path: `${baseUrl}/settings/sosial-media`,
+    element: <SocialMedia />,
+  },
+  {
+    path: `${baseUrl}/settings/rekening`,
+    element: <Rekening />,
+  },
 
 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={Router}/>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

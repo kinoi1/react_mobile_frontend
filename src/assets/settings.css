@@ -78,6 +78,16 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.icon-filter{
+    background-color: #696969;
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask: url('/public/img/settings/filter.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/filter.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .bg-profile{
     background-color: #1e76ed;
     border-radius: 50%;
@@ -105,4 +115,117 @@ div.card-body{
 }
 .profile-submit{
     height: 40px;
+}
+.bottom-0{
+    bottom: 0;
+}
+.select-no-icon{
+    appearance: none; /* Hapus ikon bawaan browser */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+}
+.bg-select-form-control{
+    background-color: #e9ecef;
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* sosial media css */
+.pt-44{
+    padding-top: 11rem;
+}
+.border-sosial-media{
+    border:1px solid #EDEDED;
+}
+.icon-ballon-chat{
+    background-color: #0087EC;
+    display: block;
+    width: 40px;
+    height: 20px;
+    mask: url('/public/img/settings/ballon-chat.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/ballon-chat.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-profile-sosial-media{
+    background-color: #E0E0E0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    mask: url('/public/img/settings/profile-sosial-media.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/profile-sosial-media.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-trash{
+    background-color: #EC3434;
+    display: block;
+    width: 10px;
+    height: 12px;
+    mask: url('/public/img/settings/trash.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/trash.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon-card-with-pencil{
+    background-color: #0087EC;
+    display: block;
+    width: 10px;
+    height: 12px;
+    mask: url('/public/img/settings/card-with-pencil.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/card-with-pencil.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mr-03{
+    margin-right: 0.3rem;
+}
+.border-icon-trash{
+    width: 25px;
+    height: 25px;
+}
+.bg-terverifikasi{
+    background-color: #13B4AC;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0rem 0.8rem 0rem 0.8rem;
+    letter-spacing: 0.5px;
+}
+.modal-header.icon-filter{
+    width: 30px;
+    padding: 0;
+    margin-right: 0.5rem;
+}
+.border-blue{
+    border: 1px solid #0087EC;
+    border-radius: 2rem;
+}
+.btn-grey{
+    background-color: #F5F5F5;
+    color: #333333;
+}
+.btn-selected{
+    background-color: rgba(0, 135, 236, 0.1);
+}
+.line-height-3{
+    line-height: 3;
+}
+/* END sosial media css */
+
+.icon-important{
+    background-color: #0087EC;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask: url('/public/img/settings/important.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/important.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-important{
+    background-color: rgba(0, 135, 236, 0.15);
+}
+.bg-important{
+    background-color: rgba(0, 135, 236, 0.2);;
 }

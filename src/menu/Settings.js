@@ -9,7 +9,7 @@ function Settings() {
 
     const menuItems = [
         { id: 1, icon: "icon-profile", name: "Ubah profile", link:'profile' },
-        { id: 2, icon: "icon-sosmed", name: "Akun sosial media", link:'social-media' },
+        { id: 2, icon: "icon-sosmed", name: "Akun sosial media", link:'sosial-media' },
         { id: 3, icon: "icon-rekening", name: "Rekening Bank", link:'rekening' },
         { id: 4, icon: "icon-key", name: "Password", link:'password' },
         { id: 5, icon: "icon-referral", name: "Referral kamu", link:'refferal' },
