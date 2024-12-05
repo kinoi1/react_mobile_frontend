@@ -69,9 +69,9 @@ body {
     .pekerjaan{
         width: 110px !important;
     }
-    .text-xsm{
+    /* .text-xsm{
         font-size: 1rem !important;
-    }
+    } */
 }
 @media (min-height: 852px){
     
@@ -471,6 +471,9 @@ body {
 .rounded-03{
     border-radius: 0.313rem; /* 5px */
 }
+.rounded-0{
+    border-radius: 0;
+}
 .progress-bar{
     background-color: #FF9E49;
     width: 50% !important;
@@ -777,4 +780,10 @@ body {
 }
 .letter-spacing-1{
     letter-spacing: 1px;
+}
+.letter-spacing-05{
+    letter-spacing:0.5px;
+}
+.overflow-hidden{
+    overflow: hidden;
 }

@@ -229,3 +229,48 @@ div.card-body{
 .bg-important{
     background-color: rgba(0, 135, 236, 0.2);;
 }
+.underline{
+    text-decoration-line: underline;
+}
+.icon-salin{
+    background-color: #0087EC;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask: url('/public/img/settings/salin.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/salin.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.border-r-0{
+    border-right: 0;
+}
+.border-salin{
+    border: 1px solid #D5D5D5;
+}
+.text-member{
+    color:#909090;
+}
+.icon-salin-grey{
+    background-color: #D5D5D5;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask: url('/public/img/settings/salin-grey.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/salin-grey.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.placeholder-grey{
+    color: #747474;
+}
+.icon-cs{
+    background-color: #FFFFFF;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask: url('/public/img/settings/cs.svg') no-repeat center / contain;
+    -webkit-mask: url('/public/img/settings/cs.svg') no-repeat center / contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

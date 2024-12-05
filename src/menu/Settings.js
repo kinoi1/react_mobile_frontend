@@ -12,8 +12,8 @@ function Settings() {
         { id: 2, icon: "icon-sosmed", name: "Akun sosial media", link:'sosial-media' },
         { id: 3, icon: "icon-rekening", name: "Rekening Bank", link:'rekening' },
         { id: 4, icon: "icon-key", name: "Password", link:'password' },
-        { id: 5, icon: "icon-referral", name: "Referral kamu", link:'refferal' },
-        { id: 6, icon: "icon-kontributor", name: "Pusat edukasi kontributor", link:'kontributor' },
+        { id: 5, icon: "icon-referral", name: "Referral kamu", link:'referral' },
+        { id: 6, icon: "icon-kontributor", name: "Pusat edukasi kontributor", link:'edu-kontributor' },
         { id: 7, icon: "icon-ketentuan", name: "Ketentuan & kebijakan", link:'ketentuan' },
       ];
 

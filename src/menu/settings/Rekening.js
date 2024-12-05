@@ -31,50 +31,62 @@ const Rekening = ({ value }) => {
   return (
     <div>
         <HeaderSetting label="Rekening Bank" />
-
-        <div className="container d-flex flex-column pt-24 bg-white gap-2 pb-16">
-            <div className="d-flex flex-row card-important align-items-center p-3"> 
-                <div className="p-2 bg-important rounded-small mr-3">
-                    <span className="icon-important"></span>
-                </div>
-                <span className="text-blue text-xs-small letter-spacing-1">
-                    Pastikan data bank yang kamu masukan benar, kesalahan menjadi tanggung jawab kamu. hubungi admin
-                </span>
-            </div>
-            <span className="text-xs">Nomor Rekening</span>
-            <input className="form-control text-xs-small border-0 bg-gray input-gray"
-            placeholder="Masukan nomor rekening">
-
-            </input>
-            <div className="d-flex flex-row">
-                <div className="col-6 d-flex flex-column p-0 pr-2">
-                    <span className="text-xs">
-                        Nama Pemilik
+        <form>
+            <div className="container d-flex flex-column pt-24 bg-white gap-2 pb-16">
+                <div className="d-flex flex-row card-important align-items-center p-3"> 
+                    <div className="p-2 bg-important rounded-small mr-3">
+                        <span className="icon-important"></span>
+                    </div>
+                    <span className="text-blue text-xs-small letter-spacing-1">
+                        Pastikan data bank yang kamu masukan benar, kesalahan menjadi tanggung jawab kamu. hubungi admin
                     </span>
-                    <input className="flex-fill text-xs-small form-control border-0 bg-gray  input-gray"
-                    placeholder="Masukan Nama"
-                    ></input>
                 </div>
-                <div className="col-6 d-flex flex-column p-0 pl-2">
-                    <span className="text-xs">
-                        Pilih Bank
-                    </span>
-                    <div className="d-flex flex-row">
-                        <input className="form-control text-xs-small border-0 bg-gray  input-gray select-no-icon"
-                        type="text"
-                        name="bank"
-                        id="bank"
-                        placeholder="Pilih Bank"
-                        value={formData}
-                        onClick={handleOpenModal}
-                        readOnly
-                        >
-                        </input>
-                        <i className="fa fa-angle-right d-flex align-items-center bg-select-form-control text-blue"></i>
+                <span className="text-xs">Nomor Rekening</span>
+                <input className="form-control text-xs-small border-0 bg-gray input-gray"
+                placeholder="Masukan nomor rekening">
+
+                </input>
+                <div className="d-flex flex-row">
+                    <div className="col-6 d-flex flex-column p-0 pr-2">
+                        <span className="text-xs">
+                            Nama Pemilik
+                        </span>
+                        <input className="flex-fill text-xs-small form-control border-0 bg-gray  input-gray"
+                        placeholder="Masukan Nama"
+                        ></input>
+                    </div>
+                    <div className="col-6 d-flex flex-column p-0 pl-2">
+                        <span className="text-xs">
+                            Pilih Bank
+                        </span>
+                        <div className="d-flex flex-row">
+                            <input className="form-control text-xs-small border-0 bg-gray  input-gray select-no-icon"
+                            type="text"
+                            name="bank"
+                            id="bank"
+                            placeholder="Pilih Bank"
+                            value={formData}
+                            onClick={handleOpenModal}
+                            readOnly
+                            >
+                            </input>
+                            <i className="fa fa-angle-right d-flex align-items-center bg-select-form-control text-blue"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div className="root">
+                <div className="position-fixed container pt-2 pb-4 bg-white bottom-0 shadow-small-t">
+                    <button
+                    type="submit"
+                    className="btn btn-primary col-12 profile-submit"
+                    >
+                    Tambah rekening
+                    </button>
+                </div>
+            </div>
+        </form>
 
         <ModalRekening
         show={showModal}

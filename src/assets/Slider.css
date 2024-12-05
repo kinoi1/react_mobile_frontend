@@ -1,0 +1,43 @@
+ .slider-container {
+    width: 100%;
+    overflow: hidden; /* Supaya elemen di luar viewport tidak terlihat */
+    border: 2px solid #ddd;
+    padding: 20px;
+  }
+  
+  .slider {
+    display: flex; /* Membuat div anak sejajar secara horizontal */
+    gap: 10px; /* Jarak antar elemen */
+    cursor: grab;
+  }
+  
+  .slider:active {
+    cursor: grabbing;
+  }
+  
+  .slider-item {
+    min-height: 30px; /* Tinggi item */
+    background-color: #FFFFFF; /* Warna latar belakang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color:#666666;
+    border-radius: 3rem;
+    border: 1px solid #EDEDED;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .image-tips{
+    width: 250px;
+    height: 120px;
+  }
+  .image-tips-last{
+    width: 150px;
+    height: 90px;
+  }
+  .white-space-breakSpaces{
+    white-space: break-spaces;
+  }
+  

@@ -11,6 +11,9 @@ import Settings from './menu/Settings';
 import Profile from './menu/settings/Profile';
 import SocialMedia from './menu/settings/Sosial_media';
 import Rekening from './menu/settings/Rekening';
+import Password from './menu/settings/Password';
+import Referral from './menu/settings/Referral';
+import EduKontributor from './menu/settings/Edu_kontributor';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -47,6 +50,19 @@ const Router = createBrowserRouter([
     path: `${baseUrl}/settings/rekening`,
     element: <Rekening />,
   },
+  {
+    path: `${baseUrl}/settings/password`,
+    element: <Password />,
+  },
+  {
+    path: `${baseUrl}/settings/referral`,
+    element: <Referral />,
+  },
+  {
+    path: `${baseUrl}/settings/edu-kontributor`,
+    element: <EduKontributor />,
+  },
+
 
 
 ]);
