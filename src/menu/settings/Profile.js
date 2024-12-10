@@ -93,7 +93,7 @@ const Profile = ({ value }) => {
         >
           <span className="col-12 d-flex p-0">
             <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
-              Perhatian!{" "}
+              Perhatian!
             </span>
             {isOpen ? (
               <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>

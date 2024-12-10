@@ -19,7 +19,7 @@ function Settings() {
 
     return(
     <div>
-        <section className="root">
+        <section className="">
             <div className="pt-4 pb-16 bg-image">
                 <div className="">
                     <div className="col-md-12 d-flex flex-row">
@@ -36,7 +36,7 @@ function Settings() {
                 </div>
             </div>
         </section>
-        <div className="container py-4 bg-white">
+        <div className="container pt-4 pb-16 bg-white">
         <h3 className="mb-4 text-base-setting">Pengaturan</h3>
         <ul className="list-group border-0">
             {menuItems.map((item) => (
@@ -45,19 +45,24 @@ function Settings() {
                     <i className={`${item.icon}`}></i>
                 </div>
                 <Link
-                  to={`${baseUrl}/settings/${item.link}`}>
+                className='flex-fill'
+                to={`${baseUrl}/settings/${item.link}`}>
                     <span className="pl-2-5 text-setting">{item.name}</span>
                 </Link>
+                <i 
+                style={{color:'#4C4C4C'}}
+                className='fa fa-angle-right'></i>
             </li>
             ))}
         </ul>
 
-        <div className="col-12 px-0 pt-15">
-            <a className="d-block w-full btn-primary col-12 p-0 rounded-small logout"> <span className="d-flex justify-content-center align-items-center logout">Logout</span></a>
-        </div>
+        {/* <div className="col-12 px-0 pt-15"> */}
+            <a className="d-block btn-primary p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center logout">Logout</span></a>
+        {/* </div> */}
 
-        <BottomBar />
         </div>
+        <BottomBar />
+
     </div>
     )
 }

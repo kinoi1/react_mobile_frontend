@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BottomBar from "../bottom_bar";
 
 function History() {
@@ -63,7 +64,9 @@ function History() {
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-column justify-content-end">
-                                        <button class="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo"> Tarik saldo</button>
+                                        <Link 
+                                        to={`${baseUrl}/history/tarik-saldo`}
+                                        class="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo"> Tarik saldo</Link>
                                     </div>
                                 </div>
                             </div> 

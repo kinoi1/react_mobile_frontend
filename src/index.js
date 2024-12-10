@@ -14,6 +14,8 @@ import Rekening from './menu/settings/Rekening';
 import Password from './menu/settings/Password';
 import Referral from './menu/settings/Referral';
 import EduKontributor from './menu/settings/Edu_kontributor';
+import TambahSosialMedia from './menu/settings/Tambah_Sosial_media';
+import TarikSaldo from './menu/history/TarikSaldo';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -47,6 +49,10 @@ const Router = createBrowserRouter([
     element: <SocialMedia />,
   },
   {
+    path: `${baseUrl}/settings/sosial-media/tambah`,
+    element: <TambahSosialMedia />,
+  },
+  {
     path: `${baseUrl}/settings/rekening`,
     element: <Rekening />,
   },
@@ -61,6 +67,10 @@ const Router = createBrowserRouter([
   {
     path: `${baseUrl}/settings/edu-kontributor`,
     element: <EduKontributor />,
+  },
+  {
+    path: `${baseUrl}/history/tarik-saldo`,
+    element: <TarikSaldo />,
   },
 
 

@@ -68,7 +68,9 @@ function Riwayat() {
         
 
         {/* Tab Content */}
-        <div className="tab-content mt-28 mb-12">
+        <div className="tab-content mt-28 mb-12"
+        style={{minHeight:'80vh'}}
+        >
             <div
             className={`tab-pane fade ${activeTab === "tab1" ? "show active" : ""}`}
             >

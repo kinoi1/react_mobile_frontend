@@ -1,6 +1,9 @@
 import './App.css';
 import './assets/main.css';
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
 
@@ -25,6 +28,21 @@ function App() {
     { id: "7", icon: "icon-follow", nama: "Youtube", harga: "500" },
     { id: "8", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
   ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const images = [
+    `${baseUrl}/img/Banner2.jpg`,
+    `${baseUrl}/img/Banner1.jpg`, // Tambahkan gambar kedua
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval); // Membersihkan interval saat komponen tidak digunakan
+  }, [images.length]);
+
   return (
     <div>
       <section className="w-full pt-7 pb-30 position-fixed z-index-2 bg-image">
@@ -78,16 +96,32 @@ function App() {
 
       <section className="banner-dashboard">
         <div className="container">
-          <div className='row'>
-            <div className='col-md-12'>
-              <img className='w-100 rounded-xl' src={`${baseUrl}/img/Banner2.jpg`} alt='Banner'>
-              </img>
+            <div className='col-md-12'
+            >
+            <AnimatePresence>
+                {images.map((src, index) =>
+                  index === currentImage ? (
+                    <motion.img
+                      key={index}
+                      src={src}
+                      alt={`Banner ${index + 1}`}
+                      className="container p-0 rounded-xl position-absolute top-0 left-0"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ display: "none" }} // Menghilangkan gambar sebelumnya langsung
+                      transition={{ duration: 0.4 }}
+                      // style={{width:'90%'}}
+                    />
+                  ) : null
+                )}
+              </AnimatePresence>
             </div>
           </div>
-        </div>
       </section>
 
-      <section className="bg-white pt-8">
+      <section className="bg-white pt-8"
+        style={{marginTop:'170px'}}
+      >
         <div className="container">
           <div className='col-md-12 p-0'>
             <div className="d-flex flex-row gap-1 p-0 justify-space-between">

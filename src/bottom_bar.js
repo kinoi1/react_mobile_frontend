@@ -39,14 +39,14 @@ function BottomBar() {
                 <Link
                   to={`${baseUrl}/riwayat-pekerjaan`}
                   className={`icon-wallet flex-fill ${activePath === `${baseUrl}/riwayat-pekerjaan` ? 'button-bar-active' : ''}`}
-                  onClick={() => handleSetActive('/riwayat-pekerjaan')}
+                  onClick={() => handleSetActive(`${baseUrl}/riwayat-pekerjaan`)}
                 ></Link>
               </div>
               <div>
                 <Link
                   to={`${baseUrl}/settings`}
                   className={`icon-setting flex-fill ${activePath === `${baseUrl}/settings` ? 'button-bar-active' : ''}`}
-                  onClick={() => handleSetActive('/settings')}
+                  onClick={() => handleSetActive(`${baseUrl}/settings`)}
                 ></Link>
               </div>
             </div>

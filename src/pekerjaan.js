@@ -45,7 +45,7 @@ function Pekerjaan() {
             <div className="col-md-12">
                 <div className="d-flex flex-row justify-space-between">
                     <div className="text-xsm">Pekerjaan Aktif</div>
-                    <div className="text-small bg-green text-white px-2 rounded-3">Kamu punya 1 pekerjaan aktif</div>
+                    <div className="d-flex text-small bg-green text-white px-2 rounded-3 align-items-center">Kamu punya 1 pekerjaan aktif</div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import HeaderSetting from "./components/Header";
 import { motion, AnimatePresence } from "framer-motion";
 import FilterSosmed from "../../modal/FilterSosmed";
+import { Link } from "react-router-dom";
+import ModalHapusSosmed from "../../modal/ModalHapusSosmed";
+import ModalEditSosmed from "../../modal/ModalEditSosmed";
 
 const listData = [
     { id: 1, name: "tes 1",sosmedID:2, sosmed: "Instagram", count:'90' },
@@ -19,12 +22,16 @@ const listData = [
     
   ];
 
+  const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function SocialMedia() {
 
   const [showModal, setShowModal] = useState(false);
   const [filterValues, setFilterValues] = useState([]);
   const [currentField, setCurrentField] = useState("");
+  const [showModalDelete, setShowModalDelete] = useState(false);
+  const [showModalEdit, setShowModalEdit] = useState(false);
+
 
   const handleOpenModal = () => {
     setShowModal(true); // Buka modal
@@ -33,6 +40,19 @@ function SocialMedia() {
     setCurrentField(''); // Simpan nama input yang diklik
     setShowModal(false);
   };
+  const handleCloseModalDelete = () => {
+    setShowModalDelete(false);
+  };
+  const handleOpenModalDelete = (value) => {
+    setShowModalDelete(true);
+  };
+  const handleCloseModalEdit = () => {
+    setShowModalEdit(false);
+  };
+  const handleOpenModalEdit = (value) => {
+    setShowModalEdit(true);
+  };
+
   const handleSelectValue = (value) => {
     setFilterValues(value);
     setShowModal(false);
@@ -75,10 +95,14 @@ function SocialMedia() {
                         </div>
                         <div className="d-flex flex-row align-items-center gap-2">
                             <div className="bg-slate-200 border-icon-trash d-flex align-items-center">
-                                <button key={item.id} className="btn icon-trash"></button>
+                                <button key={item.id} className="btn icon-trash"
+                                onClick={handleOpenModalDelete}
+                                ></button>
                             </div>
                             <div className="bg-slate-200 border-icon-trash d-flex align-items-center">
-                                <button key={item.id} className="btn icon-card-with-pencil"></button>
+                                <button key={item.id} className="btn icon-card-with-pencil"
+                                onClick={handleOpenModalEdit}
+                                ></button>
                             </div>
                         </div>
                     </div>
@@ -88,12 +112,13 @@ function SocialMedia() {
             </div>
             <div className="root">
                 <div className="position-fixed container pt-2 pb-4 bg-white bottom-0">
-                    <button
-                    type="submit"
+                    
+                    <Link
+                    to={`${baseUrl}/settings/sosial-media/tambah`}
                     className="btn btn-primary col-12 profile-submit"
                     >
                     Tambah sosial media
-                    </button>
+                    </Link>
                 </div>
             </div>
 
@@ -101,6 +126,15 @@ function SocialMedia() {
                 show={showModal}
                 onClose={handleCloseModal}
                 onSelectValue={handleSelectValue}
+            />
+            <ModalHapusSosmed 
+                show={showModalDelete}
+                onClose={handleCloseModalDelete}
+            />
+
+            <ModalEditSosmed 
+                show={showModalEdit}
+                onClose={handleCloseModalEdit}
             />
         </div>
     );
