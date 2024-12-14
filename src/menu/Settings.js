@@ -57,7 +57,7 @@ function Settings() {
         </ul>
 
         {/* <div className="col-12 px-0 pt-15"> */}
-            <a className="d-block btn-primary p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center logout">Logout</span></a>
+            <a className="d-block p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center logout">Logout</span></a>
         {/* </div> */}
 
         </div>

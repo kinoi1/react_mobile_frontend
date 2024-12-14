@@ -488,7 +488,6 @@ body {
 }
 .progress-bar{
     background-color: #FF9E49;
-    width: 50% !important;
 }
 .progress{
     border-radius: 3rem;;
@@ -512,7 +511,7 @@ body {
     color: #737373;
 }
 .text-dark-grey{
-    color: #484848;
+    color: #606060; /* diubah dari 484848 */
 }
 .text-label{
     color: #434343;
@@ -539,7 +538,7 @@ body {
     font-size: 0.688rem;
 }
 .text-xs{
-    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 .text-xsm{
     font-size: clamp(0.813rem,2vw, 1rem);
@@ -798,4 +797,75 @@ body {
 }
 .overflow-hidden{
     overflow: hidden;
+}
+
+/* tes animated */
+
+    /* Keyframes untuk Smart Animate */
+@keyframes smartAnimateIn {
+    0% {
+      /* Properti awal (sesuaikan dengan keadaan awal animasi) */
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      /* Properti akhir (sesuaikan dengan keadaan akhir animasi) */
+      transform: translateY(50px); /* Contoh perubahan posisi */
+      opacity: 0; /* Contoh perubahan opasitas */
+    }
+  }
+
+  @keyframes smartAnimateOut {
+    0% {
+      /* Properti akhir (sesuaikan dengan keadaan akhir animasi) */
+      transform: translateY(50px); /* Contoh perubahan posisi */
+      opacity: 0; /* Contoh perubahan opasitas */
+    }
+    100% {
+      /* Properti awal (sesuaikan dengan keadaan awal animasi) */
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Elemen yang menggunakan animasi */
+  .animated-element-in {
+    animation-name: smartAnimateIn;
+    animation-timing-function: cubic-bezier(0.7, -0.4, 0.4, 1.4);
+    animation-duration: 450ms;
+    animation-fill-mode: forwards; /* Agar elemen mempertahankan keadaan akhir animasi */
+  }
+  .animated-element-out {
+    animation-name: smartAnimateOut;
+    animation-timing-function: cubic-bezier(0.7, -0.4, 0.4, 1.4);
+    animation-duration: 450ms;
+    animation-fill-mode: forwards; /* Agar elemen mempertahankan keadaan akhir animasi */
+  }
+  
+
+/* end */
+
+.tarik-saldo{
+    height: 45px;
+    border-radius: 0.75rem;
+}
+.vertical-line{
+    border:1px solid #EDEDED;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.text-upload{
+    color: #A6A6A6;
+}
+
+/* styling dropify */
+.dropify-wrapper{
+    background-color: #F5F5F5 !important;
+}
+.dropify-wrapper .dropify-message span.file-icon p {
+    font-size: clamp(0.75rem, 1vw, 1.25rem);/* mengikuti dari text-xs */
+  }
+/* end styling dropify */
+.input-gray{
+    background-color: #F5F5F5;
 }

@@ -9,6 +9,7 @@
   .pagination li {
     padding: 10px 15px;
     cursor: pointer;
+    color: #909090;
   }
   
   .pagination .active {
@@ -29,7 +30,7 @@
     pointer-events: none;
   }
   .border-solid-1{
-    border:1px solid;
+    border:1px solid #EDEDED;
   }
   .next{
     height: 50px !important;
@@ -43,13 +44,15 @@
   .page-item.active,.page-link{
     background-color: #F7F7F7 !important;
     border-color: transparent !important;
-    color: #000;
-    opacity: 0.6;
+    color: #0087EC;
+    opacity: 1;
+    font-weight: 400;
   }
   .page-link{
     /* color : #F7F7F7 !important; */
   }
   .page-header{
-    border:3px solid #F7F7F7;
+    border:2px solid #F7F7F7;
     height: 100%;
+    border-radius: 5px;
   }

@@ -66,7 +66,7 @@ function History() {
                                     <div class="d-flex flex-column justify-content-end">
                                         <Link 
                                         to={`${baseUrl}/history/tarik-saldo`}
-                                        class="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo"> Tarik saldo</Link>
+                                        class="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo d-flex align-items-center"> Tarik saldo</Link>
                                     </div>
                                 </div>
                             </div> 

@@ -12,9 +12,8 @@ const WorkList = ( param, pagination = true ) => {
   const location = useLocation();
     
   const isPekerjaanPage = location.pathname === '/react_mobile_frontend/pekerjaan';
-
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3;
+  const itemsPerPage = 2;
 
   // Calculate the displayed items
   const startIndex = currentPage * itemsPerPage;
@@ -22,7 +21,7 @@ const WorkList = ( param, pagination = true ) => {
   const totalPages = Math.ceil(listwork.length / itemsPerPage);
 
   const handlePageChange = (page) => {
-    setCurrentPage(page.selected);
+    setCurrentPage(page);
 };
 
   const [showModal, setShowModal] = useState(false);
@@ -81,7 +80,6 @@ const WorkList = ( param, pagination = true ) => {
             </div>
           </div>
         ))}
-        {!pagination && (
           <div>
             {!isPekerjaanPage && (
               <div className='py-8 see-all'>
@@ -103,7 +101,6 @@ const WorkList = ( param, pagination = true ) => {
               </div>
             )}
           </div>
-      )}
       </section>
       <ButtonModal show={showModal} onClose={handleCloseModal}/>
 

@@ -11,7 +11,7 @@ import WorkList from './work-list';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Data = [
-  // { id: "1", nama: "Follow Tiktok", harga: 5000, progress: 30 },
+  // { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500", progress: "25" },
 ];
 
 
@@ -64,9 +64,9 @@ function App() {
       
 
       <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
-        <div class="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
-          <div class="d-flex align-items-center pr-0">
-            <div class="d-flex flex-column justify-content-end">
+        <div className="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
+          <div className="d-flex align-items-center pr-0">
+            <div className="d-flex flex-column justify-content-end">
                 <div className='row'></div>
                 <div className='d-flex flex-column'>
                   <span className='text-xs text-grey'>Saldo tersedia</span>
@@ -74,19 +74,19 @@ function App() {
                 </div>
             </div>
           </div>
-          <div class="">
-              <div class="d-flex flex-row gap-5">
-                <div class="">
-                    <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
-                        <p class="text-blue font-medium m-0 p text-xsm">1351</p>
+          <div className="">
+              <div className="d-flex flex-row gap-5">
+                <div className="">
+                    <div className="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
+                        <p className="text-blue font-medium m-0 p text-xsm">1351</p>
                     </div>
-                    <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
+                    <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
                 </div>
-                <div class="">
-                    <div class="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
-                        <p class="text-blue m-0 text-xsm">Rp 500k</p>
+                <div className="">
+                    <div className="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
+                        <p className="text-blue m-0 text-xsm">Rp 500k</p>
                     </div>
-                    <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
+                    <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
                 </div>
               </div>
           </div>
@@ -143,24 +143,25 @@ function App() {
             <div className='col-md-12'>
               <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
                 <div className='col-md-12 p-0'>
-                  {/* <div class="d-flex flex-row"> */}
                     <div className="d-flex flex-row">
-                      <div className='w-20 bg-slate-200 rounded-lg'>
-                      
-                      </div>
-                      <div className='col-md-5 d-flex flex-column pl-2'>
+                    <img
+                          className="work-image"
+                          src={`${baseUrl}/img/work-icon/Follower-icon.svg`}
+                          alt="indobuzz"
+                        />
+                      <div className='d-flex flex-column pl-2 flex-fill'>
                         <div className='text-slate-400'>
-                          <p className='m-0 font-medium'>{item.nama}</p>
+                          <p className='m-0 font-medium text-dark-grey'>{item.nama}</p>
                         </div>
                         <div className='text-sky-600 d-flex flex-row gap-2'>
-                          <img src={`${baseUrl}/img/Saldo-icon(blue).svg`}></img><p className='m-0 text-blue font-medium'> Rp. {item.harga}</p>
+                          <img src={`${baseUrl}/img/Saldo-icon(blue).svg`} width={'13'}></img><p className='m-0 text-blue font-medium text-xs'> Rp. {item.harga}</p>
                         </div>
                       </div>
                     
                       <div className='col-md-5'>
-                        <span className='d-flex justify-content-end'>Progress</span>
-                        <div className="progress">
-                          <div className="progress-bar " role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100"></div>
+                        <span className='d-flex justify-content-end text-xs-small mb-2' style={{color: '#A2A2A2'}}>Progress</span>
+                        <div className="progress" style={{padding:'2px'}}>
+                          <div className="progress-bar rounded-3" role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100" style={{width: `${item.progress}%`}}></div>
                         </div>
                       </div>
                     </div>

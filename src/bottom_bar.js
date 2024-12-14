@@ -16,7 +16,7 @@ function BottomBar() {
             <div className="d-flex flex-row gap-4 w-100 justify-content-between">
               <div>
                 <Link
-                  to={`${baseUrl}/`}ß
+                  to={`${baseUrl}/`}
                   className={`icon-home flex-fill ${activePath === `${baseUrl}/` ? 'button-bar-active' : ''}`}
                   onClick={() => handleSetActive(`${baseUrl}/`)}
                 ></Link>

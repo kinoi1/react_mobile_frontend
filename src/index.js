@@ -16,6 +16,7 @@ import Referral from './menu/settings/Referral';
 import EduKontributor from './menu/settings/Edu_kontributor';
 import TambahSosialMedia from './menu/settings/Tambah_Sosial_media';
 import TarikSaldo from './menu/history/TarikSaldo';
+import UploadBukti from './menu/pekerjaan/uploadbukti';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -72,6 +73,10 @@ const Router = createBrowserRouter([
     path: `${baseUrl}/history/tarik-saldo`,
     element: <TarikSaldo />,
   },
+  {
+    path: `${baseUrl}/pekerjaan/upload-bukti`,
+    element: <UploadBukti />,
+  }
 
 
 

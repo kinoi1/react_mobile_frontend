@@ -28,6 +28,7 @@ function TambahSosialMedia() {
   const toggleCollapse = () => {
     SetOnOpen(!onOpen);
   };
+
     return(
         <div>
             <HeaderSetting label="Data sosial media" />

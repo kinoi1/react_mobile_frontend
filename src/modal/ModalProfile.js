@@ -248,19 +248,19 @@ if(type == 'city'){
               </div>
               <div className="modal-body">
                 <div className="input-group shadow-small pb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text bg-transparent border-r-0">
-                            <i className="fa fa-search"></i>
-                            </span>
-                        </div>
-                        <input
-                            type="text"
-                            className="form-control pl-0 border-l-0 text-xs text-placeholder "
-                            placeholder="Masukan kode pekerjaan"
-                            aria-label="Search"
-                            value={query}
-                            onChange={handleInputChange}
-                        />
+                  <div className="input-group-prepend">
+                      <span className="input-group-text bg-transparent border-r-0">
+                      <i className="fa fa-search"></i>
+                      </span>
+                  </div>
+                  <input
+                      type="text"
+                      className="form-control pl-0 border-l-0 text-xs text-placeholder "
+                      placeholder="Masukan kode pekerjaan"
+                      aria-label="Search"
+                      value={query}
+                      onChange={handleInputChange}
+                  />
                 </div>
                 {filteredData.length > 0 && (
                 <ul
@@ -278,7 +278,7 @@ if(type == 'city'){
                   </li>
                 ))}
               </ul>
-      )}
+              )}
                 
               </div>
             </div>
