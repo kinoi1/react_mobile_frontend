@@ -130,7 +130,7 @@ body {
         width: 100% !important;
     }
     .card-fixed{
-        width: 92% !important;
+        /* min-width: -webkit-fill-available; */
     }
     .card-fixed-d{
         padding-top:5rem;
@@ -592,9 +592,7 @@ body {
     border-width: 0;
 }
 .card-fixed{
-    max-width: 450px;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(100vh - 30px);
 }
 .banner-dashboard{
     padding-top:13.5rem;

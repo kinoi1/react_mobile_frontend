@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
+import BannerDashboard from './menu/components/BannerHeaders';
 
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -29,20 +30,6 @@ function App() {
     { id: "8", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
   ];
 
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const images = [
-    `${baseUrl}/img/Banner2.jpg`,
-    `${baseUrl}/img/Banner1.jpg`, // Tambahkan gambar kedua
-  ];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval); // Membersihkan interval saat komponen tidak digunakan
-  }, [images.length]);
-
   return (
     <div>
       <section className="w-full pt-7 pb-30 position-fixed z-index-2 bg-image">
@@ -62,62 +49,41 @@ function App() {
         </div>
       </section>
       
-
-      <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
-        <div className="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
-          <div className="d-flex align-items-center pr-0">
-            <div className="d-flex flex-column justify-content-end">
-                <div className='row'></div>
-                <div className='d-flex flex-column'>
-                  <span className='text-xs text-grey'>Saldo tersedia</span>
-                  <span className='text-base text-blue font-semibold d-flex flex-row align-items-center gap-2'>Rp. 150,000 <i className='icon-saldo w-1-2 h-1-2'></i> </span>
+      <div className='position-fixed z-index-2 d-flex'
+      style={{maxWidth:'480px',paddingLeft: '15px', paddingRight: '15px',width: '100%'}}>
+        <div className="bg-white card p-4 rounded-xl card-fixed shadow-lg top-24">
+          <div className="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
+            <div className="d-flex align-items-center pr-0">
+              <div className="d-flex flex-column justify-content-end">
+                  <div className='row'></div>
+                  <div className='d-flex flex-column'>
+                    <span className='text-xs text-grey'>Saldo tersedia</span>
+                    <span className='text-base text-blue font-semibold d-flex flex-row align-items-center gap-2'>Rp. 150,000 <i className='icon-saldo w-1-2 h-1-2'></i> </span>
+                  </div>
+              </div>
+            </div>
+            <div className="">
+                <div className="d-flex flex-row gap-5">
+                  <div className="">
+                      <div className="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
+                          <p className="text-blue font-medium m-0 p text-xsm">1351</p>
+                      </div>
+                      <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
+                  </div>
+                  <div className="">
+                      <div className="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
+                          <p className="text-blue m-0 text-xsm">Rp 500k</p>
+                      </div>
+                      <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
+                  </div>
                 </div>
             </div>
+                    
           </div>
-          <div className="">
-              <div className="d-flex flex-row gap-5">
-                <div className="">
-                    <div className="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
-                        <p className="text-blue font-medium m-0 p text-xsm">1351</p>
-                    </div>
-                    <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
-                </div>
-                <div className="">
-                    <div className="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
-                        <p className="text-blue m-0 text-xsm">Rp 500k</p>
-                    </div>
-                    <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
-                </div>
-              </div>
-          </div>
-                  
         </div>
       </div>
 
-      <section className="banner-dashboard">
-        <div className="container">
-            <div className='col-md-12'
-            >
-            <AnimatePresence>
-                {images.map((src, index) =>
-                  index === currentImage ? (
-                    <motion.img
-                      key={index}
-                      src={src}
-                      alt={`Banner ${index + 1}`}
-                      className="container p-0 rounded-xl position-absolute top-0 left-0"
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ display: "none" }} // Menghilangkan gambar sebelumnya langsung
-                      transition={{ duration: 0.4 }}
-                      // style={{width:'90%'}}
-                    />
-                  ) : null
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
-      </section>
+      <BannerDashboard />
 
       <section className="bg-white pt-8"
         style={{marginTop:'170px'}}
@@ -181,8 +147,8 @@ function App() {
         <div className='container'>
           <div className='col-md-12 p-0'>
             <div className='d-flex flex-row justify-space-between'>
-              <div className='text-xsm font-medium'> Pekerjaan Terbaru!</div>
-              <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'>Pekerjaan baru</div>
+              <div className='text-xsm font-medium'>  Pekerjaan Terbaru!</div>
+              <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'> {listwork.length} Pekerjaan baru</div>
             </div>
           </div>
         </div>

@@ -97,7 +97,7 @@ function Riwayat() {
                 <div className="container bg-white pt-2 pb-2">
                     <div className="row">
                     {listpekerjaan.map((item, index) => (
-                        <div className="col-12">
+                        <div key={index} className="col-12">
                             <div className="col-12 py-3">
                                 <div className="row">
                                     <div className="d-flex flex-row col-8 p-0">
@@ -106,7 +106,7 @@ function Riwayat() {
                                         <div className="row">
                                             <div className="col-12 text-xs pl-0 text-dark-grey">{item.desc}</div>
                                             <div className="col-12 text-xs-small pl-0 d-flex flex-row">
-                                                <img class="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
+                                                <img className="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
                                                 <span className="text-grey leading-none d-flex align-items-center">{item.tanggal}</span>
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@ function Riwayat() {
                 <div className="container bg-white pt-2 pb-2" style={{minHeight: '600px'}}>
                     <div className="">
                     {listkhusus.map((item, index) => (
-                        <a 
+                        <a key={index}
                         className="btn w-100 p-0"
                         onClick={() => handleOpenModal({imgclass: item.imgclass, desc: item.desc, tanggal: item.tanggal, nominal: item.nominal, btn: item.btn, btnText: item.btnText, class: item.class})}>
                             <div className="">
@@ -139,13 +139,11 @@ function Riwayat() {
                                     <div className="row">
                                         <div className="d-flex flex-row col-8 p-0">
                                         <div className="bg-slate-200 border-icon-saldo d-flex justify-content-center align-items-center rounded-03"><span className={`${item.imgclass}`}></span></div>
-                                        <div className="col-8 ml-2 d-flex vertical-align-end">
-                                            <div className="row">
-                                                <div className="col-12 text-xs pl-0 text-dark-grey d-flex justify-content-start">{item.desc}</div>
-                                                <div className="col-12 text-xs-small pl-0 d-flex flex-row">
-                                                    <img class="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
-                                                    <span className="text-grey leading-none d-flex align-items-center">{item.tanggal}</span>
-                                                </div>
+                                        <div className="ml-2 d-flex flex-column vertical-align-end flex-fill">
+                                            <div className="text-xs pl-0 text-dark-grey d-flex justify-content-start text-left">{item.desc}</div>
+                                            <div className="col-12 text-xs-small pl-0 d-flex flex-row flex-fill vertical-align-end">
+                                                <img className="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
+                                                <span className="text-grey leading-none d-flex align-items-center">{item.tanggal}</span>
                                             </div>
                                         </div>
                                         </div>

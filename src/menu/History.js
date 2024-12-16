@@ -45,28 +45,28 @@ function History() {
                 <div className='row'>
                     <div className=''>
                         <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
-                            <div class="d-flex flex-row justify-content-between">
-                                <div class="">
-                                    <div class="d-flex flex-row gap-5">
-                                        <div class="">
-                                            <div class="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
-                                                <p class="text-blue font-medium m-0 p text-xsm">1351</p>
+                            <div className="d-flex flex-row justify-content-between">
+                                <div className="">
+                                    <div className="d-flex flex-row gap-5">
+                                        <div className="">
+                                            <div className="bg-slate-200 rounded-xl n-work col-12 d-flex justify-content-center align-items-center">
+                                                <p className="text-blue font-medium m-0 p text-xsm">1351</p>
                                             </div>
-                                            <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
+                                            <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Pekerjaan</div>
                                         </div>
-                                        <div class="">
-                                            <div class="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
-                                                <p class="text-blue m-0 text-xsm">Rp 500k</p>
+                                        <div className="">
+                                            <div className="bg-slate-200 rounded-xl d-flex justify-content-center align-items-center n-work">
+                                                <p className="text-blue m-0 text-xsm">Rp 500k</p>
                                             </div>
-                                            <div class="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
+                                            <div className="text-grey text-xs d-flex justify-content-center pekerjaan">Penarikan</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-column justify-content-end">
+                                <div className="d-flex align-items-center">
+                                    <div className="d-flex flex-column justify-content-end">
                                         <Link 
                                         to={`${baseUrl}/history/tarik-saldo`}
-                                        class="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo d-flex align-items-center"> Tarik saldo</Link>
+                                        className="btn bg-main text-white text-xs rounded-small px-4 tarik-saldo d-flex align-items-center"> Tarik saldo</Link>
                                     </div>
                                 </div>
                             </div> 
@@ -84,7 +84,7 @@ function History() {
         <div className="container bg-white pt-2 pb-2">
             <div className="row">
             {listhistory.map((item, index) => (
-                <div className="col-12">
+                <div key={index} className="col-12">
                     <div className="py-2">
                         <div className="d-flex flex-row">
                             <div className="d-flex flex-row col-8 p-0">
@@ -94,7 +94,7 @@ function History() {
                                     <div className="row">
                                         <div className="col-12 text-xs pl-0 text-dark-grey">{item.desc}</div>
                                         <div className="col-12 text-xs-small pl-0 d-flex flex-row">
-                                            <img class="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
+                                            <img className="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
                                             <span className="text-grey leading-none">{item.tanggal}</span>
                                         </div>
                                     </div>

@@ -29,7 +29,6 @@ function ModalPekerjaanKhusus({ show, onClose, data }){
         );
         setFilteredData(filtered);
       };
-      console.log(data);
     return(
         <div>
             <AnimatePresence>
@@ -90,7 +89,7 @@ function ModalPekerjaanKhusus({ show, onClose, data }){
                                             <div className="row">
                                                 <div className="col-12 text-xsm pl-0 text-dark-grey d-flex justify-content-start">{item.desc}</div>
                                                 <div className="col-12 text-xs-small pl-0 d-flex flex-row">
-                                                    <img class="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
+                                                    <img className="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
                                                     <span className="text-grey leading-none d-flex align-items-center">{item.tanggal}</span>
                                                 </div>
                                             </div>

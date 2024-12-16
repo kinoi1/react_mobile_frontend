@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import './App.css';
@@ -54,6 +53,14 @@ function Pekerjaan() {
         // formData[currentField] = value;
         setShowModal(false);
       };
+
+      const TotalPekerjaan = listwork.length + listworktrending.length + listworkspecial.length;
+
+      const [childData, setChildData] = useState("");
+
+      const handleDataFromChild = (data) => {
+        setChildData(data); // Data yang diterima dari child
+      };
   return (
     <div className="bg-slate-200 rootwork">
     <section className="bg-white daftar-pekerjaan shadow-small">
@@ -71,7 +78,7 @@ function Pekerjaan() {
             <div className="col-md-12">
                 <div className="d-flex flex-row justify-space-between">
                     <div className="text-xsm">Pekerjaan Aktif</div>
-                    <div className="d-flex text-small bg-green text-white px-2 rounded-3 align-items-center">Kamu punya 1 pekerjaan aktif</div>
+                    <div className="d-flex text-small bg-green text-white px-2 rounded-3 align-items-center">Kamu punya {listworkactive.length} pekerjaan aktif</div>
                 </div>
             </div>
         </div>
@@ -85,7 +92,6 @@ function Pekerjaan() {
                     <div className="d-flex gap-4">
                         <div className="">
                             <img className='work-image-active' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
-                        
                         </div>
                         <div className="">
                             <span className="text-xs"> {item.nama}</span>
@@ -181,7 +187,7 @@ function Pekerjaan() {
     onClose={handleCloseModal}
     onSelectValue={handleSelectValue}
     />
-    <BottomBar />
+    <BottomBar data={TotalPekerjaan} sendDataToParent={handleDataFromChild}/>
     </div>
   );
 }
