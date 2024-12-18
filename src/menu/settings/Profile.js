@@ -93,6 +93,13 @@ const Profile = ({ value }) => {
         >
           <span className="col-12 d-flex p-0">
             <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
+            <img
+              className="mr-2"
+              src={`${baseUrl}/img/settings/perhatian.png`}
+              alt="indobuzz"
+              width="18"
+              height="18"
+            />
               Perhatian!
             </span>
             {isOpen ? (
@@ -175,9 +182,12 @@ const Profile = ({ value }) => {
 
           {/* Password Field */}
           <div className="form-group">
-            <label htmlFor="password" className="input-label text-xs">
-              Nomor Handphone
-            </label>
+            <div className="d-flex flex-row">
+              <label htmlFor="password" className="input-label text-xs flex-fill">
+                Nomor Handphone
+              </label>
+              <div className="p-1 px-2 text-xs-small text-white rounded-3" style={{backgroundColor: '#4EBA2A'}}>Terverifikasi</div>
+            </div>
             <input
               type="text"
               className="form-control input-gray border-0"
@@ -193,15 +203,18 @@ const Profile = ({ value }) => {
             <label htmlFor="city" className="input-label text-xs">
               Kota
             </label>
-            <input
-              type="text"
-              className="form-control input-gray text-xs border-0 input-select"
-              id="city"
-              name="city"
-              value={formData.city}
-              onClick={() => handleOpenModal("city")}
-              readOnly
-            ></input>
+            <div className="d-flex flex-row">
+              <input
+                type="text"
+                className="form-control input-gray text-xs border-0 input-select"
+                id="city"
+                name="city"
+                value={formData.city}
+                onClick={() => handleOpenModal("city")}
+                readOnly
+              ></input>
+              <i className="fa fa-angle-right d-flex align-items-center bg-select-form-control text-blue"></i>
+            </div>
           </div>
 
           <div className="form-group">

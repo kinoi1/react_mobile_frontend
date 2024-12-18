@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import HeaderSetting from "./components/Header";
-import { motion, AnimatePresence } from "framer-motion";
 import ModalRekening from "../../modal/ModalRekening";
 
 const Rekening = ({ value }) => {

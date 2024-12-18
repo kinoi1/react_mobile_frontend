@@ -3,6 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../../assets/Slider.css";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
+
 function EduKontributor(){
     const sliderData = ["Tarik saldo", "Referral", "Leader", "Pekerjaan Khusus", "Akun Sosmed"];
 
@@ -62,7 +65,14 @@ function EduKontributor(){
             <HeaderSetting label="Pusat edukasi kontributor" />
             <div className="container">
                 <div className="pt-24 d-flex justify-content-center">
-                    <span className="pt-2 pb-4">ini logo</span>
+                <img
+                    className="d-block pt-2 pb-4"
+                    src={`${baseUrl}/img/Logo-indobuzz.png`}
+                    alt="indobuzz"
+                    width='100'
+                    
+
+                />
                 </div>
                 <div className="input-group border-0 pb-2">
                     <span className="btn fa fa-search input-gray d-flex align-items-center"

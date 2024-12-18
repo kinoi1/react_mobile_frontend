@@ -23,7 +23,7 @@ body {
     background-color: #0087EC;
 }
 .bg-green{
-    background-color: #13B4AC;
+    background-color: #48AE25;
 }
 .bg-money{
     background-color: #39AA14;
@@ -866,4 +866,7 @@ body {
 /* end styling dropify */
 .input-gray{
     background-color: #F5F5F5;
+}
+.text-ketentuan{
+    color: #4C4C4C;
 }

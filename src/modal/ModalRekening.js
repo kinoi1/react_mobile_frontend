@@ -6,13 +6,29 @@ import '../assets/settings.css';
 const dataList =
     [
         {
-            "DataID": 1,
-            "Name": "Laki-laki"
+          "DataID": 1,
+          "Name": "Bank BJB"
         },
         {
-            "DataID": 2,
-            "Name": "Perempuan"
-        },        
+          "DataID": 2,
+          "Name": "Bank BRI"
+        },      
+        {
+          "DataID": 3,
+          "Name": "BCA"
+        },      
+        {
+          "DataID": 4,
+          "Name": "SeaBank"
+        },      
+        {
+          "DataID": 5,
+          "Name": "Bank Syariah Indonesia (BSI)"
+        },      
+        {
+          "DataID": 6,
+          "Name": "Bank Mandiri"
+        },      
       ];
 
 

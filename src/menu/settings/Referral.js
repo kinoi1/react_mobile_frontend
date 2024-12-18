@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeaderSetting from "./components/Header"
 import { motion, AnimatePresence } from "framer-motion";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Referral(){
 
@@ -30,6 +31,13 @@ function Referral(){
                 >
                 <span className="col-12 d-flex p-0">
                     <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
+                    <img
+                        className="mr-2"
+                        src={`${baseUrl}/img/settings/perhatian.png`}
+                        alt="indobuzz"
+                        width="18"
+                        height="18"
+                    />
                     Perhatian!
                     </span>
                     {isOpen ? (

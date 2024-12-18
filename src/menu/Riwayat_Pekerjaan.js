@@ -57,7 +57,8 @@ function Riwayat() {
     return (
 
         <div className="bg-slate-200 rootwork">
-            <section className="bg-white daftar-pekerjaan position-fixed w-full z-index-2 top-0 pt-8">
+            <section className="bg-white daftar-pekerjaan position-fixed z-index-2 top-0 pt-8"
+            style={{maxWidth: '480px', width: '100%'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <span>
@@ -65,8 +66,8 @@ function Riwayat() {
                         </span>
                     </div>
                 </div>
-                <ul className="nav nav-tabs col-12 pr-0 pt-4">
-                    <li className="nav-item col-6 p-0">
+                <ul className="nav nav-tabs pr-0 pt-4">
+                    <li className="nav-item col-6 p-0 flex-fill">
                     <button
                         className={`nav-link text-xs col-12 ${activeTab === "tab1" ? "active text-blue" : "text-grey"}`}
                         onClick={() => setActiveTab("tab1")}

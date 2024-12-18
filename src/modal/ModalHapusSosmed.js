@@ -58,6 +58,7 @@ const ModalHapusSosmed = ({ show, onClose }) => {
             }}
             onClick={(e) => e.stopPropagation()} // Prevent closing modal on click
           >
+
             <div
               className="modal-content"
               style={{
@@ -66,7 +67,11 @@ const ModalHapusSosmed = ({ show, onClose }) => {
                 padding: "20px",
               }}
             >
-              <div className="modal-header border-0">
+              <div className="w-100 d-flex justify-content-center">
+                <div style={{border: '1px solid #DADADA', width: '37px'}}></div>
+              </div>
+
+              <div className="modal-header border-0 d-flex flex-column">
                 <span className="col-md-12 modal-title d-flex flex-column align-items-center justify-content-center text-base-modal leading-none font-semibold">
                     <img className="pb-2" src={`${baseUrl}/img/settings/Delete-Sosmed.png`} height={'137'} width={'207'}></img>
                     <div className="text-sm font-normal">Kamu yakin mau <span className="text-blue">hapus</span></div> <br></br> 

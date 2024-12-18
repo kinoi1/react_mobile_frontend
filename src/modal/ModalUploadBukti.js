@@ -112,10 +112,10 @@ const ModalUploadBukti = ({ show, onClose, onSelectValue}) => {
                 
                 </div>
             </div>
-            <div className="modal-body pl-0">
+            <div className="modal-body pl-0 pt-0">
               {filteredData.length > 0 && (
               <ul
-              className="list-group pt-8"
+              className="list-group"
               style={{
                 maxHeight: "200px", // Membatasi tinggi maksimum list
                 overflowY: "auto", // Membuat list dapat discroll

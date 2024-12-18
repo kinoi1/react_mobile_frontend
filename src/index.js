@@ -17,6 +17,7 @@ import EduKontributor from './menu/settings/Edu_kontributor';
 import TambahSosialMedia from './menu/settings/Tambah_Sosial_media';
 import TarikSaldo from './menu/history/TarikSaldo';
 import UploadBukti from './menu/pekerjaan/uploadbukti';
+import KetentuanKebijakan from './menu/settings/Ketentuan_kebijakan';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -76,6 +77,10 @@ const Router = createBrowserRouter([
   {
     path: `${baseUrl}/pekerjaan/upload-bukti`,
     element: <UploadBukti />,
+  },
+  {
+    path: `${baseUrl}/settings/syarat-ketentuan`,
+    element: <KetentuanKebijakan />,
   }
 
 

@@ -109,7 +109,7 @@ const DataPet =
 
 
 const ModalProfile = ({ show, onClose, onSelectValue, type }) => {
-
+var searchInput = false;
 const HeaderContent = ({ type }) => {
 const renderContent = () => {
     switch (type) {
@@ -141,6 +141,7 @@ const renderContent = () => {
 };
   // Variasi animasi untuk modal
 if(type == 'city'){
+    searchInput = true;
     dataList = DataCity;
 }else if(type == 'gender') {
     dataList = DataGender;
@@ -247,6 +248,8 @@ if(type == 'city'){
                 <HeaderContent type={type} />
               </div>
               <div className="modal-body">
+              {searchInput && (
+
                 <div className="input-group shadow-small pb-3">
                   <div className="input-group-prepend">
                       <span className="input-group-text bg-transparent border-r-0">
@@ -261,7 +264,10 @@ if(type == 'city'){
                       value={query}
                       onChange={handleInputChange}
                   />
+                  
+                
                 </div>
+                )}
                 {filteredData.length > 0 && (
                 <ul
                 className="list-group"

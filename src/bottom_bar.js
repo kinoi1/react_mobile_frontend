@@ -101,16 +101,16 @@ function BottomBar({ data = 0, sendDataToParent }) {
                 <div>
                     <Link
                         to={`${baseUrl}/history`}
-                        className={`icon-riwayat flex-fill ${
+                        className={`icon-wallet flex-fill ${
                             activePath === `${baseUrl}/history` ? "button-bar-active" : ""
                         }`}
-                        onClick={() => handleSetActive("/history")}
+                        onClick={() => handleSetActive(`${baseUrl}/history`)}
                     ></Link>
                 </div>
                 <div>
                     <Link
                         to={`${baseUrl}/riwayat-pekerjaan`}
-                        className={`icon-wallet flex-fill ${
+                        className={`icon-riwayat flex-fill ${
                             activePath === `${baseUrl}/riwayat-pekerjaan`
                                 ? "button-bar-active"
                                 : ""

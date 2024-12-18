@@ -27,7 +27,7 @@ function History() {
     return(
         <div>
         <section className="position-fixed z-index-2 root">
-            <div className="pt-4 pb-16 bg-image">
+            <div className="pt-4 pb-16 bg-image" style={{height: '153px'}}>
                 <div className="">
                     <div className="col-md-12 d-flex flex-row">
                         <div className="d-flex flex-column">
@@ -43,8 +43,8 @@ function History() {
         <div className=''>
             <div className='container'>
                 <div className='row'>
-                    <div className=''>
-                        <div className="bg-white w-100 card p-4 rounded-xl position-fixed z-index-2  shadow-lg card-fixed top-24">
+                    <div className='position-fixed z-index-2' style={{maxWidth:'480px',paddingLeft: '15px', paddingRight: '15px',width: '100%'}}>
+                        <div className="bg-white w-100 card p-4 rounded-xl shadow-lg card-fixed top-24">
                             <div className="d-flex flex-row justify-content-between">
                                 <div className="">
                                     <div className="d-flex flex-row gap-5">

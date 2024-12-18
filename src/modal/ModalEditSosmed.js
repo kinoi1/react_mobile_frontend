@@ -77,7 +77,7 @@ const ModalEditSosmed = ({ show, onClose }) => {
               }}
             >
               <div className="modal-header border-0">
-                
+                  <span>Edit sosial media</span>
               </div>
               <div className="modal-body mb-8">
                 <div className={`d-flex flex-row card-important align-items-center p-2 mb-4`}> 
