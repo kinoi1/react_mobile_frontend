@@ -59,20 +59,20 @@ const ButtonModal = ({ show, onClose }) => {
             <div
               className="modal-content"
               style={{
-                borderRadius: "10px 10px 0 0",
+                borderRadius: "25px 25px 0 0",
                 backgroundColor: "#fff",
                 padding: "20px",
               }}
             >
               <div className="modal-header border-0">
-                <h5 className="col-md-12 modal-title d-flex flex-column align-items-center justify-content-center text-base-modal leading-none font-semibold">
+                <h5 className="col-md-12 modal-title d-flex flex-column align-items-center justify-content-center text-base-modal font-semibold p-0" style={{lineHeight: '0.8'}}>
                     <div>Ambil <span className="text-blue">pekerjaan & dapatkan</span></div> <br></br> 
                     <div> <span className="text-blue">cuan</span> dengan mudah!</div>
                 </h5>
               </div>
-              <div className="modal-body">
+              <div className="modal-body pb-8 pl-0 pr-0">
                 
-                    <p className="text-xs text-center text-grey">Pekerjaan ini bisa kamu ambil <span className="text-blue font-medium">maks 4x</span> dengan akun sosmed yang berbeda. Pastikan jumlah akunmu mencukupi agar bisa ambil maks.</p>
+                    <p className="text-xs text-center text-grey" style={{padding: '0rem 0rem',marginBottom: '2rem', lineHeight: '1.7'}}>Pekerjaan ini bisa kamu ambil <span className="text-blue font-medium">maks 4x</span> dengan akun sosmed yang berbeda. Pastikan jumlah akunmu mencukupi agar bisa ambil maks.</p>
                     <div className="d-flex flex-row gap-2">
                         <button className="col-md-6 btn bg-sky-blue text-xs text-blue">
                             Cek sosmed dulu

@@ -39,7 +39,7 @@ const WorkList = ( param, pagination = true ) => {
               <div className="col-md-12 p-0">
                 <div className="bg-white">
                   <div className="col-md-12 list-work">
-                    <div className="d-flex justify-content-between gap-4">
+                    <div className="d-flex justify-content-between">
                       <div className="rounded-lg">
                         <img
                           className="work-image"
@@ -47,31 +47,29 @@ const WorkList = ( param, pagination = true ) => {
                           alt="indobuzz"
                         />
                       </div>
-                      <div className="p-0 w-60">
+                      <div className="p-0 w-60 ml-3">
                         <div className="d-flex flex-column gap-03">
-                          <span className="text-xs text-dark-grey font-medium">{item.nama}</span>
-                          <span className='text-xsm'> <img className='w-1-r mr-02' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
+                          <span className="text-xsm text-dark-grey font-medium">{item.nama}</span>
+                          <span className='text-xsm'> <img className='w-1-r mr-03' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
                           </img> 
                           
-                          <span className='text-small text-grey font-normal'>Maks Ambil 4 tiket</span></span> 
-                          <span className="text-blue text-xs-small">
-                            <img className='mr-02' src={`${baseUrl}/img/Saldo-icon(blue).svg`} width={'13'} height={'13'} alt='indobuzz'></img>
+                          <span className='text-xs text-grey font-normal'>Maks 4 tiket</span></span> 
+                          <span className="text-blue text-xs font-medium">
+                            <img className='mr-03' src={`${baseUrl}/img/Saldo-icon(blue).svg`} width={'15'} height={'15'} alt='indobuzz'></img>
                             Rp. {item.harga}
                           </span>
                         </div>
                       </div>
-                      <div className="pr-0 d-flex flex-row-reverse align-items-center">
-                        <div className="">
+                      <div className="pr-0 d-flex flex-row-reverse align-items-center flex-fill">
                           {isPekerjaanPage && (
-                            <div>
-                            <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
-                            <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
+                            <div style={{marginBottom: '8px'}}>
+                              <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
+                              <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
                             </div>
                           )}
-                            <button onClick={handleOpenModal} className="btn btn-primary text-xs-small rounded-small px-2 btn-ambil">
+                            <button onClick={handleOpenModal} className="btn btn-primary text-base-setting rounded-small px-2 btn-ambil">
                               Ambil Pekerjaan
                             </button>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -82,10 +80,10 @@ const WorkList = ( param, pagination = true ) => {
         ))}
           <div>
             {!isPekerjaanPage && (
-              <div className='py-8 see-all'>
+              <div className='py-12 see-all mb-8'>
                 <div className='d-flex justify-content-center'>
                   <button className='btn bg-slate-200 text-xs rounded-3'>
-                    Lihat semua <i className='fa fa-arrow-right text-blue'></i>
+                    Lihat semua <i className='fa fa-arrow-right text-blue pl-2'></i>
                   </button>
                 </div>
               </div>

@@ -6,6 +6,7 @@ body {
     background-color: #F7F7F7;
 }
 
+
 #root {
     max-width: 480px !important;
     width: 100%;
@@ -36,13 +37,13 @@ body {
 }
 .bg-image{
   max-width: 480px;
-  height: 80px;
+  height: 165px;
   background-image: url('/public/img/header.png'); /* Ganti dengan URL gambar Anda */
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-origin: content-box;
+  /* background-origin: content-box; */
   overflow: hidden; 
 }
 .bg-sky-blue{
@@ -228,6 +229,10 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 .pr-0{
     padding-right: 0;
 }
@@ -398,8 +403,8 @@ body {
     padding-right: 0;
 }
 .px-2-5{
-    padding-left:0.625rem;
-    padding-right:0.625rem;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
 }
 .px-2{
     padding-left: 0.5rem;
@@ -538,22 +543,22 @@ body {
     font-size: 0.688rem;
 }
 .text-xs{
-    font-size: clamp(0.75rem, 1vw, 1.25rem);
+    font-size: clamp(0.82rem, 1.55vw, 0.9rem);
 }
 .text-xsm{
-    font-size: clamp(0.813rem,2vw, 1rem);
+    font-size: clamp(0.9rem,2vw, 1rem);
 }
 .text-base-setting{
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem,3.5vw, 0.85rem);
 }
 .text-base-small{
     font-size: 0.938rem;
 }
 .text-base{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 .text-base-modal{
-    font-size: 1rem; /* the different is it's not reduce by width scale */
+    font-size: clamp(1rem, 4.5vw, 1.2rem); /* the different is it's not reduce by width scale */
 }
 .text-lg{
     font-size: 1.125rem;
@@ -583,7 +588,7 @@ body {
     opacity: 0.7;
 }
 .shadow-small{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(245, 245, 245, 100);
 }
 .shadow-small-t{
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -592,7 +597,7 @@ body {
     border-width: 0;
 }
 .card-fixed{
-    width: calc(100vh - 30px);
+    width: calc(100vh - 36px);
 }
 .banner-dashboard{
     padding-top:13.5rem;
@@ -773,7 +778,7 @@ body {
     padding-top:13rem;
 }
 .btn-ambil{
-    width: 118px;
+    width: 135px;
     padding-top:5px;
     padding-bottom:5px;
 }
@@ -869,4 +874,7 @@ body {
 }
 .text-ketentuan{
     color: #4C4C4C;
+}
+.line-height-1-4{
+    line-height: 1.4;
 }

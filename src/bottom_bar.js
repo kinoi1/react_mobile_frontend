@@ -60,7 +60,7 @@ function BottomBar({ data = 0, sendDataToParent }) {
 
     return (
         <section
-            className={`bg-white position-sticky container bottom-0 d-flex ${
+            className={`bg-white position-fixed container bottom-0 d-flex ${
                 location.pathname === "/pekerjaan" ? "left-0" : ""
             } root-bottom-bar`}
         >

@@ -21,7 +21,7 @@ const BannerDashboard = () => {
   }, [images.length]);
 
   return (
-    <section className="banner-dashboard">
+    <section className="banner-dashboard bg-white">
       <div className="container">
         <div className="col-md-12">
           <AnimatePresence>

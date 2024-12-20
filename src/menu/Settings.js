@@ -13,7 +13,7 @@ function Settings() {
         { id: 3, icon: "icon-rekening", name: "Rekening Bank", link:'rekening', new: false },
         { id: 4, icon: "icon-key", name: "Password", link:'password', new: false },
         { id: 5, icon: "icon-referral", name: "Referral kamu", link:'referral', new: true },
-        { id: 6, icon: "icon-kontributor", name: "Pusat edukasi kontributor", link:'edu-kontributor', new: false },
+        // { id: 6, icon: "icon-kontributor", name: "Pusat edukasi kontributor", link:'edu-kontributor', new: false },
         { id: 7, icon: "icon-ketentuan", name: "Ketentuan & kebijakan", link:'syarat-ketentuan', new: false },
       ];
 

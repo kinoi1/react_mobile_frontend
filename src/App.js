@@ -1,8 +1,7 @@
 import './App.css';
 import './assets/main.css';
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
@@ -11,13 +10,12 @@ import BannerDashboard from './menu/components/BannerHeaders';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-const Data = [
-  // { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500", progress: "25" },
-];
-
 
 function App() {
 
+  const Data = [
+    // { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500", progress: "25" },
+  ];
 
   const listwork = [
     { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
@@ -35,9 +33,9 @@ function App() {
       <section className="w-full pt-7 pb-30 position-fixed z-index-2 bg-image">
         <div className="w-full container position-fixed z-index-2">
           <div className="w-full row position-fixed z-index-2">
-            <div className='w-full col-md-12 position-fixed z-index-2'>
+            <div className='w-full col-md-12 position-fixed z-index-2 line-height-1-4'>
               <div className="text-white">
-                  <span className='text-base-small'>Halo, Jeni</span>
+                  <span className='text-lg font-medium'>Halo, Jeni</span>
                 </div>
                 <div className='pb-6'> 
                   <span className="text-white text-xs opacity-50">Apa kabarmu hari ini?</span>
@@ -50,7 +48,7 @@ function App() {
       </section>
       
       <div className='position-fixed z-index-2 d-flex'
-      style={{maxWidth:'480px',paddingLeft: '15px', paddingRight: '15px',width: '100%'}}>
+      style={{maxWidth:'480px',paddingLeft: '18px', paddingRight: '18px',width: '100%'}}>
         <div className="bg-white card p-4 rounded-xl card-fixed shadow-lg top-24">
           <div className="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
             <div className="d-flex align-items-center pr-0">
@@ -86,14 +84,14 @@ function App() {
       <BannerDashboard />
 
       <section className="bg-white pt-8"
-        style={{marginTop:'170px'}}
+        style={{paddingTop:'clamp(150px, 45vw, 200px)'}}
       >
         <div className="container">
           <div className='col-md-12 p-0'>
             <div className="d-flex flex-row gap-1 p-0 justify-space-between">
               <p className="m-0 mr-2 p-0">Pekerjaan aktif</p>
-              <div className="text-xs bg-rose-500 text-white rounded-3 px-2-5 ml-8 text-right d-flex align-items-center">
-                Segera Kerjakan!
+              <div className={`text-xs-small ${Data.length == 0 ? 'bg-blue' : 'bg-rose-500'} text-white rounded-3 px-2-5 ml-8 text-right d-flex align-items-center`}>
+                {Data.length == 0 ? 'Segera ambil pekerjaan' : 'Segera kerjakan!'}
               </div>
             </div>
           </div>
@@ -147,8 +145,8 @@ function App() {
         <div className='container'>
           <div className='col-md-12 p-0'>
             <div className='d-flex flex-row justify-space-between'>
-              <div className='text-xsm font-medium'>  Pekerjaan Terbaru!</div>
-              <div className='bg-green rounded-xl p-1 px-2 text-white font-normal text-xs'> {listwork.length} Pekerjaan baru</div>
+              <div className=''>  Pekerjaan Terbaru!</div>
+              <div className='bg-green rounded-xl py-1 px-2-5 text-white font-normal text-xs-small'> {listwork.length} Pekerjaan baru</div>
             </div>
           </div>
         </div>
