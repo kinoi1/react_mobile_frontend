@@ -42,6 +42,7 @@ function BottomBar({ data = 0, sendDataToParent }) {
     const [activePath, setActivePath] = useState(location.pathname);
 
     const handleSetActive = (path) => {
+      console.log(path);
         setActivePath(path);
     };
     const [totalpekerjaan, setTotalPekerjaan] = useState(false);
@@ -57,24 +58,33 @@ function BottomBar({ data = 0, sendDataToParent }) {
         }
 
     }, []);
-
     return (
         <section
             className={`bg-white position-fixed container bottom-0 d-flex ${
                 location.pathname === "/pekerjaan" ? "left-0" : ""
             } root-bottom-bar`}
+            style={{boxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+              WebkitBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+              MozBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+            paddingTop: '0.25rem',
+          paddingBottom: '0.45rem'}}
         >
-            <div className="d-flex flex-row gap-4 w-100 justify-content-between">
-                <div>
+            <div className="d-flex flex-row px-3 w-100 justify-content-between">
+                <div className='d-flex flex-column justify-content-center align-items-center'>
                     <Link
-                        to={`${baseUrl}/`}
+                        to={`${baseUrl}`}
                         className={`icon-home flex-fill ${
-                            activePath === `${baseUrl}/` ? "button-bar-active" : ""
+                            activePath === `${baseUrl}` ? "button-bar-active" : ""
                         }`}
-                        onClick={() => handleSetActive(`${baseUrl}/`)}
+                        onClick={() => handleSetActive(`${baseUrl}`)}
                     ></Link>
+                    <span className={`text-bottom-bar ${
+                            activePath === `${baseUrl}` ? "text-blue" : "text-gray-bottom-bar"
+                        }`}>Beranda</span>
                 </div>
                 <div className="position-relative">
+                    
+                    <div className='d-flex flex-column align-items-center h-full'>
                     {totalpekerjaan && (
                         <span
                             className="bg-red position-absolute rounded-3 d-flex justify-content-center align-items-center text-white"
@@ -83,22 +93,25 @@ function BottomBar({ data = 0, sendDataToParent }) {
                                 height: "14px",
                                 width: "14px",
                                 zIndex: "2",
-                                right: "-10%",
+                                right: "0%",
                             }}
                         >
                             {totalpekerjaan}
                         </span>
                     )}
-
-                    <Link
-                        to={`${baseUrl}/pekerjaan`}
-                        className={`icon-work flex-fill ${
-                            activePath === `${baseUrl}/pekerjaan` ? "button-bar-active" : ""
-                        }`}
-                        onClick={() => handleSetActive(`${baseUrl}/pekerjaan`)}
-                    ></Link>
+                      <Link
+                          to={`${baseUrl}/pekerjaan`}
+                          className={`icon-work flex-fill ${
+                              activePath === `${baseUrl}/pekerjaan` ? "button-bar-active" : ""
+                          }`}
+                          onClick={() => handleSetActive(`${baseUrl}/pekerjaan`)}
+                      ></Link>
+                      <span className={`text-bottom-bar ${
+                              activePath === `${baseUrl}/pekerjaan` ? "text-blue" : "text-gray-bottom-bar"
+                          }`}>Pekerjaan</span>
+                    </div>
                 </div>
-                <div>
+                <div className='d-flex flex-column align-items-center'>
                     <Link
                         to={`${baseUrl}/history`}
                         className={`icon-wallet flex-fill ${
@@ -106,8 +119,11 @@ function BottomBar({ data = 0, sendDataToParent }) {
                         }`}
                         onClick={() => handleSetActive(`${baseUrl}/history`)}
                     ></Link>
+                    <span className={`text-bottom-bar ${
+                              activePath === `${baseUrl}/history` ? "text-blue" : "text-gray-bottom-bar"
+                          }`}>Dompet</span>
                 </div>
-                <div>
+                <div className='d-flex flex-column align-items-center'>
                     <Link
                         to={`${baseUrl}/riwayat-pekerjaan`}
                         className={`icon-riwayat flex-fill ${
@@ -117,8 +133,11 @@ function BottomBar({ data = 0, sendDataToParent }) {
                         }`}
                         onClick={() => handleSetActive(`${baseUrl}/riwayat-pekerjaan`)}
                     ></Link>
+                    <span className={`text-bottom-bar ${
+                              activePath === `${baseUrl}/riwayat-pekerjaan` ? "text-blue" : "text-gray-bottom-bar"
+                          }`}>Riwayat</span>
                 </div>
-                <div>
+                <div className='d-flex flex-column align-items-center'>
                     <Link
                         to={`${baseUrl}/settings`}
                         className={`icon-setting flex-fill ${
@@ -126,6 +145,9 @@ function BottomBar({ data = 0, sendDataToParent }) {
                         }`}
                         onClick={() => handleSetActive(`${baseUrl}/settings`)}
                     ></Link>
+                     <span className={`text-bottom-bar ${
+                              activePath === `${baseUrl}/settings` ? "text-blue" : "text-gray-bottom-bar"
+                          }`}>Setting</span>
                 </div>
             </div>
         </section>

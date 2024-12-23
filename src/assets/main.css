@@ -525,7 +525,7 @@ body {
     color: #39AA14;
 }
 .font-normal{
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 .font-medium{
     font-weight: 500;
@@ -597,7 +597,7 @@ body {
     border-width: 0;
 }
 .card-fixed{
-    width: calc(100vh - 36px);
+    width: 100%;
 }
 .banner-dashboard{
     padding-top:13.5rem;
@@ -617,8 +617,8 @@ body {
 .icon-home{
     background-color: #C9C9C9;
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     mask: url('/public/img/navbar-icon/Navbar-beranda.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/navbar-icon/Navbar-beranda.svg') no-repeat center / contain;
     background-size: contain;
@@ -627,8 +627,8 @@ body {
 .icon-work{
     background-color: #C9C9C9;
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 31px;
+    height: 25px;
     mask: url('/public/img/navbar-icon/Navbar-pekerjaan.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/navbar-icon/Navbar-pekerjaan.svg') no-repeat center / contain;
     background-size: contain;
@@ -637,8 +637,8 @@ body {
 .icon-riwayat{
     background-color: #C9C9C9;
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     mask: url('/public/img/navbar-icon/Navbar-riwayat.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/navbar-icon/Navbar-riwayat.svg') no-repeat center / contain;
     background-size: contain;
@@ -647,8 +647,8 @@ body {
 .icon-setting{
     background-color: #C9C9C9;
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     mask: url('/public/img/navbar-icon/Navbar-setting.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/navbar-icon/Navbar-setting.svg') no-repeat center / contain;
     background-size: contain;
@@ -657,8 +657,8 @@ body {
 .icon-wallet{
     background-color: #C9C9C9;
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     mask: url('/public/img/navbar-icon/Navbar-wallet.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/navbar-icon/Navbar-wallet.svg') no-repeat center / contain;
     background-size: contain;
@@ -878,3 +878,48 @@ body {
 .line-height-1-4{
     line-height: 1.4;
 }
+
+/* Override default carousel transitions */
+.carousel-item {
+    transition: transform 2s ease-in-out !important;
+  }
+  
+  .carousel-item.slide-right {
+    animation: slideToRight 5s infinite;
+  }
+  
+  .carousel-item.slide-left {
+    animation: slideToLeft 5s infinite;
+  }
+  
+  /* Animasi slide ke kanan */
+  @keyframes slideToRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Animasi slide ke kiri */
+  @keyframes slideToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .text-bottom-bar{
+    font-size: 0.725rem;
+  }
+  .text-gray-bottom-bar{
+    color: #B0BAC3;
+  }

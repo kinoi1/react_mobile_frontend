@@ -20,7 +20,7 @@ function Settings() {
     return(
     <div>
         <section className="">
-            <div className="pt-4 pb-16 bg-image">
+            <div className="pt-12 pb-16 bg-image" style={{height: '100px'}}>
                 <div className="">
                     <div className="col-md-12 d-flex flex-row">
                         <div className="bg-profile">

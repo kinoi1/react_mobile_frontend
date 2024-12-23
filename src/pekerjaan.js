@@ -115,7 +115,7 @@ function Pekerjaan() {
     ))}
     </div>
 
-    <section className="mt-2 py-4 bg-white shadow-small">
+    <section className="mt-3 py-4 bg-white shadow-small">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
@@ -129,7 +129,7 @@ function Pekerjaan() {
 
     <WorkList listwork={listwork} pagination={false}/>
 
-    <section className="mt-2 py-4 bg-white shadow-small">
+    <section className="mt-3 py-4 bg-white shadow-small">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
@@ -143,7 +143,7 @@ function Pekerjaan() {
 
     <WorkList listwork={listworktrending} />
 
-    <section className="mt-2 bg-white pt-4 pb-2">
+    <section className="mt-3 bg-white pt-4 pb-2">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">

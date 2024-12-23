@@ -13,7 +13,7 @@ const WorkList = ( param, pagination = true ) => {
     
   const isPekerjaanPage = location.pathname === '/react_mobile_frontend/pekerjaan';
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 5;
 
   // Calculate the displayed items
   const startIndex = currentPage * itemsPerPage;
@@ -60,14 +60,14 @@ const WorkList = ( param, pagination = true ) => {
                           </span>
                         </div>
                       </div>
-                      <div className="pr-0 d-flex flex-row-reverse align-items-center flex-fill">
+                      <div className="pr-0 d-flex flex-column align-items-center flex-fill justify-content-center">
                           {isPekerjaanPage && (
                             <div style={{marginBottom: '8px'}}>
                               <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
                               <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
                             </div>
                           )}
-                            <button onClick={handleOpenModal} className="btn btn-primary text-base-setting rounded-small px-2 btn-ambil">
+                            <button onClick={handleOpenModal} className="btn btn-primary text-base-setting rounded-small px-2 btn-ambil font-normal">
                               Ambil Pekerjaan
                             </button>
                       </div>
@@ -80,10 +80,10 @@ const WorkList = ( param, pagination = true ) => {
         ))}
           <div>
             {!isPekerjaanPage && (
-              <div className='py-12 see-all mb-8'>
+              <div className='py-12 see-all mb-12'>
                 <div className='d-flex justify-content-center'>
                   <button className='btn bg-slate-200 text-xs rounded-3'>
-                    Lihat semua <i className='fa fa-arrow-right text-blue pl-2'></i>
+                    Lihat semua <i className='fa fa-arrow-right text-blue pl-2 font-normal'></i>
                   </button>
                 </div>
               </div>

@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <section className="w-full pt-7 pb-30 position-fixed z-index-2 bg-image">
+      <section className="w-100 pt-7 pb-30 position-fixed z-index-2 bg-image">
         <div className="w-full container position-fixed z-index-2">
           <div className="w-full row position-fixed z-index-2">
             <div className='w-full col-md-12 position-fixed z-index-2 line-height-1-4'>
@@ -84,7 +84,7 @@ function App() {
       <BannerDashboard />
 
       <section className="bg-white pt-8"
-        style={{paddingTop:'clamp(150px, 45vw, 200px)'}}
+        // style={{paddingTop:'clamp(150px, 45vw, 200px)'}}
       >
         <div className="container">
           <div className='col-md-12 p-0'>
@@ -99,7 +99,7 @@ function App() {
         </div>
       </section>
 
-      <section className="bg-white pt-8 pb-8 mb-2">
+      <section className="bg-white pt-8 pb-8 mb-3">
       {Data.length > 0 ? (
         Data.map((item,index) => (
         <div className='container' key={index}>
@@ -123,7 +123,7 @@ function App() {
                       </div>
                     
                       <div className='col-md-5'>
-                        <span className='d-flex justify-content-end text-xs-small mb-2' style={{color: '#A2A2A2'}}>Progress</span>
+                        <span className='d-flex justify-content-end text-xs-small mb-3' style={{color: '#A2A2A2'}}>Progress</span>
                         <div className="progress" style={{padding:'2px'}}>
                           <div className="progress-bar rounded-3" role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100" style={{width: `${item.progress}%`}}></div>
                         </div>
