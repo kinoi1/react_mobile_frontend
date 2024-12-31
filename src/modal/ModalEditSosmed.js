@@ -71,17 +71,16 @@ const ModalEditSosmed = ({ show, onClose }) => {
             <div
               className="modal-content"
               style={{
-                borderRadius: "10px 10px 0 0",
                 backgroundColor: "#fff",
                 padding: "20px",
               }}
             >
-              <div className="modal-header border-0">
+              <div className="modal-header border-0 px-0">
                   <span>Edit sosial media</span>
               </div>
-              <div className="modal-body mb-8">
-                <div className={`d-flex flex-row card-important align-items-center p-2 mb-4`}> 
-                    <span className="text-blue text-xs-small letter-spacing-1">
+              <div className="modal-body p-0 mb-8">
+                <div className={`d-flex flex-row card-important align-items-center p-2 mb-4 rounded-small`}> 
+                    <span className="text-blue text-xs-small">
                       Fitur edit hanya bisa digunakan 1x24 jam setelah  terakhir kali kamu berhasil melakukan edit
                     </span>
                 </div>

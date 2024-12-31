@@ -33,11 +33,11 @@ function TambahSosialMedia() {
         <div>
             <HeaderSetting label="Data sosial media" />
 
-            <div className="container bg-white pt-24 pb-24">
+            <div className="container bg-white pt-24 pb-24" style={{minHeight: '800px'}}>
                 <div className="d-flex flex-column gap-4">
 
-                <div className={`${display} flex-row card-important align-items-center p-2`}> 
-                    <span className="text-blue text-xs-small letter-spacing-1">
+                <div className={`${display} flex-row card-important align-items-center p-2 rounded-small`}> 
+                    <span className="text-blue text-attention">
                         Anda bisa tambahkan maks 50 akun {selectedValue}
                     </span>
                 </div>
@@ -102,8 +102,8 @@ function TambahSosialMedia() {
                     aria-expanded={onOpen}
                     >
                         <span className="col-12 d-flex p-0">
-                            <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
-                            Perhatian!
+                            <span className="flex-fill d-flex justify-content-start text-xs font-medium p-0">
+                            Baca ini dulu!
                             </span>
                             {onOpen ? (
                             <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -135,7 +135,7 @@ function TambahSosialMedia() {
                                 }}
                                 className="card card-body bg-blue text-white border-0 p-0"
                                 >
-                                <p className="text-align-start m-0 text-xs-small">
+                                <p className="text-align-start m-0 text-xs pt-2 opacity-80 font-normal letter-spacing-03">
                                 Isi username dengan link akun sosial media yang akan di gunakan. Contoh: https://www.website.com/profile
                                 </p>
                                 </motion.div>
@@ -152,7 +152,18 @@ function TambahSosialMedia() {
                     placeholder="follower"
                     ></input>
                 </div>
+
             </div>
+            <div className="position-fixed container pt-2 pb-4 bg-white bottom-0 shadow-small-t p-0">
+                    <div className="col-12">
+                        <button
+                        type="submit"
+                        className="btn btn-primary col-12 profile-submit text-xs h-45px"
+                        >
+                        Konfirmasi sosial media
+                        </button>
+                    </div>
+                </div>
         </div>
     )
 }

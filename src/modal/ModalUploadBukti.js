@@ -101,15 +101,13 @@ const ModalUploadBukti = ({ show, onClose, onSelectValue}) => {
           <div
             className="modal-content"
             style={{
-              borderRadius: "10px 10px 0 0",
               backgroundColor: "#fff",
               padding: "20px",
             }}
           >
-            <div className="modal-header border-0 d-flex justify-content-center pt-0">
+            <div className="modal-header border-0 d-flex justify-content-center pt-0 pl-0 pr-0">
                 <div className="input-group shadow-small pb-3">
                     Silahkan <span className="text-blue px-2"> pilih sosial media</span> yang akan digunakan
-                
                 </div>
             </div>
             <div className="modal-body pl-0 pt-0">

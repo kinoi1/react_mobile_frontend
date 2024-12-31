@@ -73,30 +73,30 @@ function ModalPekerjaanKhusus({ show, onClose, data }){
                         <div
                         className="modal-content"
                         style={{
-                            borderRadius: "10px 10px 0 0",
+                            borderRadius: "25px 25px 0 0",
                             backgroundColor: "#fff",
-                            padding: "20px",
+                            padding: "10px 20px 20px 20px",
                         }}
                         >
-                            <div className="modal-header border-0 d-flex justify-content-center pt-0">
-                            </div>
-                            <div className="modal-body">
-                                <div className="bg-white pt-2 pb-2">
+                            {/* <div className="modal-header border-0 d-flex justify-content-center pt-0">
+                            </div> */}
+                            <div className="modal-body p-0">
+                                <div className="bg-white pt-3 pb-2">
                                     <div className="d-flex">
-                                        <div className="d-flex flex-row col-8 p-0">
+                                        <div className="d-flex flex-row flex-fill p-0">
                                         <div className="bg-slate-200 border-icon-saldo d-flex justify-content-center align-items-center rounded-03"><span className={`${item.imgclass}`}></span></div>
-                                        <div className="col-8 ml-2 d-flex vertical-align-end">
-                                            <div className="row">
-                                                <div className="col-12 text-xsm pl-0 text-dark-grey d-flex justify-content-start">{item.desc}</div>
-                                                <div className="col-12 text-xs-small pl-0 d-flex flex-row">
+                                        <div className="ml-2 d-flex vertical-align-end">
+                                            <div className="d-flex flex-column justify-content-between">
+                                                <div className="text-xs pl-0 d-flex justify-content-start font-medium leading-none">{item.desc}</div>
+                                                <div className="text-xs-small pl-0 d-flex flex-row align-items-baseline">
                                                     <img className="img-11 mr-03" src="/react_mobile_frontend/img/work-icon/Calendar-icon.svg" alt="indobuzz"></img>
-                                                    <span className="text-grey leading-none d-flex align-items-center">{item.tanggal}</span>
+                                                    <span className="font-normal opacity-50 text-xs leading-none d-flex align-items-center">{item.tanggal}</span>
                                                 </div>
                                             </div>
                                         </div>
                                         </div>
-                                        <div className={`col-4 d-flex flex-column align-items-end justify-content-start text-xs pr-0 ${item.class}`}>
-                                            <span className={`text-xs-small`}>
+                                        <div className={`d-flex flex-column align-items-end justify-content-start text-xs pr-0 ${item.class}`}>
+                                            <span className={`btn ${item.btn} text-white text-small rounded-3`} style={{padding: '2px 11px 2px 11px'}}>
                                                 {item.btnText}
                                             </span>
                                         </div>

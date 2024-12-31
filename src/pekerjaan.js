@@ -18,10 +18,10 @@ function Pekerjaan() {
         { id: "1", icon: "icon-follow", nama: "Follow Tiktok"},
     ]
     const listwork = [
-        { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500" },
-        { id: "2", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
-        { id: "3", icon: "icon-follow", nama: "Youtube", harga: "5000" },
-        { id: "4", icon: "icon-follow", nama: "Tes Twitter", harga: "5090" },
+        { id: "1", icon: "icon-follow", nama: "Subscribe Youtube", harga: "500" },
+        { id: "2", icon: "icon-follow", nama: "Komentar tiktok", harga: "500" },
+        { id: "3", icon: "icon-follow", nama: "Review Google Maps", harga: "5000" },
+        { id: "4", icon: "icon-follow", nama: "Follow Instagram", harga: "5090" },
         { id: "5", icon: "icon-follow", nama: "Youtube", harga: "500" },
         { id: "6", icon: "icon-follow", nama: "Tes Instagram", harga: "5000" },
         { id: "7", icon: "icon-follow", nama: "Youtube", harga: "500" },
@@ -63,131 +63,142 @@ function Pekerjaan() {
       };
   return (
     <div className="bg-slate-200 rootwork">
-    <section className="bg-white daftar-pekerjaan shadow-small">
-        <div className="container">
-            <div className="row justify-content-center">
-                <span>
-                    Daftar Pekerjaan
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <div className="container py-4 bg-white">
-        <div className="row">
-            <div className="col-md-12">
-                <div className="d-flex flex-row justify-space-between">
-                    <div className="text-xsm">Pekerjaan Aktif</div>
-                    <div className="d-flex text-small bg-green text-white px-2 rounded-3 align-items-center">Kamu punya {listworkactive.length} pekerjaan aktif</div>
+        <section className="position-fixed z-index-2 container top-0 p-0"
+            style={{boxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+            WebkitBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+            MozBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)'}}
+        >
+            <div className="bg-white daftar-pekerjaan shadow-small">
+                <div className="">
+                    <div className="row justify-content-center">
+                        <span>
+                            Daftar Pekerjaan
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div className="bg-white shadow-small pb-2">
-    {listworkactive.map((item, index) => (
-        <div key={index} className="container">
-            <div className="row">
-                <div className="col-md-12 d-flex flex-row align-items-center justify-content-between py-2">
-                    <div className="d-flex gap-4">
-                        <div className="">
-                            <img className='work-image-active' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
-                        </div>
-                        <div className="">
-                            <span className="text-xs"> {item.nama}</span>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-5">
-                        <div className="p-0 d-flex px-2 py-1 justify-content-center bg-blue rounded-3">
-                            <Link 
-                            to={`${baseUrl}/pekerjaan/upload-bukti`}
-                            className="btn text-xs-small p-0 text-white">Unggah Bukti</Link>
-                        </div>
-                        <div className="bg-red px-2 rounded-3">
-                            <button className="btn text-xs-small p-0 py-1 text-white"
-                            onClick={() => handleOpenModal("pet")}
-                            > batalkan</button>
+            <div className="container pt-3 pb-4 bg-white">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="d-flex flex-row justify-space-between">
+                            <div className="text-work-header">
+                            
+                                Pekerjaan Aktif</div>
+                            <div className="d-flex text-xs-small bg-green text-white px-2-5 rounded-3 align-items-center">
+                                {/* <img src={`${baseUrl}/video/Api.gif`} alt="tes" height='15' width='15' /> */}
+                                Kamu punya {listworkactive.length} pekerjaan aktif</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    ))}
-    </div>
 
-    <section className="mt-3 py-4 bg-white shadow-small">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <span className="text-xs">
-                        Pekerjaan Terbaru
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <WorkList listwork={listwork} pagination={false}/>
-
-    <section className="mt-3 py-4 bg-white shadow-small">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <span className="text-xs">
-                        Pekerjaan Trending Topik
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <WorkList listwork={listworktrending} />
-
-    <section className="mt-3 bg-white pt-4 pb-2">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
-                    <span className="text-xs">
-                        Pekerjaan Khusus!
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section className="bg-white shadow-small pb-3">
-        <div className="container opacity-60">
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="input-group">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text bg-transparent border-r-0">
-                            <i className="fa fa-search"></i>
-                            </span>
+            <div className="bg-white shadow-small pb-4">
+            {listworkactive.map((item, index) => (
+                <div key={index} className="container">
+                    <div className="row">
+                        <div className="col-md-12 d-flex flex-row align-items-center justify-content-between">
+                            <div className="d-flex gap-4">
+                                <div className="d-flex align-items-center">
+                                    <img className='work-image-active' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
+                                </div>
+                                <div className="d-flex align-items-center">
+                                    <span className="text-xsm"> {item.nama}</span>
+                                </div>
+                            </div>
+                            <div className="d-flex gap-2">
+                                <div className="d-flex px-2-5 py-1 align-items-center bg-blue rounded-3">
+                                    <Link 
+                                    to={`${baseUrl}/pekerjaan/upload-bukti`}
+                                    className="btn text-base-upload p-0 text-white font-normal">Unggah Bukti</Link>
+                                </div>
+                                <div className="bg-red px-2-5 rounded-3">
+                                    <button className="btn text-base-upload p-0 py-1 text-white font-normal"
+                                    onClick={() => handleOpenModal("pet")}
+                                    > Batalkan</button>
+                                </div>
+                            </div>
                         </div>
-                        <input
-                            type="text"
-                            className="form-control pl-0 border-l-0 text-xs text-placeholder "
-                            placeholder="Masukan kode pekerjaan"
-                            aria-label="Search"
-                        />
+                    </div>
+                </div>
+            ))}
+            </div>
+        </section>
+
+        <section className="container mt-44 py-4 bg-white shadow-small">
+            <div className="">
+                <div className="row">
+                    <div className="col-md-12">
+                        <span className="text-work-header">
+                            Pekerjaan Terbaru
+                        </span>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <WorkList listwork={listwork} pagination={false}/>
+
+        <section className="container mt-3 py-4 bg-white shadow-small">
+            <div className="">
+                <div className="row">
+                    <div className="col-md-12">
+                        <span className="text-work-header">
+                            Pekerjaan Trending Topik
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <WorkList listwork={listworktrending} />
+
+        <section className="mt-3 bg-white pt-4 pb-3">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <span className="text-work-header">
+                            Pekerjaan Khusus!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className="bg-white shadow-small" style={{paddingBottom: '0.85rem'}}>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="input-group">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text border-0 input-gray" style={{borderRadius: '8px 0px 0px 8px'}}>
+                                <i className="icon-search text-blue"></i>
+                                </span>
+                            </div>
+                            <input
+                                type="text"
+                                className="form-control text-placeholder border-0 bg-gray input-gray pl-0 text-xs"
+                                placeholder="Masukan kode pekerjaan"
+                                aria-label="Search"
+                                style={{height: '45px',borderRadius: '0px 8px 8px 0px'}}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div className="bg-white mb-16 pb-24 shadow-small">
+
+            <WorkList listwork={listworkspecial} />
+
         </div>
-    </section>
-
-    <div className="bg-white mb-16 pb-24 shadow-small-t">
-
-        <WorkList listwork={listworkspecial} />
-
-    </div>
-    <ModalBatalPekerjaan 
-    show={showModal}
-    onClose={handleCloseModal}
-    onSelectValue={handleSelectValue}
-    />
-    <BottomBar data={TotalPekerjaan} sendDataToParent={handleDataFromChild}/>
+        <ModalBatalPekerjaan 
+            show={showModal}
+            onClose={handleCloseModal}
+            onSelectValue={handleSelectValue}
+        />
+        <BottomBar data={TotalPekerjaan} sendDataToParent={handleDataFromChild}/>
     </div>
   );
 }

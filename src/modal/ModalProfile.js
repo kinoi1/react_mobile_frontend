@@ -239,27 +239,26 @@ if(type == 'city'){
             <div
               className="modal-content"
               style={{
-                borderRadius: "10px 10px 0 0",
                 backgroundColor: "#fff",
                 padding: "20px",
               }}
             >
-              <div className="modal-header border-0 d-flex justify-content-center pt-0">
+              <div className="modal-header border-0 d-flex justify-content-center pt-0 shadow-small">
                 <HeaderContent type={type} />
               </div>
-              <div className="modal-body">
+              <div className="modal-body p-0">
               {searchInput && (
 
                 <div className="input-group shadow-small pb-3">
                   <div className="input-group-prepend">
-                      <span className="input-group-text bg-transparent border-r-0">
-                      <i className="fa fa-search"></i>
+                      <span className="input-group-text border-0 input-gray">
+                      <i className="icon-search text-blue"></i>
                       </span>
                   </div>
                   <input
                       type="text"
-                      className="form-control pl-0 border-l-0 text-xs text-placeholder "
-                      placeholder="Masukan kode pekerjaan"
+                      className="form-control text-placeholder border-0 bg-gray input-gray pl-0 text-xs"
+                      placeholder="Cari kotamu"
                       aria-label="Search"
                       value={query}
                       onChange={handleInputChange}
@@ -277,7 +276,7 @@ if(type == 'city'){
                 }}
               >
                 {filteredData.map((item, index) => (
-                  <li className="list-group-item border-0 input-select" key={index}
+                  <li className="list-group-item border-0 input-select pl-0 pr-0" key={index}
                   onClick={() => handleSelect(item.Name)} // Kirim nilai ke parent
                   >
                     {item.Name}

@@ -31,9 +31,14 @@ const Profile = ({ value }) => {
     married: "",
     pet: "",
   });
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
+  };
+
+  const [isOpenWa, setIsOpenWa] = useState(false);
+  const toggleCollapseWa = () => {
+    setIsOpenWa(!isOpenWa);
   };
 
   const handleChange = (e) => {
@@ -84,15 +89,15 @@ const Profile = ({ value }) => {
     <div>
       <HeaderSetting label="Ubah profile" />
 
-      <div className="container pt-24 bg-white w-100 ">
+      <div className="container pt-24 bg-white w-100 mb-3">
         {/* Trigger Button */}
         <button
-          className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white p-2-5`}
-          onClick={toggleCollapse}
-          aria-expanded={isOpen}
+          className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-wa border-0 text-white p-2-5`}
+          onClick={toggleCollapseWa}
+          aria-expanded={isOpenWa}
         >
           <span className="col-12 d-flex p-0">
-            <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
+            <span className="flex-fill d-flex justify-content-start align-items-center text-xs font-medium p-0">
             <img
               className="mr-2"
               src={`${baseUrl}/img/settings/perhatian.png`}
@@ -100,7 +105,95 @@ const Profile = ({ value }) => {
               width="18"
               height="18"
             />
-              Perhatian!
+              Verifikasi no Whatsapp kamu!
+            </span>
+            {isOpenWa ? (
+              <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
+            ) : (
+              <i className="fa fa-angle-right d-flex justify-content-end align-items-center"></i>
+            )}
+          </span>
+          {/* Animated Content */}
+          <motion.div
+            initial={false}
+            animate={{ height: isOpenWa ? "auto" : 0 }}
+            style={{
+              overflow: "hidden",
+            }}
+            className="bg-wa border-0"
+            transition={{ type: "spring", stiffness: 120, damping: 15 }}
+          >
+            <AnimatePresence>
+              {isOpenWa && (
+                <motion.div
+                  key="content"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 12,
+                  }}
+                  className="card card-body bg-wa text-white border-0 p-0"
+                >
+                  <p className="text-align-start m-0 text-xs pt-2 font-normal letter-spacing-03 opacity-80">
+                    Silahkan verifikasi akun anda dengan memasukan kode yang telah dikirimkan ke no whatsapp anda.
+                    Jika anda tidak menerima kode verifikasi, silahkan klik tombol dibawah ini untuk mengirim kode verifikasi.
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        </button>
+
+        <div className="form-group pt-4">
+            <label htmlFor="otp" className="input-label text-xs">
+              Kode OTP
+            </label>
+            <input
+              type="text"
+              className="form-control input-gray border-0"
+              id="otp"
+              name="otp"
+              placeholder=""
+              
+            />
+          </div>
+          <div className="pt-2 pb-4 bg-white bottom-0">
+          <button
+              type="submit"
+              className="btn btn-primary col-12 profile-submit h-45px text-xs mb-2 card-important text-blue border-0 no-hover"
+            >
+              Kirim ulang 
+            </button>
+            <button
+              type="submit"
+              className="btn btn-primary col-12 profile-submit h-45px text-xs"
+            >
+              Verifikasi
+            </button>
+          </div>
+
+      </div>
+
+      <div className="container pt-4 bg-white w-100 ">
+        {/* Trigger Button */}
+        <button
+          className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white p-2-5 gap-5px`}
+          onClick={toggleCollapse}
+          aria-expanded={isOpen}
+        >
+          <span className="col-12 d-flex p-0">
+            <span className="flex-fill d-flex justify-content-start align-items-center text-xs font-medium p-0">
+            <img
+              className="mr-2"
+              src={`${baseUrl}/img/settings/perhatian.png`}
+              alt="indobuzz"
+              width="18"
+              height="18"
+            />
+              Baca ini dulu!
             </span>
             {isOpen ? (
               <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -132,7 +225,7 @@ const Profile = ({ value }) => {
                   }}
                   className="card card-body bg-purple text-white border-0 p-0"
                 >
-                  <p className="text-align-start m-0 text-xs-small">
+                  <p className="text-align-start m-0 text-xs pt-2 font-normal letter-spacing-03 opacity-80">
                     Pengisian profil ini untuk tujuan pekerjaan dari brand yang
                     berkaitan dengan hal yang spesifik, seperti pekerjaan yang
                     membutuhkan 100 orang ibu-ibu yang memiliki balita untuk
@@ -146,8 +239,8 @@ const Profile = ({ value }) => {
           </motion.div>
         </button>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div className="container bg-white pb-16">
+      <form onSubmit={handleSubmit} className="bg-white pt-4">
+        <div className="container pb-24">
           {/* Name Field */}
           <div className="form-group">
             <label htmlFor="name" className="input-label text-xs">
@@ -182,8 +275,8 @@ const Profile = ({ value }) => {
 
           {/* Password Field */}
           <div className="form-group">
-            <div className="d-flex flex-row">
-              <label htmlFor="password" className="input-label text-xs flex-fill">
+            <div className="d-flex flex-row mb-2">
+              <label htmlFor="password" className="input-label text-xs flex-fill mb-0">
                 Nomor Handphone
               </label>
               <div className="p-1 px-2 text-xs-small text-white rounded-3" style={{backgroundColor: '#4EBA2A'}}>Terverifikasi</div>
@@ -350,7 +443,7 @@ const Profile = ({ value }) => {
           <div className="position-fixed container pt-2 pb-4 bg-white bottom-0">
             <button
               type="submit"
-              className="btn btn-primary col-12 profile-submit"
+              className="btn btn-primary col-12 profile-submit h-45px text-xs"
             >
               Perbaharui Profile
             </button>

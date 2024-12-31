@@ -8,18 +8,18 @@ button.nav-link.active{
     border-bottom: 2px solid #0087EC !important;
 }
 .btn {
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left: 20px;
-    padding-right:20px;
-    border-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
     font-weight: 500;
 }
 .icon-pending{
     background-color: #0087EC;
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     mask: url('/public/img/work-icon/pending.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/work-icon/pending.svg') no-repeat center / contain;
     background-size: contain;
@@ -28,8 +28,8 @@ button.nav-link.active{
 .icon-sukses{
     background-color: #0087EC;
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     mask: url('/public/img/work-icon/sukses.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/work-icon/sukses.svg') no-repeat center / contain;
     background-size: contain;
@@ -38,8 +38,8 @@ button.nav-link.active{
 .icon-report{
     background-color: #0087EC;
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     mask: url('/public/img/work-icon/report.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/work-icon/report.svg') no-repeat center / contain;
     background-size: contain;

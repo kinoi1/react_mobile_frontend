@@ -47,27 +47,32 @@ const WorkList = ( param, pagination = true ) => {
                           alt="indobuzz"
                         />
                       </div>
-                      <div className="p-0 w-60 ml-3">
+                      <div className="p-0 flex-fill ml-3">
                         <div className="d-flex flex-column gap-03">
-                          <span className="text-xsm text-dark-grey font-medium">{item.nama}</span>
-                          <span className='text-xsm'> <img className='w-1-r mr-03' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
-                          </img> 
+                          <span className="text-xs font-normal" style={{maxWidth: 'clamp(17ch, 22vw, 20ch)',whiteSpace: 'nowrap',overflow: 'hidden',textOverflow: 'ellipsis'}}>{item.nama}</span>
+                          <span className='text-xsm'> 
+                          <img className='w-1-r mr-03' src={`${baseUrl}/img/work-icon/Tiket-icon.svg`} >
+                              </img> 
+                              <span className='text-xs font-normal opacity-50'>Maks 4 tiket</span>
+                            <img className='img-worklist d-none' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
+                            
+                          <span className='text-xs opacity-50 pl-02 d-none'>23 Oct-24 Oct 2024</span>
                           
-                          <span className='text-xs text-grey font-normal'>Maks 4 tiket</span></span> 
+
+                          </span> 
                           <span className="text-blue text-xs font-medium">
                             <img className='mr-03' src={`${baseUrl}/img/Saldo-icon(blue).svg`} width={'15'} height={'15'} alt='indobuzz'></img>
                             Rp. {item.harga}
                           </span>
                         </div>
                       </div>
-                      <div className="pr-0 d-flex flex-column align-items-center flex-fill justify-content-center">
+                      <div className="pr-0 d-flex flex-column align-items-end justify-content-center">
                           {isPekerjaanPage && (
-                            <div style={{marginBottom: '8px'}}>
-                              <img className='img-worklist' src={`${baseUrl}/img/work-icon/Calendar-icon.svg`} alt='indobuzz'></img>
-                              <span className='text-small opacity-60 pl-02'>23 Oct-24 Oct 2024</span>
+                            <div>
+                              
                             </div>
                           )}
-                            <button onClick={handleOpenModal} className="btn btn-primary text-base-setting rounded-small px-2 btn-ambil font-normal">
+                            <button onClick={handleOpenModal} className="btn btn-primary text-base-setting rounded-small btn-ambil font-normal w-100">
                               Ambil Pekerjaan
                             </button>
                       </div>
@@ -82,8 +87,8 @@ const WorkList = ( param, pagination = true ) => {
             {!isPekerjaanPage && (
               <div className='py-12 see-all mb-12'>
                 <div className='d-flex justify-content-center'>
-                  <button className='btn bg-slate-200 text-xs rounded-3'>
-                    Lihat semua <i className='fa fa-arrow-right text-blue pl-2 font-normal'></i>
+                  <button className='btn bg-slate-200 text-xs rounded-3 font-normal'>
+                    Lihat semua <i className='fa fa-arrow-right text-blue pl-2'></i>
                   </button>
                 </div>
               </div>

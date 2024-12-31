@@ -19,35 +19,35 @@ function Settings() {
 
     return(
     <div>
-        <section className="">
+        <section className="position-fixed z-index-2 container p-0">
             <div className="pt-12 pb-16 bg-image" style={{height: '100px'}}>
                 <div className="">
                     <div className="col-md-12 d-flex flex-row">
-                        <div className="bg-profile">
+                        <div className="">
                             <span className="icon-profile-pict bg-white">
 
                             </span>
                         </div>
                         <div className="pl-2-5">
                             <div className="text-white text-xsm">Anjay Tes</div>
-                            <div className="text-white text-small">KONTRIBUTOR</div>
+                            <div className="text-white text-xs opacity-50">KONTRIBUTOR</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div className="container pt-4 pb-16 bg-white" style={{minHeight: '750px'}}>
-        <h3 className="mb-4 text-base-setting">Pengaturan</h3>
+        <div className="container pt-36 pb-16 bg-white" style={{minHeight: '750px'}}>
+        <h3 className="mb-4 text-xsm" style={{color: '#4C4C4C'}}>Pengaturan</h3>
         <ul className="list-group border-0">
             {menuItems.map((item) => (
-            <li key={item.id} className="list-group-item d-flex align-items-center p-0 border-0 py-2">
+            <li key={item.id} className="list-group-item d-flex align-items-center p-0 border-0 py-3">
                 <div className="bg-slate-200 border-icon-saldo d-flex justify-content-center align-items-center rounded-03">
                     <i className={`${item.icon}`}></i>
                 </div>
                 <Link
-                className='flex-fill'
+                className='flex-fill no-hover-underline'
                 to={`${baseUrl}/settings/${item.link}`}>
-                    <span className="pl-2-5 text-setting">{item.name}</span>
+                    <span className="pl-2-5 text-xs" style={{color: '#4C4C4C',fontWeight: '400'}}>{item.name}</span>
                 </Link>
                 {item.new && (
                     <span style={{fontSize: '9px'}} className=' px-2 bg-red rounded-3 text-white letter-spacing-05 mr-3'>Baru</span>
@@ -61,7 +61,7 @@ function Settings() {
         </ul>
 
         {/* <div className="col-12 px-0 pt-15"> */}
-            <a className="d-block p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center logout">Logout</span></a>
+            <a className="d-block p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center h-100 font-medium">Logout</span></a>
         {/* </div> */}
 
         </div>

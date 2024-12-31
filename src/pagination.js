@@ -14,7 +14,7 @@ const Pagination = ({ totalPages, itemsPerPage, onPageChange }) => {
         className={`prev-item ${currentPage === 0 ? "disabled" : ""}`}
         onClick={() => currentPage > 0 && handlePageClick(currentPage -1)}
       >
-        <a className="prev-link d-flex justify-content-center align-items-center next border-solid-1 p-4 shadow-small rounded-3 fa fa-angle-left"></a>
+        <a className="prev-link d-flex justify-content-center align-items-center next border-solid-1 p-3 shadow-small rounded-3 fa fa-angle-left"></a>
       </li>
 
       <div className="page-header d-flex flex-row align-items-center">
@@ -41,7 +41,7 @@ const Pagination = ({ totalPages, itemsPerPage, onPageChange }) => {
           currentPage < totalPages - 1 && handlePageClick(currentPage + 1)
         }
       >
-        <a className="next-link d-flex justify-content-center align-items-center next border-solid-1 p-4 shadow-small rounded-3 fa fa-angle-right"></a>
+        <a className="next-link d-flex justify-content-center align-items-center next border-solid-1 p-3 shadow-small rounded-3 fa fa-angle-right"></a>
       </li>
     </ul>
   );

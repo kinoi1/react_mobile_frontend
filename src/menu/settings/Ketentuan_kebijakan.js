@@ -12,7 +12,7 @@ function KetentuanKebijakan(){
     return (
         <div>
             <HeaderSetting label="Syarat & Ketentuan" />
-            <div className="container pt-24 w-100 ">
+            <div className="container pt-20 w-100 ">
 
                 <button
                     className={`btn col-12 d-flex flex-column justify-content-between border-0 p-2-5 bg-white mt-2 mb-3`}
@@ -21,7 +21,7 @@ function KetentuanKebijakan(){
                     >
                     <span className="col-12 d-flex p-0">
                         <span className="flex-fill d-flex justify-content-start text-xs p-0">
-                        Perhatian!
+                        Informasi update!
                         </span>
                         {isOpen ? (
                         <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -52,7 +52,7 @@ function KetentuanKebijakan(){
                                     }}
                                     className="card card-body border-0 p-0"
                                 >
-                                    <p className="text-align-start m-0 text-xs-small">
+                                    <p className="text-align-start m-0 text-xs pt-2">
                                         Tidak ada perubahan syarat & ketentuan
                                     </p>
                                 </motion.div>

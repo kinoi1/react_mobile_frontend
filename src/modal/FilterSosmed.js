@@ -136,7 +136,6 @@ const FilterSosmed = ({ show, onClose, onSelectValue }) => {
             <div
               className="modal-content"
               style={{
-                borderRadius: "10px 10px 0 0",
                 backgroundColor: "#fff",
                 padding: "20px",
               }}
@@ -156,14 +155,14 @@ const FilterSosmed = ({ show, onClose, onSelectValue }) => {
                 
                     <div className="d-flex flex-column">
                         <div className="d-flex flex-column"> 
-                            <span style={{color:'#AFAFAF'}} className="text-xs py-2"> Berdasarkan Sosmed</span>
+                            <span style={{color:'#AFAFAF'}} className="text-xs py-3"> Berdasarkan Sosmed</span>
                             <div className="line-height-3">
                                 {filters.map((filter) => (
                                     filter.type === 1 && (
                                     <button
                                     key={filter.id}
                                     type="button"
-                                    className={`btn mr-2 rounded-3 px-3 text-xs-small ${
+                                    className={`btn font-normal mr-2 rounded-3 px-3 text-xs ${
                                         selectedButtons.includes(filter.id)
                                         ? "btn-selected text-blue"
                                         : "btn-grey"
@@ -176,14 +175,14 @@ const FilterSosmed = ({ show, onClose, onSelectValue }) => {
                             </div>
                         </div>
                         <div className="d-flex flex-column pb-4"> 
-                            <span style={{color:'#AFAFAF'}} className="text-xs py-2"> Berdasarkan follower</span>
+                            <span style={{color:'#AFAFAF'}} className="text-xs py-3"> Berdasarkan follower</span>
                             <div className="line-height-3">
                                 {filters.map((filter) => (
                                     filter.type === 2 && (
                                     <button
                                     key={filter.id}
                                     type="button"
-                                    className={`btn mr-2 px-3 rounded-3 text-xs-small ${
+                                    className={`btn font-normal mr-2 px-3 rounded-3 text-xs ${
                                         selectedButtons.includes(filter.id)
                                         ? "btn-selected text-blue"
                                         : "btn-grey"

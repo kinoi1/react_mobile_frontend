@@ -73,16 +73,19 @@ function ModalBatalPekerjaan({ show, onClose }){
                         <div
                         className="modal-content"
                         style={{
-                            borderRadius: "10px 10px 0 0",
                             backgroundColor: "#fff",
-                            padding: "20px",
+                            padding: "10px 20px 20px 20px",
                         }}
                         >
-                        <div className="modal-header border-0 d-flex justify-content-center pt-0">
+                            <div className="w-100 d-flex justify-content-center">
+                                <div style={{border: '2px solid #DADADA', width: '40px', borderRadius: '1rem'}}></div>
+                            </div>
+                        <div className="modal-header border-0 d-flex justify-content-center pt-2">
                             <span className="col-md-12 modal-title d-flex flex-column align-items-center justify-content-center text-base-modal leading-none font-semibold">
-                                <img className="pb-2" src={`${baseUrl}/img/Batalkan-pekerjaan.png`} height={'160'} width={'217'}></img>
-                                <div className="text-sm font-normal">Kamu yakin <span className="text-blue">mau batalkan</span></div> <br></br> 
-                                <div className="text-sm font-normal"> <span className="text-blue"> </span>pekerjaan ini?</div>
+                                <img className="mb-4" src={`${baseUrl}/img/Batalkan-pekerjaan.png`} height={'160'} width={'217'}></img>
+                                <div className="text-sm font-medium pb-2">Kamu yakin <span className="text-blue">mau batalkan</span>
+                                </div>
+                                <div className="text-sm font-medium"> <span className="text-blue"> </span>pekerjaan ini?</div>
 
                                 <span className="text-xs letter-spacing-05 pt-4 font-normal" 
                                 style={{color: '#8A8A8A',lineHeight: '1.6',textAlign: 'center'}}>
@@ -93,12 +96,12 @@ function ModalBatalPekerjaan({ show, onClose }){
                             
 
                         </div>
-                        <div className="modal-body">
+                        <div className="modal-body p-0">
                             <div className="d-flex flex-row gap-2">
-                                <button className="col-md-6 btn bg-sky-blue text-xs text-blue">
+                                <button className="col-md-6 btn bg-sky-blue text-xs text-blue h-45px">
                                     Lanjut pekerjaan
                                 </button>
-                                <button className="col-md-6 btn btn-danger text-white text-xs">
+                                <button className="col-md-6 btn btn-danger text-white text-xs h-45px">
                                     Cancel pekerjaan
                                 </button>
                             </div>

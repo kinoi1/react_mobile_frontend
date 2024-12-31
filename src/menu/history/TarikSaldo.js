@@ -47,35 +47,36 @@ function TarikSaldo(){
     return (
 
         <div>
-            <div className="position-fixed z-index-2 w-full header-setting bg-white shadow-small">
-                <div className="col-12 pt-12">
-                    <div>
-                        <Link to={`${baseUrl}/history`}> 
+            <div className="position-fixed z-index-2 w-full header-setting bg-white shadow-small pb-4 d-flex flex-column">
+                <div className="col-12 pt-8 shadow-small">
+                    <div className="pb-2">
+                        <Link to={`${baseUrl}/history`} className="no-hover-underline"> 
                         <i className="fa fa-angle-left"></i> 
                         <span className="text-black pl-2">Payout otomatis</span> </Link>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white d-flex flex-column container pt-24 shadow-small">
-                <div className="pb-4">
-                    <span className="text-placeholder opacity-50 text-xs font-normal">Saldo Tersedia</span>
-                    <span className="text-blue text-lg font-semibold d-flex flex-row align-items-center">Rp. 150.000 <i className="icon-saldo ml-2 bg-saldo-white opacity-50"></i></span>
+                <div className="bg-white d-flex flex-column container shadow-small">
+                    <div className="py-3">
+                        <span className="text-placeholder text-xs font-normal">Saldo Tersedia</span>
+                        <span className="text-blue text-lg font-semibold d-flex flex-row align-items-center">Rp. 150.000 <i className="icon-saldo ml-2 bg-saldo-white opacity-50"></i></span>
+                    </div>
                 </div>
             </div>
-            <div className="bg-white d-flex flex-column container mb-24 pb-16">
+            
+            <div className="bg-white d-flex flex-column container mb-24 pb-16 pt-44">
                 <div className="d-flex flex-row bg-purple align-items-center p-2 mb-4 rounded-small mt-2"> 
-                    <div className="p-2 bg-important rounded-small mr-3">
+                    <div className="p-2  mr-2">
                         <img src={`${baseUrl}/img/settings/Time.png`} height={'30px'}></img>
                     </div>
-                    <span className="text-white text-xs-small letter-spacing-1">
+                    <span className="text-white text-attention">
                         Komplain maks 1x24 jam setelah transaksi sukses, lebih dari itu maka dianggap transaksi selesai
                     </span>
                 </div>
                 <div className="d-flex flex-row bg-blue align-items-center p-2 rounded-small"> 
-                    <div className="p-2 bg-important rounded-small mr-3">
+                    <div className="p-2 bg-important rounded-small mr-2">
                         <img src={`${baseUrl}/img/settings/Time.png`} height={'30px'}></img>
                     </div>
-                    <span className="text-white text-xs-small letter-spacing-1">
+                    <span className="text-white text-attention">
                         Cut off transaksi di jam 09:00 - 06:00 WIB. Di pukul tersebut tidak bisa melakukan transaksi
                     </span>
                 </div>
@@ -268,10 +269,10 @@ function TarikSaldo(){
                 </label>
 
                 <div className="d-flex flex-row bg-blue align-items-center p-2 mb-4 rounded-small mt-2"> 
-                    <div className="p-2 bg-important rounded-small mr-3">
+                    <div className="p-2 bg-important rounded-small mr-2">
                         <img src={`${baseUrl}/img/settings/Time.png`} height={'25px'}></img>
                     </div>
-                    <span className="text-white text-xs-small letter-spacing-1">
+                    <span className="text-white text-attention ">
                         Pastikan nomor tujuan benar, kesalahan pengisian nomor tujuan diluar tanggung jawab kami
                     </span>
                 </div>
@@ -291,7 +292,7 @@ function TarikSaldo(){
                 <div className="position-fixed container pt-2 pb-4 bg-white bottom-0">
                     <button
                     type="submit"
-                    className="btn btn-primary col-12 tarik-saldo letter-spacing-1 text-xs"
+                    className="btn btn-primary col-12 tarik-saldo text-xs"
                     >
                     Request Penarikan Otomatis
                     </button>

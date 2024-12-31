@@ -7,7 +7,7 @@
   }
   
   .pagination li {
-    padding: 10px 15px;
+    padding: 5px 15px;
     cursor: pointer;
     color: #909090;
   }
@@ -16,7 +16,7 @@
     font-weight: bold;
     color: white;
     background-color: #F7F7F7;
-    padding: 10px 15px;
+    padding: 5px 15px;
   }
   
   .pagination .prev,
@@ -33,8 +33,8 @@
     border:1px solid #EDEDED;
   }
   .next{
-    height: 50px !important;
-    width: 50px !important;
+    height: 40px !important;
+    width: 40px !important;
   }
   .next a{
     display: block;

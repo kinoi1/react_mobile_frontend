@@ -21,6 +21,10 @@ const listData = [
     
   ];
 
+const listPengajuan = [
+    { id: 1, name: "pengajuan 1",sosmedID:2, sosmed: "Instagram", count:'90' },
+  ];
+
   const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function SocialMedia() {
@@ -64,22 +68,18 @@ function SocialMedia() {
         <div>
             <HeaderSetting label="Data sosial media" />
 
-            <div className="z-index-2 container position-fixed bg-white top-10 d-flex flex-row py-3 shadow-small">
-                <span className="flex-fill">List sosmed</span>
-                <button className="btn icon-filter d-flex justify-content-end"
-                onClick={handleOpenModal}
-                ></button>
-            </div>
-
-            <div className="container bg-white pt-44 pb-16">
-                {filteredData.map((item, index) => (
-                <div key={index} className="d-flex flex-column border-sosial-media pl-3 pb-3 mb-2 rounded-small">
-                    <div className="col-12 p-0 d-flex justify-content-end">
-                        <span className="bg-terverifikasi text-verif text-white">Terverifikasi</span>
-                    </div>
+            
+            {/* list pengajuan  */}
+            <div className="container bg-white pt-20 pb-4 mb-3">
+                <div className="pb-6">
+                    <lablel> Proses pengajuan</lablel>
+                </div>
+                {listPengajuan.length > 0 ? (
+                listPengajuan.map((item, index) => (
+                <div key={index} className="d-flex flex-column border-sosial-media pl-3 py-3 mb-2 rounded-small">             
                     <div className="d-flex flex-row pr-3">
                         <div className="flex-fill d-flex flex-row">
-                            <div className="border-icon-saldo bg-slate-200 d-flex justify-content-center align-items-center">
+                            <div className="border-icon-saldo bg-slate-200 d-flex justify-content-center align-items-center rounded-small">
                                 <span className="icon-ballon-chat"></span>
                             </div>
                             <div className="col-12">
@@ -88,18 +88,65 @@ function SocialMedia() {
                                 </div>
                                 <div className="d-flex flex-row align-items-center text-xs-small">
                                     <i className="icon-profile-sosial-media mr-03"></i> 
-                                    <span className="text-blue pr-2">{item.count}</span> <span>{item.sosmed}</span>
+                                    <span className="text-blue pr-2 text-xs">{item.count}</span> 
+                                    <span className="text-xs opacity-50">{item.sosmed}</span>
                                 </div>
                             </div>
                         </div>
                         <div className="d-flex flex-row align-items-center gap-2">
-                            <div className="bg-slate-200 border-icon-trash d-flex align-items-center">
+                            <span className="text-white px-2-5 py-1 rounded-3 text-small bg-blue">pending</span>
+                        </div>
+                    </div>
+                </div>
+                ))
+                ):( 
+                    <div className="d-flex justify-content-center text-none text-xs"> Tidak ada sosmed yang sedang diajukan </div>
+                )}
+            </div>
+            {/* end pengajuan */}
+
+
+            <div className="container bg-white pb-20">
+
+                <div className="d-flex flex-row py-3 shadow-small">
+                    <span className="flex-fill d-flex align-items-center">List sosmed</span>
+                    <div className="shadow-all p-2">
+                        <button className="btn icon-filter d-flex justify-content-end"
+                        onClick={handleOpenModal}
+                        ></button>
+                    </div>
+                    
+                </div>
+
+                {filteredData.map((item, index) => (
+                <div key={index} className="d-flex flex-column border-sosial-media pl-3 pb-3 mb-2 rounded-small">
+                    <div className="col-12 p-0 d-flex justify-content-end">
+                        <span className="bg-terverifikasi text-verif text-white">Terverifikasi</span>
+                    </div>
+                    <div className="d-flex flex-row pr-3">
+                        <div className="flex-fill d-flex flex-row">
+                            <div className="border-icon-saldo bg-slate-200 d-flex justify-content-center align-items-center rounded-small">
+                                <span className="icon-ballon-chat"></span>
+                            </div>
+                            <div className="flex-fill pl-2">
+                                <div className="text-xs">
+                                    {item.name}
+                                </div>
+                                <div className="d-flex flex-row align-items-center text-xs-small">
+                                    <i className="icon-profile-sosial-media mr-03"></i> 
+                                    <span className="text-blue pr-2 text-xs">{item.count}</span> 
+                                    <span className="text-xs opacity-50">{item.sosmed}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center gap-3-5">
+                            <div className="bg-slate-200 border-icon-trash d-flex align-items-center rounded-small">
                                 <button key={item.id} className="btn icon-trash"
                                 onClick={handleOpenModalDelete}
                                 ></button>
                             </div>
-                            <div className="bg-slate-200 border-icon-trash d-flex align-items-center">
-                                <button key={item.id} className="btn icon-card-with-pencil"
+                            <div className="bg-slate-200 border-card-with-pencil d-flex align-items-center rounded-small">
+                                <button key={item.id} className="icon-card-with-pencil border-transparent"
                                 onClick={handleOpenModalEdit}
                                 ></button>
                             </div>
@@ -109,12 +156,13 @@ function SocialMedia() {
                 ))
                 }
             </div>
+
             <div className="root">
                 <div className="position-fixed container pt-2 pb-4 bg-white bottom-0">
                     
                     <Link
                     to={`${baseUrl}/settings/sosial-media/tambah`}
-                    className="btn btn-primary col-12 profile-submit"
+                    className="btn btn-primary col-12 profile-submit h-45px text-xs d-flex justify-content-center align-items-center"
                     >
                     Tambah sosial media
                     </Link>

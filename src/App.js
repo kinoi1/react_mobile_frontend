@@ -14,7 +14,7 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 function App() {
 
   const Data = [
-    // { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500", progress: "25" },
+    { id: "1", icon: "icon-follow", nama: "Youtube", harga: "500", progress: "25" },
   ];
 
   const listwork = [
@@ -49,7 +49,7 @@ function App() {
       
       <div className='position-fixed z-index-2 d-flex'
       style={{maxWidth:'480px',paddingLeft: '18px', paddingRight: '18px',width: '100%'}}>
-        <div className="bg-white card p-4 rounded-xl card-fixed shadow-lg top-24">
+        <div className="bg-white card p-4 rounded-xl card-fixed shadow-all top-24">
           <div className="d-flex flex-row justify-content-between overflow-hidden white-space-nowrap">
             <div className="d-flex align-items-center pr-0">
               <div className="d-flex flex-column justify-content-end">
@@ -105,7 +105,7 @@ function App() {
         <div className='container' key={index}>
           <div className='row'>
             <div className='col-md-12'>
-              <div className="bg-white p-2 rounded-xl shadow-lg work-active py-4">
+              <div className="bg-white p-2 rounded-xl shadow-lg work-active py-3 px-3">
                 <div className='col-md-12 p-0'>
                     <div className="d-flex flex-row">
                     <img
@@ -113,7 +113,7 @@ function App() {
                           src={`${baseUrl}/img/work-icon/Follower-icon.svg`}
                           alt="indobuzz"
                         />
-                      <div className='d-flex flex-column pl-2 flex-fill'>
+                      <div className='d-flex flex-column pl-3 flex-fill'>
                         <div className='text-slate-400'>
                           <p className='m-0 font-medium text-dark-grey'>{item.nama}</p>
                         </div>
@@ -122,8 +122,8 @@ function App() {
                         </div>
                       </div>
                     
-                      <div className='col-md-5'>
-                        <span className='d-flex justify-content-end text-xs-small mb-3' style={{color: '#A2A2A2'}}>Progress</span>
+                      <div className='pr-0' style={{minWidth: '40%'}}>
+                        <span className='d-flex justify-content-end text-xs mb-2' style={{color: '#A2A2A2'}}>Progress</span>
                         <div className="progress" style={{padding:'2px'}}>
                           <div className="progress-bar rounded-3" role="progressbar" aria-valuenow={item.progress} aria-valuemin="0" aria-valuemax="100" style={{width: `${item.progress}%`}}></div>
                         </div>

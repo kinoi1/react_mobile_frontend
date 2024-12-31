@@ -1,8 +1,11 @@
+.form-control{
+    height: calc(1.5em + .75rem + 10px);
+}
 .icon-profile-pict{
     background-color: #696969;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     mask: url('/public/img/settings/Profile-pict.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/Profile-pict.svg') no-repeat center / contain;
     background-size: contain;
@@ -81,8 +84,8 @@
 .icon-filter{
     background-color: #696969;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     mask: url('/public/img/settings/filter.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/filter.svg') no-repeat center / contain;
     background-size: contain;
@@ -98,7 +101,7 @@
     opacity: 0.8;
 }
 .logout{
-    height: 41px;
+    height: 45px;
     border: 1px solid #0087EC;
     color:#0087EC;
 }
@@ -130,10 +133,16 @@ div.card-body{
     background-color: #e9ecef;
     border-radius: 0rem 0.25rem 0.25rem 0rem;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 /* sosial media css */
+.pt-36{
+    padding-top: 9rem;
+}
+.pt-40{
+    padding-top: 10rem;
+}
 .pt-44{
     padding-top: 11rem;
 }
@@ -144,7 +153,7 @@ div.card-body{
     background-color: #0087EC;
     display: block;
     width: 40px;
-    height: 20px;
+    height: 25px;
     mask: url('/public/img/settings/ballon-chat.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/ballon-chat.svg') no-repeat center / contain;
     background-size: contain;
@@ -153,8 +162,8 @@ div.card-body{
 .icon-profile-sosial-media{
     background-color: #E0E0E0;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     mask: url('/public/img/settings/profile-sosial-media.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/profile-sosial-media.svg') no-repeat center / contain;
     background-size: contain;
@@ -163,8 +172,8 @@ div.card-body{
 .icon-trash{
     background-color: #EC3434;
     display: block;
-    width: 10px;
-    height: 12px;
+    /* width: 10px; */
+    height: 16px;
     mask: url('/public/img/settings/trash.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/trash.svg') no-repeat center / contain;
     background-size: contain;
@@ -173,8 +182,8 @@ div.card-body{
 .icon-card-with-pencil{
     background-color: #0087EC;
     display: block;
-    width: 10px;
-    height: 12px;
+    /* width: 10px; */
+    height: 14px;
     mask: url('/public/img/settings/card-with-pencil.svg') no-repeat center / contain;
     -webkit-mask: url('/public/img/settings/card-with-pencil.svg') no-repeat center / contain;
     background-size: contain;
@@ -184,14 +193,15 @@ div.card-body{
     margin-right: 0.3rem;
 }
 .border-icon-trash{
-    width: 25px;
-    height: 25px;
+    /* width: 25px;
+    height: 25px; */
+    padding: 7px 4px;
 }
 .bg-terverifikasi{
     background-color: #48AE25;
     padding: 0.15rem 0.5rem;
-    border-radius: 0rem 0.8rem 0rem 0.8rem;
-    letter-spacing: 0.5px;
+    border-radius: 0rem 0.5rem 0rem 0.5rem;
+    letter-spacing: 0.3px;
 }
 .modal-header.icon-filter{
     width: 30px;
@@ -274,4 +284,15 @@ div.card-body{
     -webkit-mask: url('/public/img/settings/cs.svg') no-repeat center / contain;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.h-45px{
+    height: 45px;
+}
+input.form-password{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    height: calc(1.5em + .75rem + 13px);
+}
+.border-card-with-pencil{
+    padding: 8px 7px;
 }

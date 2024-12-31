@@ -6,12 +6,12 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Referral(){
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const toggleCollapse = () => {
       setIsOpen(!isOpen);
     };
 
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState("12321");
 
     const handleCopy = () => {
       navigator.clipboard.writeText(inputValue).then(() => {
@@ -22,15 +22,15 @@ function Referral(){
     return (
         <div>
             <HeaderSetting label="Referall Kamu" />
-            <div className="container pt-24 bg-white w-100 ">
+            <div className="container pt-24 bg-white w-100 " style={{minHeight: '800px'}}>
                 {/* Trigger Button */}
                 <button
-                className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-blue border-0 text-white p-2-5`}
+                className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-blue border-0 text-white p-2-5 gap-5px`}
                 onClick={toggleCollapse}
                 aria-expanded={isOpen}
                 >
                 <span className="col-12 d-flex p-0">
-                    <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
+                    <span className="flex-fill d-flex justify-content-start text-xs font-medium p-0">
                     <img
                         className="mr-2"
                         src={`${baseUrl}/img/settings/perhatian.png`}
@@ -38,7 +38,7 @@ function Referral(){
                         width="18"
                         height="18"
                     />
-                    Perhatian!
+                    Baca ini dulu!
                     </span>
                     {isOpen ? (
                     <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -70,7 +70,8 @@ function Referral(){
                         }}
                         className="card card-body bg-blue text-white border-0 p-0"
                         >
-                        <p className="text-align-start m-0 text-xs-small">
+                        <p className="text-align-start m-0 text-xs pt-2"
+                        style={{fontWeight: '400',opacity: '0.8',letterSpacing: '0.3px'}}>
                         Referral member digunakan untuk mengajak gabung Kontributor, kamu bisa mengajukan sebagai leader setelah mendapat min 10 member dan dapatkan komisi referral 10% dari fee tiap member yang selesai mengerjakan pekerjaan. Sedangkan, referral Advertiser digunakan untuk mengajak gabung Advertiser, kamu akan mendapat komisi 10% apabila Advertiser melakukan transaksi di indobuzz.
                         </p>
                         </motion.div>
@@ -80,9 +81,9 @@ function Referral(){
                 </button>
 
                 <div className="d-flex flex-row mt-4 justify-content-between align-items-center">
-                    <div className="d-flex flex-column input-gray rounded-xl p-4">
-                        <span className="text-blue text-lg">12443</span>
-                        <span className="text-small text-member letter-spacing-1"> Member</span>
+                    <div className="d-flex flex-column input-gray rounded-xl py-3 px-6">
+                        <span className="text-blue text-sm d-flex justify-content-center">12443</span>
+                        <span className="text-xs text-member"> Member</span>
                     </div>
                     <div className="d-flex flex-column col-8">
                         <span className="text-xs letter-spacing-05 pb-2">
@@ -93,12 +94,17 @@ function Referral(){
                                 type="text"
                                 className="form-control boder-sosial-media border-r-0"
                                 id="copyInput"
+                                style={{backgroundColor: '#fff'}}
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
-                                placeholder="Masukkan teks di sini"
+                                placeholder=""
+                                disabled
                             />
-                            <div className="input-group-append d-flex align-items-center border-salin">
-                                <button className="btn icon-salin" onClick={handleCopy}>
+                            <div className="input-group-append d-flex align-items-center border-salin pr-2"
+                            style={{borderRadius: '0rem 0.25rem 0.25rem 0rem'}}
+                            >
+                                <button className="btn icon-salin" 
+                                onClick={handleCopy}>
                                 
                                 </button>
                             </div>
@@ -118,13 +124,15 @@ function Referral(){
                             placeholder=""
                             style={{height:'50px'}}
                         />
-                        <div className="input-group-append d-flex align-items-center border-0 input-gray">
-                            <button className="btn icon-salin-grey" onClick={handleCopy}>
+                        <div className="input-group-append d-flex align-items-center border-0 input-gray pr-2"
+                        style={{borderRadius: '0rem 0.25rem 0.25rem 0rem'}}>
+                            <button className="btn icon-salin-grey" 
+                            onClick={handleCopy}>
                             </button>
                         </div>
                     </div>
                 </div>
-                <button className="btn bg-blue text-white text-xs-small letter-spacing-05 rounded-small" onClick={handleCopy}
+                <button className="btn bg-blue text-white text-xs rounded-small font-normal" onClick={handleCopy}
                 style={{height:'40px'}}
                 >
                     Copy Referral

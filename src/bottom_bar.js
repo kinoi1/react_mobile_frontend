@@ -93,7 +93,7 @@ function BottomBar({ data = 0, sendDataToParent }) {
                                 height: "14px",
                                 width: "14px",
                                 zIndex: "2",
-                                right: "0%",
+                                right: "10%",
                             }}
                         >
                             {totalpekerjaan}

@@ -9,14 +9,19 @@ import 'dropify/dist/css/dropify.min.css';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function UploadBukti(){
+    const jobkhusus = false;
+    const taskJobKhusus = [
+        { id: "1", nama: "Youtube", note: '', type: 'file' },
+        { id: "1", nama: "Youtube", note: '', type: 'link' },
+    ];
     const [formData, setFormData] = useState({
         sosialMedia: ''
       }); 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const toggleCollapse = () => {
       setIsOpen(!isOpen);
     };
-    const [isOpenClient, setIsOpenClient] = useState(false);
+    const [isOpenClient, setIsOpenClient] = useState(true);
     const toggleCollapseClient = () => {
       setIsOpenClient(!isOpenClient);
     };
@@ -24,7 +29,7 @@ function UploadBukti(){
     const toggleCollapseCatatan = () => {
       setIsOpenCatatan(!isOpenCatatan);
     };
-    const [isOpenPerhatian, setIsOpenPerhatian] = useState(false);
+    const [isOpenPerhatian, setIsOpenPerhatian] = useState(true);
     const toggleCollapsePerhatian = () => {
       setIsOpenPerhatian(!isOpenPerhatian);
     };
@@ -69,10 +74,10 @@ function UploadBukti(){
     //
     return (
         <div>
-            <div className="position-fixed z-index-2 w-full header-setting bg-white shadow-small">
-                <div className="col-12 pt-12">
+            <div className="position-fixed z-index-2 w-full header-setting bg-white shadow-small d-flex align-items-center">
+                <div className="col-12">
                     <div>
-                        <Link to={`${baseUrl}/history`}> 
+                        <Link to={`${baseUrl}/pekerjaan`} className="no-hover-underline"> 
                         <i className="fa fa-angle-left"></i> 
                         <span className="text-black pl-2">Upload Pekerjaan</span> </Link>
                     </div>
@@ -80,9 +85,9 @@ function UploadBukti(){
             </div>
 
             <div className="pt-24 container bg-white">
-                <div className="d-flex flex-column pt-8 pb-4">
-                    <div className="d-flex justify-content-center">
-                        <img className='rounded-3' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz' height={'52px'} width={'52px'}></img>
+                <div className="d-flex flex-column pt-4 pb-4">
+                    <div className="d-flex justify-content-center mb-4">
+                        <img className='rounded-3' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz' height={'72px'} width={'72px'}></img>
                     </div>
                     <span className="d-flex justify-content-center">
                         Job subscribe Youtube
@@ -90,23 +95,14 @@ function UploadBukti(){
                     <span className="d-flex justify-content-center">
                         (PX Indonesia)
                     </span>
-                    <span className="d-flex justify-content-center text-xs-small">
+                    <span className="d-flex justify-content-center text-xs pt-2 text-upload">
                         subscribe youtube
                     </span>
                 </div>
                 <div className="d-flex flex-row">
-                    <div className="d-flex flex-column flex-fill">
-                        <div className="text-xs d-flex justify-content-center">
-                            12-11-2024
-                        </div>
-                        <div className="text-xs d-flex justify-content-center flex-fill align-items-center text-upload">
-                            Periode
-                        </div>
-                    </div>
-                    <div className="vertical-line">
-                        
-                    </div>
-                    <div className="d-flex flex-column flex-fill">
+                    
+                    
+                    <div className="d-flex flex-column flex-fill pr-8 pl-8">
                         <div className="text-xs text-blue d-flex justify-content-center">
                             Rp. 1000
                         </div>
@@ -117,18 +113,26 @@ function UploadBukti(){
                     <div className="vertical-line">
                         
                     </div>
-                    <div className="d-flex flex-column flex-fill px-2">
-                        <a className="btn btn-primary rounded-3"> link</a>
-                        <span className="d-flex justify-content-center text-xs-small text-upload letter-spacing-05">Link target</span>
+                    <div className="d-flex flex-column flex-fill">
+                        <a className="btn btn-primary rounded-3 text-xs mx-8" style={{paddingTop: '2px', paddingBottom: '2px'}}> link</a>
+                        <span className="d-flex justify-content-center text-xs text-upload letter-spacing-03">Target</span>
                     </div>
                     <div className="vertical-line">
                         
                     </div>
-                    <div className="d-flex flex-column flex-fill px-2"> 
-                        <a className="btn btn-primary rounded-3"> link</a>
-                        <span className="d-flex justify-content-center text-xs-small text-upload letter-spacing-05">Link Assets</span>
+                    <div className="d-flex flex-column flex-fill"> 
+                        <a className="btn btn-primary rounded-3 text-xs ml-8 mr-4" style={{paddingTop: '2px', paddingBottom: '2px'}}> link</a>
+                        <span className="d-flex justify-content-center text-xs text-upload letter-spacing-03">Assets</span>
                     </div>
                 </div>
+
+                <div className="d-flex flex-row card-important align-items-center p-2 mt-4 rounded-small"> 
+                    <span className="icon-important mr-2"></span>
+                    <span className="text-blue text-attention">
+                        Periode pekerjaan dimulai pada <span className="font-medium">23 Dec 2024 pukul 12:00</span> s/d <span className="font-medium"> 24 Dec 2024 pukul 15:00</span>
+                    </span>
+                </div>
+
                 <div className="py-4">
                     <button
                         className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-slate-200 border-0 p-2-5`}
@@ -136,7 +140,7 @@ function UploadBukti(){
                         aria-expanded={isOpen}
                         >
                         <span className="col-12 d-flex p-0">
-                            <span className="flex-fill d-flex justify-content-start text-xs letter-spacing-1 p-0 font-medium"
+                            <span className="flex-fill d-flex justify-content-start text-xs letter-spacing-03 p-0 font-medium"
                             style={{color: '#2F2F2F'}}>
                             Catatan umum
                             </span>
@@ -188,11 +192,11 @@ function UploadBukti(){
                         aria-expanded={isOpenClient}
                         >
                         <span className="col-12 d-flex p-0">
-                            <span className="flex-fill d-flex justify-content-start text-xs letter-spacing-1 p-0 font-medium"
+                            <span className="flex-fill d-flex justify-content-start text-xs letter-spacing-03 p-0 font-medium"
                             style={{color: '#2F2F2F'}}>
                             Catatan dari klien
                             </span>
-                            {isOpen ? (
+                            {isOpenClient ? (
                             <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center text-blue"></i>
                             ) : (
                             <i className="fa fa-angle-right d-flex justify-content-end align-items-center text-blue"></i>
@@ -240,13 +244,13 @@ function UploadBukti(){
 
                 <div className="pb-4">
                     <button
-                        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-blue border-0 text-white p-2-5`}
+                        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-blue border-0 text-white p-2-5 gap-5px`}
                         onClick={toggleCollapseCatatan}
                         aria-expanded={isOpenCatatan}
                         >
                         <span className="col-12 d-flex p-0">
-                            <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
-                            Perhatian!
+                            <span className="flex-fill d-flex justify-content-start text-xs font-medium p-0">
+                            Baca ini dulu!
                             </span>
                             {isOpen ? (
                             <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -278,7 +282,7 @@ function UploadBukti(){
                                 }}
                                 className="card card-body bg-blue text-white border-0 p-0"
                                 >
-                                <p className="text-align-start m-0 text-xs-small">
+                                <p className="text-align-start m-0 text-xs opacity-80 font-normal">
                                     Kamu bisa ambil maks 4x tiket pada pekerjaan ini 
                                     dengan akun sosial media yang berbeda.
                                 </p>
@@ -289,7 +293,7 @@ function UploadBukti(){
                     </button>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="gender" className="input-label text-xs">
+                    <label className="input-label text-xs">
                     Sosial media
                     </label>
                     <div className="d-flex flex-row">
@@ -307,34 +311,109 @@ function UploadBukti(){
                     <i className="fa fa-angle-right d-flex align-items-center bg-select-form-control text-blue"></i>
                     </div>
                 </div>
-                <div className="pb-4">
-                    <label htmlFor="gender" className="input-label text-xs">
-                    Screenshot bukti pekerjaan
-                    </label>
-                    <div className="d-flex flex-row card-important align-items-center p-2"> 
-                        <span className="text-blue text-xs-small letter-spacing-1">
-                            Silahkan upload dan tunggu hingga gambar selesai diupload, lalu klik tombol submit pekerjaan.
-                        </span>
-                    </div>
-                    <div className="pt-4">
-                        <input
-                            type="file"
-                            className="dropify bg-slate-200"
-                            data-height="100"
-                            onChange={handleFileChange}
-                        />
+                {jobkhusus === true ? (
+                    <div>
+                        <div className="rounded-small p-3 mb-4" style={{ border: '1px solid #EDEDED' }}>
+                            <label className="input-label text-xs">
+                                Screenshot bukti pekerjaan
+                            </label>
+                            <div className="d-flex flex-row card-important align-items-center p-2 rounded-small">
+                                <span className="text-blue text-attention">
+                                    Silahkan upload dan tunggu hingga gambar selesai diupload, lalu klik tombol submit pekerjaan.
+                                </span>
+                            </div>
+                            <div className="pt-4">
+                                <input
+                                    type="file"
+                                    className="dropify bg-slate-200 border-0"
+                                    data-height="100"
+                                    onChange={handleFileChange}
+                                />
+                            </div>
+                        </div>
 
+                        {/* Map over taskJobKhusus */}
+                        {taskJobKhusus.map((item, index) => (
+                            <div className="rounded-small p-3 mb-4" style={{ border: '1px solid #EDEDED' }}>
+                                <div className="d-flex flex-column">
+                                    <label className="input-label text-xs">
+                                        Task {index+1} 
+                                    </label>
+                                    <label className="input-label text-xs">
+                                        Note : 
+                                    </label>
+                                </div>
+                                <div className="pt-2">
+                                    {item.type == 'file' ? (
+                                        <div className="d-flex flex-column gap-4">
+                                            <div className="d-flex flex-row card-important align-items-center p-2 rounded-small">
+                                                <span className="text-blue text-attention">
+                                                    Silahkan upload dan tunggu hingga gambar selesai diupload, lalu klik tombol submit pekerjaan.
+                                                </span>
+                                            </div>
+                                            <input
+                                            type="file"
+                                            className="dropify bg-slate-200 border-0"
+                                            data-height="100"
+                                            onChange={handleFileChange}
+                                            />
+                                            <button className="btn btn-primary rounded-small font-medium text-xs">
+                                                Upload bukti
+                                            </button>
+                                        </div>
+                                    ):(
+                                        
+                                        <div className="d-flex flex-column gap-4">
+                                            <div className="d-flex flex-row card-important align-items-center p-2 rounded-small">
+                                                <span className="text-blue text-attention">
+                                                Silahkan masukan link hasil pekerjaan.
+                                                </span>
+                                            </div>
+                                            <input 
+                                                name="link[]"
+                                                className="input-gray form-control text-xs border-0 placeholder-gray"
+                                                placeholder="Masukan link"
+                                            />
+                                            <button className="btn btn-primary rounded-small font-medium text-xs">
+                                                Konfirmasi link
+                                            </button>
+                                        </div>
+                                    )}
+                                    
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                </div>
+                ) : (
+                    <div className="pb-4">
+                        <label className="input-label text-xs">
+                            Screenshot bukti pekerjaan
+                        </label>
+                        <div className="d-flex flex-row card-important align-items-center p-2 rounded-small">
+                            <span className="text-blue text-attention">
+                                Silahkan upload dan tunggu hingga gambar selesai diupload, lalu klik tombol submit pekerjaan.
+                            </span>
+                        </div>
+                        <div className="pt-4">
+                            <input
+                                type="file"
+                                className="dropify bg-slate-200"
+                                data-height="100"
+                                onChange={handleFileChange}
+                            />
+                        </div>
+                    </div>
+                )}
+
                 <div className="pb-24">
                     <button
-                        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white p-2-5`}
+                        className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-purple border-0 text-white p-2-5 gap-5px`}
                         onClick={toggleCollapsePerhatian}
                         aria-expanded={isOpenPerhatian}
                         >
                         <span className="col-12 d-flex p-0">
-                            <span className="flex-fill d-flex justify-content-start text-xs font-semibold p-0">
-                            Perhatian!
+                            <span className="flex-fill d-flex justify-content-start text-xs font-medium p-0">
+                            Baca ini dulu!
                             </span>
                             {isOpenPerhatian ? (
                             <i className="fa fa-angle-down flex-fill d-flex justify-content-end align-items-center"></i>
@@ -366,7 +445,7 @@ function UploadBukti(){
                                 }}
                                 className="card card-body bg-purple text-white border-0 p-0"
                                 >
-                                <p className="text-align-start m-0 text-xs-small">
+                                <p className="text-align-start m-0 text-xs opacity-80 font-normal">
                                     Konfirmasi tiket sebelum (tanggal) atau silahkan batalkan. Akan ada sanksi bagi yang mengambil tiket namun tidak mengerjakannya.
                                 </p>
                                 </motion.div>
@@ -380,7 +459,7 @@ function UploadBukti(){
                 <div className="position-fixed container pt-2 pb-4 bg-white bottom-0">
                     <button
                     type="submit"
-                    className="btn btn-primary col-12 profile-submit"
+                    className="btn btn-primary col-12 profile-submit text-xs h-45px"
                     >
                         Submit Pekerjaan
                     </button>
