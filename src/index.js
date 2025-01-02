@@ -19,6 +19,7 @@ import TambahSosialMedia from './menu/settings/Tambah_Sosial_media';
 import TarikSaldo from './menu/history/TarikSaldo';
 import UploadBukti from './menu/pekerjaan/uploadbukti';
 import KetentuanKebijakan from './menu/settings/Ketentuan_kebijakan';
+import Login from './menu/Login';
 const baseUrl = process.env.REACT_APP_BASE_URL || ''; // Default ke '' jika tidak diatur
 
 
@@ -82,6 +83,10 @@ const Router = createBrowserRouter([
   {
     path: `${baseUrl}/settings/syarat-ketentuan`,
     element: <KetentuanKebijakan />,
+  },
+  {
+    path: `${baseUrl}/login`,
+    element: <Login />,
   }
 
 

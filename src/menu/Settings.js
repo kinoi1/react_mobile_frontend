@@ -18,7 +18,7 @@ function Settings() {
       ];
 
     return(
-    <div>
+    <div style={{overflowY: 'scroll',maxHeight: '85%',scrollbarWidth:'none'}}>
         <section className="position-fixed z-index-2 container p-0">
             <div className="pt-12 pb-16 bg-image" style={{height: '100px'}}>
                 <div className="">

@@ -25,7 +25,7 @@ function History() {
       ];
 
     return(
-        <div>
+        <div style={{overflowY: 'scroll',maxHeight: '65%',scrollbarWidth:'none'}}>
         <section className="position-fixed z-index-2 container p-0">
             <div className="pt-4 pb-16 bg-image" style={{height: '165px'}}>
                 <div className="col-md-12 d-flex flex-row">

@@ -5,12 +5,14 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #F7F7F7;
     letter-spacing: 0.3px;
+    overflow: hidden;
 }
 
 
 #root {
     max-width: 480px !important;
     width: 100%;
+    overflow: hidden;
 }
 .root{
     width: 480px;
@@ -151,11 +153,6 @@ body {
     }
 }
 @media (max-width: 400px){
-    body {
-        display: block;
-        justify-content: unset;
-        font-family: 'Poppins', sans-serif;
-    }
     .banner-dashboard{
         padding-top:12.5rem !important;
     }
@@ -371,6 +368,9 @@ body {
 .mt-2{
     margin-top: 0.5rem;
 }
+.mt-8{
+    margin-top: 2rem;
+}
 .mt-16{
     margin-top: 4rem;
 }
@@ -569,6 +569,17 @@ body {
 .text-money{
     color: #39AA14;
 }
+.text-7b{
+    color: #7B7B7B;
+}
+.text-6d{
+    color: #6D6D6D;
+}
+.form-check-input{
+    width: 17px;
+    height: 17px;
+    margin-top: 0.1rem !important;
+}
 .font-normal{
     font-weight: 400 !important;
 }
@@ -759,8 +770,8 @@ body {
     width:2.75rem;
 }
 .daftar-pekerjaan{
-    padding-top:1rem;
-    /* padding-bottom:1rem; */
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
 }
 .left-0{
     left:0%;

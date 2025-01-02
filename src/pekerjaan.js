@@ -15,7 +15,7 @@ function Pekerjaan() {
     const [showModal, setShowModal] = useState(false);
 
     const listworkactive = [
-        { id: "1", icon: "icon-follow", nama: "Follow Tiktok"},
+        // { id: "1", icon: "icon-follow", nama: "Follow Tiktok"},
     ]
     const listwork = [
         { id: "1", icon: "icon-follow", nama: "Subscribe Youtube", harga: "500" },
@@ -62,68 +62,103 @@ function Pekerjaan() {
         setChildData(data); // Data yang diterima dari child
       };
   return (
-    <div className="bg-slate-200 rootwork">
-        <section className="position-fixed z-index-2 container top-0 p-0"
-            style={{boxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
-            WebkitBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
-            MozBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)'}}
-        >
-            <div className="bg-white daftar-pekerjaan shadow-small">
-                <div className="">
-                    <div className="row justify-content-center">
-                        <span>
-                            Daftar Pekerjaan
-                        </span>
-                    </div>
-                </div>
-            </div>
+    <div className="bg-slate-200 rootwork" style={{overflowY: 'scroll',maxHeight: '35%',scrollbarWidth:'none'}}>
+        <section
+  className="position-fixed z-index-2 container top-0 p-0"
+  style={{
+    boxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+    WebkitBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+    MozBoxShadow: '0px -5px 20px 0px rgba(0,0,0,0.05)',
+  }}
+>
+  <div className="bg-white daftar-pekerjaan shadow-small">
+    <div className="row justify-content-center">
+      <span>Daftar Pekerjaan</span>
+    </div>
+  </div>
 
-            <div className="container pt-3 pb-4 bg-white">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="d-flex flex-row justify-space-between">
-                            <div className="text-work-header">
-                            
-                                Pekerjaan Aktif</div>
-                            <div className="d-flex text-xs-small bg-green text-white px-2-5 rounded-3 align-items-center">
-                                {/* <img src={`${baseUrl}/video/Api.gif`} alt="tes" height='15' width='15' /> */}
-                                Kamu punya {listworkactive.length} pekerjaan aktif</div>
-                        </div>
-                    </div>
-                </div>
+  {listworkactive.length > 0 && (
+    <>
+      {/* Pekerjaan Aktif Section */}
+      <div className="container pt-3 pb-4 bg-white">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="d-flex flex-row justify-space-between">
+              <div className="text-work-header">Pekerjaan Aktif</div>
+              <div className="d-flex text-xs-small bg-green text-white px-2-5 rounded-3 align-items-center">
+                Kamu punya {listworkactive.length} pekerjaan aktif
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div className="bg-white shadow-small pb-4">
-            {listworkactive.map((item, index) => (
-                <div key={index} className="container">
-                    <div className="row">
-                        <div className="col-md-12 d-flex flex-row align-items-center justify-content-between">
-                            <div className="d-flex gap-4">
-                                <div className="d-flex align-items-center">
-                                    <img className='work-image-active' src={`${baseUrl}/img/work-icon/Follower-icon.svg`} alt='indobuzz'></img>
-                                </div>
-                                <div className="d-flex align-items-center">
-                                    <span className="text-xsm"> {item.nama}</span>
-                                </div>
-                            </div>
-                            <div className="d-flex gap-2">
-                                <div className="d-flex px-2-5 py-1 align-items-center bg-blue rounded-3">
-                                    <Link 
-                                    to={`${baseUrl}/pekerjaan/upload-bukti`}
-                                    className="btn text-base-upload p-0 text-white font-normal">Unggah Bukti</Link>
-                                </div>
-                                <div className="bg-red px-2-5 rounded-3">
-                                    <button className="btn text-base-upload p-0 py-1 text-white font-normal"
-                                    onClick={() => handleOpenModal("pet")}
-                                    > Batalkan</button>
-                                </div>
-                            </div>
-                        </div>
+      {/* List Pekerjaan Aktif */}
+      <div className="bg-white shadow-small pb-4">
+        {listworkactive.map((item, index) => (
+          <div key={index} className="container">
+            <div className="row">
+              <div className="col-md-12 d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex gap-4">
+                  <div className="d-flex align-items-center">
+                    <img
+                      className="work-image-active"
+                      src={`${baseUrl}/img/work-icon/Follower-icon.svg`}
+                      alt={item.nama}
+                    />
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <span className="text-xsm">{item.nama}</span>
+                  </div>
+                </div>
+                <div className="d-flex gap-2">
+                  <div className="d-flex px-2-5 py-1 align-items-center bg-blue rounded-3">
+                    <Link
+                      to={`${baseUrl}/pekerjaan/upload-bukti`}
+                      className="btn text-base-upload p-0 text-white font-normal"
+                    >
+                      Unggah Bukti
+                    </Link>
+                  </div>
+                  <div className="bg-red px-2-5 rounded-3">
+                    <button
+                      className="btn text-base-upload p-0 py-1 text-white font-normal"
+                      onClick={() => handleOpenModal("pet")}
+                    >
+                      Batalkan
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+</section>
+
+{listworkactive == 0 && (
+    <div className="container pt-3 pb-4 bg-white">
+        <div className="row">
+            <div className="col-md-12">
+                <div className="d-flex flex-row justify-space-between">
+                    <div className="text-work-header">
+                        Pekerjaan Aktif
+                    </div>
+                    <div className="d-flex text-xs-small bg-green text-white px-2-5 rounded-3 align-items-center">
+                        {/* <img src={`${baseUrl}/video/Api.gif`} alt="tes" height='15' width='15' /> */}
+                        Kamu punya {listworkactive.length} pekerjaan aktif
                     </div>
                 </div>
-            ))}
             </div>
-        </section>
+        </div>
+    </div>
+)}
+
+
+                
+            
 
         <section className="container mt-44 py-4 bg-white shadow-small">
             <div className="">

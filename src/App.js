@@ -1,11 +1,12 @@
+import { useEffect } from 'react';
+
 import './App.css';
 import './assets/main.css';
-
 import React from "react";
-
 import BottomBar from './bottom_bar';
 import WorkList from './work-list';
 import BannerDashboard from './menu/components/BannerHeaders';
+
 
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -27,9 +28,20 @@ function App() {
     { id: "7", icon: "icon-follow", nama: "Youtube", harga: "500" },
     { id: "8", icon: "icon-follow", nama: "Tes Youtube", harga: "500" },
   ];
+  useEffect(() => {
+    const container = document.getElementById('dashboard');
+    console.log(container.scrollTop);
+    if (container) {
+        container.scrollTop = 0; // Reset posisi scroll
+        console.log(container.scrollTop);
+    }
+}, []); // Hanya dijalankan sekali saat komponen dimuat
 
+  const handleScroll = (event) => {
+    console.log(event.target.scrollTop)
+  }
   return (
-    <div>
+    <div id='dashboard' style={{overflowY: 'scroll',maxHeight: '65%',scrollbarWidth:'none'}} onScroll={handleScroll}>
       <section className="w-100 pt-7 pb-30 position-fixed z-index-2 bg-image">
         <div className="w-full container position-fixed z-index-2">
           <div className="w-full row position-fixed z-index-2">

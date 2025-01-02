@@ -59,7 +59,7 @@ function Riwayat() {
     return (
 
         <div className="bg-slate-200 rootwork">
-            <section className="bg-white daftar-pekerjaan position-fixed z-index-2 top-0 pt-8"
+            <section className="bg-white daftar-pekerjaan position-fixed z-index-2 top-0 pt-8 pb-0"
             style={{maxWidth: '480px', width: '100%'}}>
                 <div className="container">
                     <div className="row justify-content-center">
@@ -92,12 +92,13 @@ function Riwayat() {
 
         {/* Tab Content */}
         <div className="tab-content pb-24 pt-26 bg-white"
-        style={{minHeight:'600px'}}
         >
             <div
             className={`tab-pane fade ${activeTab === "tab1" ? "show active" : ""}`}
             >
-                <div className="container bg-white pt-2 pb-2" style={{minHeight: '600px'}}>
+                <div className="container bg-white pt-2 pb-2" 
+                    style={{height: '700px',overflowY: 'scroll',scrollbarWidth:'none'}}
+                >
                     {listpekerjaan.map((item, index) => (
                         <div key={index} className="">
                             <div className="py-3">
@@ -133,7 +134,9 @@ function Riwayat() {
             <div
             className={`tab-pane fade ${activeTab === "tab2" ? "show active" : ""}`}
             >
-                <div className="container bg-white pt-2 pb-2" style={{minHeight: '800px'}}>
+                <div className="container bg-white pt-2 pb-2" 
+                style={{height: '700px',overflowY: 'scroll',scrollbarWidth:'none'}}
+                >
                     {listkhusus.map((item, index) => (
                         <a key={index}
                         className="btn w-100 p-0"
