@@ -33,7 +33,7 @@ function TambahSosialMedia() {
         <div>
             <HeaderSetting label="Data sosial media" />
 
-            <div className="container bg-white pt-24 pb-24" style={{minHeight: '800px'}}>
+            <div className="container bg-white pt-24 pb-24" style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
                 <div className="d-flex flex-column gap-4">
 
                 <div className={`${display} flex-row card-important align-items-center p-2 rounded-small`}> 

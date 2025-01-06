@@ -10,7 +10,7 @@ function KetentuanKebijakan(){
         setIsOpen(!isOpen);
       };
     return (
-        <div>
+        <div style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
             <HeaderSetting label="Syarat & Ketentuan" />
             <div className="container pt-20 w-100 ">
 

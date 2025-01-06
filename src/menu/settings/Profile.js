@@ -86,7 +86,7 @@ const Profile = ({ value }) => {
   };
 
   return (
-    <div>
+    <div style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
       <HeaderSetting label="Ubah profile" />
 
       <div className="container pt-24 bg-white w-100 mb-3">

@@ -11,11 +11,12 @@ import ModalBatalPekerjaan from "./modal/ModalBatalPekerjaan";
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Pekerjaan() {
-
+    let marginWorkActive = '';
+    let marginListWork = '';
     const [showModal, setShowModal] = useState(false);
 
     const listworkactive = [
-        // { id: "1", icon: "icon-follow", nama: "Follow Tiktok"},
+        { id: "1", icon: "icon-follow", nama: "Follow Tiktok"},
     ]
     const listwork = [
         { id: "1", icon: "icon-follow", nama: "Subscribe Youtube", harga: "500" },
@@ -61,8 +62,16 @@ function Pekerjaan() {
       const handleDataFromChild = (data) => {
         setChildData(data); // Data yang diterima dari child
       };
+
+      if(listworkactive.length > 0){
+        marginWorkActive = 'mt-44';
+        marginListWork = 'mt-44';
+      } else{
+        marginWorkActive = 'mt-12';
+      }
+      
   return (
-    <div className="bg-slate-200 rootwork" style={{overflowY: 'scroll',maxHeight: '35%',scrollbarWidth:'none'}}>
+    <div className="bg-slate-200 rootwork">
         <section
   className="position-fixed z-index-2 container top-0 p-0"
   style={{
@@ -139,7 +148,7 @@ function Pekerjaan() {
 </section>
 
 {listworkactive == 0 && (
-    <div className="container pt-3 pb-4 bg-white">
+    <div className={`container ${marginWorkActive} mb-2 pt-3 pb-4 bg-white`}>
         <div className="row">
             <div className="col-md-12">
                 <div className="d-flex flex-row justify-space-between">
@@ -160,14 +169,12 @@ function Pekerjaan() {
                 
             
 
-        <section className="container mt-44 py-4 bg-white shadow-small">
-            <div className="">
-                <div className="row">
-                    <div className="col-md-12">
-                        <span className="text-work-header">
-                            Pekerjaan Terbaru
-                        </span>
-                    </div>
+        <section className={`container py-4 bg-white shadow-small ${marginListWork}`}>
+            <div className="row">
+                <div className="col-md-12">
+                    <span className="text-work-header">
+                        Pekerjaan Terbaru
+                    </span>
                 </div>
             </div>
         </section>

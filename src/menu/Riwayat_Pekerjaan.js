@@ -44,6 +44,15 @@ function Riwayat() {
         { id: "1", btn: "bg-blue",btnText:"pending", class: "text-blue",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "Rp.500", desc:'Download, rating & registrasi', imgclass:"icon-pending" },
         { id: "1", btn: "bg-red",btnText:"Dilaporkan", class: "text-red",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "- Rp.500", desc:' Komentar Youtube', imgclass:"icon-report" },
         { id: "2", btn: "bg-money",btnText:"Sukses", class: "text-money", tanggal:"2 Nov 2024", nama: "Youtube", nominal: "+ Rp.1000", desc:'Subscribe Youtube', imgclass:"icon-sukses" },
+        { id: "1", btn: "bg-blue",btnText:"pending", class: "text-blue",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "Rp.500", desc:'Download, rating & registrasi', imgclass:"icon-pending" },
+        { id: "1", btn: "bg-red",btnText:"Dilaporkan", class: "text-red",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "- Rp.500", desc:' Komentar Youtube', imgclass:"icon-report" },
+        { id: "2", btn: "bg-money",btnText:"Sukses", class: "text-money", tanggal:"2 Nov 2024", nama: "Youtube", nominal: "+ Rp.1000", desc:'Subscribe Youtube', imgclass:"icon-sukses" },
+        { id: "1", btn: "bg-blue",btnText:"pending", class: "text-blue",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "Rp.500", desc:'Download, rating & registrasi', imgclass:"icon-pending" },
+        { id: "1", btn: "bg-red",btnText:"Dilaporkan", class: "text-red",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "- Rp.500", desc:' Komentar Youtube', imgclass:"icon-report" },
+        { id: "2", btn: "bg-money",btnText:"Sukses", class: "text-money", tanggal:"2 Nov 2024", nama: "Youtube", nominal: "+ Rp.1000", desc:'Subscribe Youtube', imgclass:"icon-sukses" },
+        { id: "1", btn: "bg-blue",btnText:"pending", class: "text-blue",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "Rp.500", desc:'Download, rating & registrasi', imgclass:"icon-pending" },
+        { id: "1", btn: "bg-red",btnText:"Dilaporkan", class: "text-red",tanggal:"5 Nov 2024", nama: "Youtube", nominal: "- Rp.500", desc:' Komentar Youtube', imgclass:"icon-report" },
+        { id: "2", btn: "bg-money",btnText:"Sukses", class: "text-money", tanggal:"2 Nov 2024", nama: "Youtube", nominal: "+ Rp.1000", desc:'Subscribe Youtube', imgclass:"icon-sukses" },
         
       ];
 
@@ -56,9 +65,19 @@ function Riwayat() {
         setShowModal(false);
       };
 
+      const handleScroll = (name) => {
+        console.log('ecece');
+        console.log(name);
+        const bro = document.getElementById(name);
+        console.log(bro);
+      }
+      
+
+      
     return (
 
-        <div className="bg-slate-200 rootwork">
+        <div className="bg-slate-200 rootwork"
+>
             <section className="bg-white daftar-pekerjaan position-fixed z-index-2 top-0 pt-8 pb-0"
             style={{maxWidth: '480px', width: '100%'}}>
                 <div className="container">
@@ -72,15 +91,15 @@ function Riwayat() {
                     <li className="nav-item col-6 p-0 flex-fill">
                     <button
                         className={`nav-link text-xs col-12 ${activeTab === "tab1" ? "active text-blue" : "text-grey"}`}
-                        onClick={() => setActiveTab("tab1")}
+                        onClick={() => {setActiveTab("tab1"); handleScroll('tab1')}}
                     >
                         Pekerjaan
                     </button>
                     </li>
                     <li className="nav-item col-6 p-0">
-                    <button
+                    <button 
                         className={`nav-link text-xs text-grey col-12 ${activeTab === "tab2" ? "active text-blue" : " text-grey"}`}
-                        onClick={() => setActiveTab("tab2")}
+                        onClick={() =>{ setActiveTab("tab2"); handleScroll('tab2')}}
                     >
                         Pekerjaan Khusus
                     </button>
@@ -91,13 +110,21 @@ function Riwayat() {
         
 
         {/* Tab Content */}
-        <div className="tab-content pb-24 pt-26 bg-white"
+        <div id="content" className="tab-content pb-24 pt-26 bg-white"
+
         >
             <div
+            id="tab1"
             className={`tab-pane fade ${activeTab === "tab1" ? "show active" : ""}`}
+            style={{overflow: 'auto',height: '800px',scrollbarWidth:'none'}}
+            onScroll={handleScroll('tab1')}
+
             >
                 <div className="container bg-white pt-2 pb-2" 
-                    style={{height: '700px',overflowY: 'scroll',scrollbarWidth:'none'}}
+                    style={{overflowY: 'scroll',scrollbarWidth:'none'}}
+                    onScroll={handleScroll}
+                    id="tab1"
+
                 >
                     {listpekerjaan.map((item, index) => (
                         <div key={index} className="">
@@ -132,10 +159,14 @@ function Riwayat() {
                 </div>
             </div>
             <div
+            id="tab2"
             className={`tab-pane fade ${activeTab === "tab2" ? "show active" : ""}`}
+            style={{height: '800px',overflow: 'auto',scrollbarWidth:'none'}}
+            onScroll={handleScroll('tab2')}
+
             >
                 <div className="container bg-white pt-2 pb-2" 
-                style={{height: '700px',overflowY: 'scroll',scrollbarWidth:'none'}}
+                id="tab2"
                 >
                     {listkhusus.map((item, index) => (
                         <a key={index}

@@ -7,7 +7,7 @@ function Password(){
         <div>
             <HeaderSetting label="Password kamu" />
 
-            <div className="container bg-white pt-24" style={{minHeight: '800px'}}>
+            <div className="container bg-white pt-24" style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
                 <div className="d-flex flex-row card-important align-items-center p-2 rounded-small"> 
                     <div className="p-2 card-important rounded-small mr-3">
                         <span className="icon-important"></span>

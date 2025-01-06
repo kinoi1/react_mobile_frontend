@@ -65,12 +65,12 @@ function SocialMedia() {
   : listData;
 
     return (
-        <div>
+        <div style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
             <HeaderSetting label="Data sosial media" />
 
             
             {/* list pengajuan  */}
-            <div className="container bg-white pt-20 pb-4 mb-3">
+            <div className="container bg-white pt-20 pb-4 mb-3" >
                 <div className="pb-6">
                     <lablel> Proses pengajuan</lablel>
                 </div>

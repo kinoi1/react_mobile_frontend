@@ -16,6 +16,11 @@ function Settings() {
         // { id: 6, icon: "icon-kontributor", name: "Pusat edukasi kontributor", link:'edu-kontributor', new: false },
         { id: 7, icon: "icon-ketentuan", name: "Ketentuan & kebijakan", link:'syarat-ketentuan', new: false },
       ];
+    //   const navigate = useNavigate();
+
+    //   const logout = () => {
+    //     navigate(`${baseUrl}/login`)
+    //   }
 
     return(
     <div style={{overflowY: 'scroll',maxHeight: '85%',scrollbarWidth:'none'}}>
@@ -60,9 +65,9 @@ function Settings() {
             ))}
         </ul>
 
-        {/* <div className="col-12 px-0 pt-15"> */}
-            <a className="d-block p-0 rounded-small logout mt-24 mb-8"> <span className="d-flex justify-content-center align-items-center h-100 font-medium">Logout</span></a>
-        {/* </div> */}
+            <Link to={`${baseUrl}/login`} className="d-block p-0 rounded-small logout mt-24 mb-8 no-hover-underline"> 
+                <span className="d-flex justify-content-center align-items-center h-100 font-medium">Logout</span>
+            </Link>
 
         </div>
         <BottomBar />

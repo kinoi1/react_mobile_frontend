@@ -85,7 +85,7 @@ const WorkList = ( param, pagination = true ) => {
         ))}
           <div>
             {!isPekerjaanPage && (
-              <div className='py-12 see-all mb-12'>
+              <div className='py-12 see-all mb-16'>
                 <div className='d-flex justify-content-center'>
                   <button className='btn bg-slate-200 text-xs rounded-3 font-normal'>
                     Lihat semua <i className='fa fa-arrow-right text-blue pl-2'></i>

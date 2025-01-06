@@ -22,7 +22,7 @@ function Referral(){
     return (
         <div>
             <HeaderSetting label="Referall Kamu" />
-            <div className="container pt-24 bg-white w-100 " style={{minHeight: '800px'}}>
+            <div className="container pt-24 bg-white w-100 " style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
                 {/* Trigger Button */}
                 <button
                 className={`btn col-12 d-flex flex-column justify-content-between align-items-center bg-blue border-0 text-white p-2-5 gap-5px`}

@@ -31,7 +31,7 @@ const Rekening = ({ value }) => {
     <div>
         <HeaderSetting label="Rekening Bank" />
         <form>
-            <div className="container d-flex flex-column pt-24 bg-white gap-3-5 pb-16" style={{minHeight: '800px'}}>
+            <div className="container d-flex flex-column pt-24 bg-white gap-3-5 pb-16" style={{overflowY: 'scroll', height:'750px',scrollbarWidth:'none'}}>
                 <div className="d-flex flex-row card-important align-items-center p-2 rounded-small mb-3"> 
                     <div className="p-2 bg-important rounded-small mr-3">
                         <span className="icon-important"></span>

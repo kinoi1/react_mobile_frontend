@@ -1,6 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const ButtonModal = ({ show, onClose }) => {
   // Variasi animasi untuk modal
   const modalVariants = {
@@ -67,7 +69,8 @@ const ButtonModal = ({ show, onClose }) => {
               <div className="w-100 d-flex justify-content-center">
                 <div style={{border: '2px solid #DADADA', width: '40px', borderRadius: '1rem'}}></div>
               </div>
-              <div className="modal-header border-0 pt-8">
+              <div className="modal-header border-0 pt-8 d-flex flex-column align-items-center">
+              <img className="pb-2 mb-2  d-flex" src={`${baseUrl}/img/Ambil-pekerjaan.png`} height={'137'} width={'207'}></img>
                 <h5 className="col-md-12 modal-title d-flex flex-column align-items-center justify-content-center text-base-modal font-semibold p-0" style={{lineHeight: '0.8'}}>
                     <div>Ambil <span className="text-blue">pekerjaan & dapatkan</span></div> <br></br> 
                     <div> <span className="text-blue">cuan</span> dengan mudah!</div>

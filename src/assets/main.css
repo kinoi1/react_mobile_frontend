@@ -5,14 +5,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #F7F7F7;
     letter-spacing: 0.3px;
-    overflow: hidden;
 }
 
 
 #root {
     max-width: 480px !important;
     width: 100%;
-    overflow: hidden;
 }
 .root{
     width: 480px;
@@ -40,6 +38,9 @@ body {
 }
 .bg-purple{
     background-color: #B93CC2;
+}
+.bg-alert{
+    background-color: #EC34341A;
 }
 .bg-image{
   max-width: 480px;
@@ -371,6 +372,9 @@ body {
 .mt-8{
     margin-top: 2rem;
 }
+.mt-12{
+    margin-top: 3rem;
+}
 .mt-16{
     margin-top: 4rem;
 }
@@ -550,6 +554,9 @@ body {
 }
 .text-red{
     color: #DD2828;
+}
+.text-alert{
+    color: #E13C3C;
 }
 .text-none{
     color: #A3A3A3;
@@ -1035,4 +1042,14 @@ body {
 
 .placeholder-gray::placeholder{
     color: #A3A3A3;
+}
+.border-register{
+    border: 1px solid #EDEDED;
+}
+.my-2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.text-96{
+    color: #969696;
 }
